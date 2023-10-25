@@ -1,0 +1,192 @@
+{% block stylesheet %}
+{% endblock %}
+{% block body %}
+
+      <div id="compte_a_rebours" class="card-box text-center center"><noscript>Fin de l'évènement le 1er Juin 2020.
+          </noscript>
+      </div>
+      <style>
+          .digit{
+position:relative;
+width:1em;
+background-color:;
+border-radius:0.2em;
+text-align:center;
+color:#fff;
+letter-spacing:2px;
+}
+#compte_a_rebours{
+    align-content: center;
+    text-align: center;
+    text-decoration: blink;
+}
+          </style>
+          <div>
+<script type="text/javascript">
+
+function compte_a_rebours()
+
+{
+
+    var compte_a_rebours = document.getElementById("compte_a_rebours");
+
+
+    var date_actuelle = new Date();
+
+    var date_evenement = new Date("Sep 4 00:00:00 2023");
+
+    var total_secondes = (date_evenement - date_actuelle) / 1000;
+
+
+    var prefixe = "{%trans %}Back to school in {% endtrans %}";   
+
+    if (total_secondes < 0)
+
+    {
+
+        prefixe = "{% trans %}Since start of school year,it has passed{% endtrans %} "; // On modifie le préfixe si la différence est négatif
+
+        total_secondes = Math.abs(total_secondes); // On ne garde que la valeur absolue
+
+    }
+
+
+    if (total_secondes > 0)
+
+    {
+
+        var jours = Math.floor(total_secondes / (60 * 60 * 24));
+
+        var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
+
+        minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
+
+        secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
+
+
+        var et = "{% trans %}and{% endtrans %}";
+
+        var mot_jour = "{% trans %}days,{%  endtrans %}";
+
+        var mot_heure = "{% trans %}Hours,{%  endtrans %}";
+
+        var mot_minute = "{% trans %}minutes,{%  endtrans %}";
+
+        var mot_seconde = "{% trans %}seconds{%  endtrans %}";
+
+
+        if (jours == 0)
+
+        {
+
+            jours = '';
+
+            mot_jour = '';
+
+        }
+
+        else if (jours == 1)
+
+        {
+
+            mot_jour = "{% trans %}day,{%  endtrans %}";
+
+        }
+
+
+        if (heures == 0)
+
+        {
+
+            heures = '';
+
+            mot_heure = '';
+
+        }
+
+        else if (heures == 1)
+
+        {
+
+            mot_heure = "{% trans %}Hour,{%  endtrans %}";
+
+        }
+
+
+        if (minutes == 0)
+
+        {
+
+            minutes = '';
+
+            mot_minute = '';
+
+        }
+
+        else if (minutes == 1)
+
+        {
+
+            mot_minute = "{% trans %}minute,{%  endtrans %}";
+
+        }
+
+
+        if (secondes == 0)
+
+        {
+
+            secondes = '';
+
+            mot_seconde = '';
+
+            et = '';
+
+        }
+
+        else if (secondes == 1)
+
+        {
+
+            mot_seconde = "{% trans %}second{%  endtrans %}";
+
+        }
+
+
+        if (minutes == 0 && heures == 0 && jours == 0)
+
+        {
+
+            et = "";
+
+        }
+
+
+        compte_a_rebours.innerHTML ='<p class="text-center centered text-primary">'+ prefixe + '<strong class="text-lg text text-warning digit"> ' + jours + '</strong> ' + mot_jour + '<strong class="text-lg text text-primary digit"> ' + heures + ' </strong>' + mot_heure + '<strong class="text-lg text text-primary digit"> ' + minutes + '</strong> ' + mot_minute + ' ' + et + ' ' + secondes + ' ' + mot_seconde + '</p>';
+
+    }
+
+    else
+
+    {
+
+        compte_a_rebours.innerHTML = 'Compte à rebours terminé.';
+
+    }
+
+
+    var actualisation = setTimeout("compte_a_rebours();", 1000);
+
+}
+
+compte_a_rebours();
+
+</script>
+</div>
+
+
+   
+    
+  
+{% endblock %}
+   

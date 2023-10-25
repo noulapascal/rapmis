@@ -1,0 +1,91 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use AppBundle\Repository\PerformanceRepository;
+use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Students;
+
+
+/**
+ * @ORM\Entity(repositoryClass=PerformanceRepository::class)
+ */
+class Performance
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $appreciation;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Chapitre::class, inversedBy="performance", cascade={"persist", "remove"})     
+     */
+    private $chapitre;
+    /**
+     * @ORM\OneToOne(targetEntity=Students::class, inversedBy="performance", cascade={"persist", "remove"})
+     */
+    private $student;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getAppreciation(): ?string
+    {
+        return $this->appreciation;
+    }
+
+    public function setAppreciation(string $appreciation): self
+    {
+        $this->appreciation = $appreciation;
+
+        return $this;
+    }
+
+    
+    public function getChapitre(): ?Chapitre
+    {
+        return $this->chapitre;
+    }
+
+    public function setChapitre(Chapitre $chapitre): self
+    {
+        $this->chapitre = $chapitre;
+
+        return $this;
+    }
+    
+
+
+    /**
+     * Set student
+     *
+     * @param \AppBundle\Entity\Students $student
+     *
+     * @return Performance
+     */
+    public function setStudent(\AppBundle\Entity\Students $student)
+    {
+        $this->student = $student;
+
+        return $this;
+    }
+
+    /**
+     * Get student
+     *
+     * @return \AppBundle\Entity\Students
+     */
+    public function getStudent()
+    {
+        return $this->student;
+    }
+}

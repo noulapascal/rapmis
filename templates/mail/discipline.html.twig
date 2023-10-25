@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+{% block title %} <html>
+    <head><title></title></head>{% endblock %}
+
+{% block body %}
+    
+    <div class="page-content-wrapper" bgcolor="purple">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+<h1>{% trans %} Update notifications from your child on rapmis{% endtrans %}</h1>
+<h3>{% trans %} Hello dear parent of student {% endtrans %} {{ student.name }} {% trans %}  from the class of{% endtrans %} {{ student.classes.niveau }} {{ student.classes.name }}</h3>
+
+{% trans %}  We want to notify you that information about your child has been updated. There is an update on the tab  {% endtrans %}{{ 'discipline' }}<br>
+{% trans %}Your child has committed the following offense {% endtrans %}{{ discipline.motif }}
+{% trans %} Please{% endtrans %}{# example, assuming you h ave a route named "login" #}
+ <a href="https://rapmis.habitechsolution.com{{ path('students_show', { 'id': student.id }) }}">{% trans %} Click here{% endtrans %}</a>. pour plus de détails.
+
+{% trans %} Thanks{% endtrans %}
+
+{# Makes an absolute URL to the /images/logo.png file #}
+<img src="{{ asset('favicon.png') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

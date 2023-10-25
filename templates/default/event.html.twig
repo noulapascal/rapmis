@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+        {% block body %}
+            <!-- start page content -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+                            <div class=" pull-left">
+                                <div class="page-title">Events</div>
+                            </div>
+                            <ol class="breadcrumb page-breadcrumb pull-right">
+                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                </li>
+                                <li class="active">Events</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 col-sm-12">
+                            <div class="card-box">
+                                <div class="card-head">
+                                    <header>CREATION PARENT</header>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="panel-body">
+                                        <div class="clear"></div>
+                                        {{ form_start(form2) }}
+                                        {{ form_widget(form2) }}
+                                        <div class="box-footer clearfix">
+                                            <button type="submit" class="mdl-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-primary pull-right">Go to <i class="fa fa-paper-plane-o"></i></button>
+                                        </div>
+                                        {{ form_end(form2) }}                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="card-box">
+                                <div class="card-head">
+                                    <header>Draggable Events</header>
+                                </div>
+                                <div class="card-body ">
+                                    <div id="external-events">
+                                        <form class="inline-form">
+                                            <input type="text" value="" class="form-control" placeholder="Event Title..." id="event_title" />
+                                            <br/>
+                                            <a href="javascript:;" id="event_add" class="btn deepPink-bgcolor"> {% trans %}Add{% endtrans %}  Event </a>
+                                        </form>
+                                        <hr/>
+                                        <div id="event_box" class="mg-bottom-10"></div>
+                                        <label class="rt-chkbox rt-chkbox-single rt-chkbox-outline" for="drop-remove"> remove after drop
+                                            <input type="checkbox" class="group-checkable" id="drop-remove" />
+                                            <span></span>
+                                        </label>
+                                        <hr class="visible-xs" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page content -->
+        {% endblock %}
+
+

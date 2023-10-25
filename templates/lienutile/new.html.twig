@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+ <div class="page-content-wrapper">
+                <div class="page-content">
+    <h1>{% trans %}Lienutile Creation{% endtrans %}</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="{% trans %} Create{% endtrans %}" class='btn flot float-right btn-light' />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('lienutile_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+    </ul>
+                </div>
+ </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+    <h1>{% trans %}Schoolyears list{% endtrans %}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %}libelle{% endtrans %}</th>
+                <th>{% trans %}Beginningyear{% endtrans %}</th>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for schoolYear in schoolYears %}
+            <tr>
+                <td><a href="{{ path('schoolyear_show', { 'id': schoolYear.id }) }}">{{ schoolYear.id }}</a></td>
+                <td>{{ schoolYear.libelle }}</td>
+                <td>{{ schoolYear.beginningYear }}</td>
+                <td>{{ schoolYear.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('schoolyear_show', { 'id': schoolYear.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('schoolyear_edit', { 'id': schoolYear.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('schoolyear_new') }}">Create a new schoolYear</a>
+        </li>
+    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+            <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+    <h1>{% trans %}Schoolyear{% endtrans %}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <td>{{ schoolYear.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <td>{{ schoolYear.libelle }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Beginningyear{% endtrans %}</th>
+                <td>{{ schoolYear.beginningYear }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <td>{{ schoolYear.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('schoolyear_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('schoolyear_edit', { 'id': schoolYear.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+                </div>
+            </div>
+        </div>
+            </div>
+{% endblock %}

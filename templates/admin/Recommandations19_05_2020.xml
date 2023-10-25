@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <{% trans %} Programme{% endtrans %}>
+        <li> Possibilité d'ajout de fichier à traiter</li>
+        <li> </li>
+        <li> </li>
+        
+    </{% trans %} Programme{% endtrans %}>
+    <{% trans %} Gap(s){% endtrans %}>
+        <li>Ajouter les {% trans %} Gap(s){% endtrans %} de plusieurs éleves à la fois</li>
+        <li>rentrer les lecons en brute ou les choisir</li>
+        <li>Champs affihés: Matières,leçons concernées,{% trans %} Gap(s){% endtrans %} et {% trans %} Suggestion(s){% endtrans %}</li>
+    </{% trans %} Gap(s){% endtrans %}>
+    <professeur class="enseignant">
+        <li>restreindre les donnees et les pouvoirs de l'enseignant aux classes qui lui sont liées</li>
+        <li></li>
+        
+         </professeur>
+        <{% trans %} Suggestion(s){% endtrans %}>
+            <li>Lier les {% trans %} Suggestion(s){% endtrans %} au chapitre si possible et 
+            Au {% trans %} Programme{% endtrans %} sinon</li>
+            <li>Champs visibles Matieres, leçons concernées et Observations</li>
+        </{% trans %} Suggestion(s){% endtrans %}>
+        <conseil>
+            
+        </conseil>
+        
+        <homework>
+            <li>Champs à afficher : Matieres, leçon, homework, date</li>
+            <li></li>
+            <li></li>
+        </homework>
+   
+</root>

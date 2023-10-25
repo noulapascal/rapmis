@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Class{% endtrans %}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <td>{{ class.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Level{% endtrans %}</th>
+                <td>{{ class.niveau.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <td>{{ class.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}School{% endtrans %}</th>
+                <td>{{ class.etablissements.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('classes_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('classes_edit', { 'id': class.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+           <li>
+                                                            <a href="{{ path('empty_class', { 'id': class.id }) }}">
+                                                                <i class="icon-tag"></i> {% trans %} Empty the classroom{% endtrans %} Class </a>
+                                                        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    </div>
+</div>
+{% endblock %}

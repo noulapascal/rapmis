@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+ <div class="page-content-wrapper">
+                <div class="page-content">
+    <h1>{% trans %}Lienutiles list{% endtrans %}</h1>
+    <table class='table table-striped   ' id='example2'>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <th>{% trans %}Linktowebsite{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for lienUtile in lienUtiles %}
+            <tr>
+                <td><a href="{{ path('lienutile_show', { 'id': lienUtile.id }) }}">{{ lienUtile.id }}</a></td>
+                <td>{{ lienUtile.name }}</td>
+                <td>{{ lienUtile.linkToWebsite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('lienutile_show', { 'id': lienUtile.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('lienutile_edit', { 'id': lienUtile.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('lienutile_new') }}">Create a new lienUtile</a>
+        </li>
+    </ul>
+                </div>
+ </div>
+{% endblock %}

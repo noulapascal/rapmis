@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+                        <div class="page-title">
+                            <h1>{% trans %}Regsels list{% endtrans %}</h1></div>
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for regSel in regSels %}
+            <tr>
+                <td><a href="{{ path('regsel_show', { 'id': regSel.id }) }}">{{ regSel.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('regsel_show', { 'id': regSel.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('regsel_edit', { 'id': regSel.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('regsel_new') }}">Create a new regSel</a>
+        </li>
+    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

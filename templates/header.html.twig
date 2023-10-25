@@ -1,0 +1,83 @@
+{# empty Twig template #}
+        <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    {% block meta %}
+
+    <meta name="description" content="Réseau des acteurs pour l'amélioration des performances en milieu scolaire" />
+    <meta name="author" content="MOUAFO NOULA Pascal" />
+    {% endblock %}
+    <title>
+        {% block title %}
+        RapMis |  by HABITECH SOLUTIONS & SERVICES
+        {% endblock %}
+
+        </title>
+    <!-- google font -->
+    <!-- icons -->
+    
+            <link rel="icon" type="image/jpg" href="{{ asset('./archeduc.jpg') }}" />
+    
+    
+    <link href="{{ asset('assets/fonts/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/w3.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/fonts/material-design-icons/material-icon.css') }}" rel="stylesheet" type="text/css" />
+    <!-- full calendar -->
+    <link href="{{ asset('assets/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
+    <!--bootstrap -->
+    <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/summernote/summernote.css') }}" rel="stylesheet">
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/material/material.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/material_style.css') }}">
+    <!-- inbox style -->
+    <link href="{{ asset('assets/css/pages/inbox.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- data tables -->
+    <link href="{{ asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css"/>
+    <!-- Theme Styles -->
+    <link href="{{ asset('assets/css/theme/light/theme_style.css') }}" rel="stylesheet" id="rt_style_components" type="text/css" />
+    <link href="{{ asset('assets/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/theme/light/style.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/theme/light/theme-color.css') }}" rel="stylesheet" type="text/css" />
+    <!-- Owl Carousel Assets -->
+    <link href="{{ asset('assets/plugins/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/owl-carousel/owl.theme.css') }}" rel="stylesheet">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    {% block stylesheets %}
+        {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+           <link rel="stylesheet" href="{{ asset('ajax.googleapis.com/ajax/libs/bootflat.min.css') }}">#}
+
+        <style>
+            .marquee-rtl > :first-child {
+  display: inline-block;                /* modèle de boîte en ligne */
+  padding-right: 2em;                   /* un peu d'espace pour la transition */
+  padding-left: 100%;                   /* placement à droite du conteneur */
+  white-space: nowrap;                  /* pas de passage à la ligne */
+  animation: defilement-rtl 15s infinite linear;
+}
+            
+            .marquee-rtl {
+  max-width: 30em;                      /* largeur de la fenêtre */
+  margin: 1em auto 2em;
+  border: 10px solid #F0F0FF;
+  overflow: hidden;                     /* masque tout ce qui dépasse */
+  box-shadow: 0 .25em .5em #CCC,inset 0 0 1em .25em #CCC;
+}
+            
+            #owl-demo .item img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            #owl-demo2 .item {
+                margin: 3px;
+            }
+            .jumbotron {
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    {% endblock %}

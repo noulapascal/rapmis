@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+ <div class="page-content-wrapper">
+                <div class="page-content">
+    <h1>{% trans %}Lienutile{% endtrans %}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <td>{{ lienUtile.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <td>{{ lienUtile.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Linktowebsite{% endtrans %}</th>
+                <td>{{ lienUtile.linkToWebsite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('lienutile_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('lienutile_edit', { 'id': lienUtile.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+                </div>
+ </div>
+{% endblock %}

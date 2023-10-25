@@ -1,0 +1,2667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Z7aWRoY" resname="Dashboard">
+        <source>Dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="Vu_PIJV" resname="Address">
+        <source>Address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="bQqINz0" resname="Creation">
+        <source>Creation</source>
+        <target>Creation</target>
+      </trans-unit>
+      <trans-unit id="R1lJisK" resname="Create">
+        <source>Create</source>
+        <target>Create</target>
+      </trans-unit>
+      <trans-unit id="W3otbtN" resname="Back To The List">
+        <source>Back To The List</source>
+        <target>Back To The List</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Edit</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="EhVukhv" resname="Id">
+        <source>Id</source>
+        <target>Identifier</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="bYBFj9F" resname="Longitude">
+        <source>Longitude</source>
+        <target>Longitude</target>
+      </trans-unit>
+      <trans-unit id="I4pnbaR" resname="Latitude">
+        <source>Latitude</source>
+        <target>Latitude</target>
+      </trans-unit>
+      <trans-unit id="n9coxmy" resname="Add">
+        <source>Add</source>
+        <target>Add</target>
+      </trans-unit>
+      <trans-unit id="GP3VSbL" resname="New">
+        <source>New</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="3w.nmJj" resname="Print">
+        <source>Print</source>
+        <target>Print</target>
+      </trans-unit>
+      <trans-unit id="TKtw6SJ" resname="Save as PDF">
+        <source>Save as PDF</source>
+        <target>Save as PDF</target>
+      </trans-unit>
+      <trans-unit id="6a0R9pL" resname="Export TO Excel">
+        <source>Export TO Excel</source>
+        <target>Export TO Excel</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="MQCRbsv" resname="SCHOOL LIST">
+        <source>SCHOOL LIST</source>
+        <target>SCHOOL LIST</target>
+      </trans-unit>
+      <trans-unit id="u6ZMM0_" resname="Sigle">
+        <source>Sigle</source>
+        <target>Sigle</target>
+      </trans-unit>
+      <trans-unit id="aTGLDGq" resname="Joined">
+        <source>Joined</source>
+        <target>Joined</target>
+      </trans-unit>
+      <trans-unit id="Uw9Y1Nc" resname="School Type">
+        <source>School Type</source>
+        <target>School Type</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="oFEF9N0" resname="Class List">
+        <source>Class List</source>
+        <target>Class List</target>
+      </trans-unit>
+      <trans-unit id="bNLjMYV" resname="School">
+        <source>School</source>
+        <target>School</target>
+      </trans-unit>
+      <trans-unit id="oEYw74v" resname="Gender">
+        <source>Gender</source>
+        <target>Gender</target>
+      </trans-unit>
+      <trans-unit id="gOKzXIe" resname="What kind of school do you want to create">
+        <source>What kind of school do you want to create</source>
+        <target>What kind of school do you want to create</target>
+      </trans-unit>
+      <trans-unit id="wWUgiJB" resname="Please make your choice">
+        <source>Please make your choice</source>
+        <target>Please make your choice</target>
+      </trans-unit>
+      <trans-unit id="aJVadMj" resname="Nursery School">
+        <source>Nursery School</source>
+        <target>Nursery School</target>
+      </trans-unit>
+      <trans-unit id="7FoeaLq" resname="Primary School">
+        <source>Primary School</source>
+        <target>Primary School</target>
+      </trans-unit>
+      <trans-unit id="qDt.dt_" resname="High School">
+        <source>High School</source>
+        <target>High School</target>
+      </trans-unit>
+      <trans-unit id="jZmhI5t" resname="University or Higher Institute">
+        <source>University or Higher Institute</source>
+        <target>University or Higher Institute</target>
+      </trans-unit>
+      <trans-unit id="IzuABKG" resname="Send  us a message">
+        <source>Send  us a message</source>
+        <target>Send  us a message</target>
+      </trans-unit>
+      <trans-unit id="gGEQi4U" resname="Call us">
+        <source>Call us</source>
+        <target>Call us</target>
+      </trans-unit>
+      <trans-unit id="1pajW90" resname="Profile">
+        <source>Profile</source>
+        <target>Profile</target>
+      </trans-unit>
+      <trans-unit id="tRLZfny" resname="User">
+        <source>User</source>
+        <target>User</target>
+      </trans-unit>
+      <trans-unit id="EFepYE4" resname="teacher">
+        <source>teacher</source>
+        <target>teacher</target>
+      </trans-unit>
+      <trans-unit id="FWIgZUP" resname="staff">
+        <source>staff</source>
+        <target>staff</target>
+      </trans-unit>
+      <trans-unit id="nWMiwfT" resname="Login">
+        <source>Login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="AXR7hqh" resname="School Management">
+        <source>School Management</source>
+        <target>School Management</target>
+      </trans-unit>
+      <trans-unit id="FwkwXJ_" resname="Level">
+        <source>Level</source>
+        <target>Level</target>
+      </trans-unit>
+      <trans-unit id="YV5NQQ8" resname="Chef_Department">
+        <source>Chef_Department</source>
+        <target>Head of department</target>
+      </trans-unit>
+      <trans-unit id="KeX9LoP" resname="HEAD OF DEPARTMENT">
+        <source>HEAD OF DEPARTMENT</source>
+        <target>HEAD OF DEPARTMENT</target>
+      </trans-unit>
+      <trans-unit id="Xu7lLsH" resname="Teacher">
+        <source>Teacher</source>
+        <target>Teacher</target>
+      </trans-unit>
+      <trans-unit id="aJcSg4Q" resname="Subject">
+        <source>Subject</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="UwSrmOW" resname="Department">
+        <source>Department</source>
+        <target>Department</target>
+      </trans-unit>
+      <trans-unit id="us4Y3rV" resname="Class edit">
+        <source>Class edit</source>
+        <target>Class edit</target>
+      </trans-unit>
+      <trans-unit id="Tzqb0AO" resname="Class">
+        <source>Class</source>
+        <target>Class</target>
+      </trans-unit>
+      <trans-unit id="vYLPFmm" resname="Number">
+        <source>Number</source>
+        <target>Class Number or letter</target>
+      </trans-unit>
+      <trans-unit id="QdpV7_y" resname="Class Creation">
+        <source>Class Creation</source>
+        <target>Class Creation</target>
+      </trans-unit>
+      <trans-unit id="aB1CJFT" resname="Class council">
+        <source>Class council</source>
+        <target>Class council</target>
+      </trans-unit>
+      <trans-unit id=".Ct5hHk" resname="Class council decision">
+        <source>Class council decision</source>
+        <target>Class council decision</target>
+      </trans-unit>
+      <trans-unit id="c_cvFXa" resname="Trimester">
+        <source>Trimester</source>
+        <target>Trimester</target>
+      </trans-unit>
+      <trans-unit id="9FiTqHj" resname="other(s)">
+        <source>other(s)</source>
+        <target>other(s)</target>
+      </trans-unit>
+      <trans-unit id="n5OBLrL" resname="City List">
+        <source>City List</source>
+        <target>City List</target>
+      </trans-unit>
+      <trans-unit id="dwb61rP" resname="Update notifications from your child on rapmis">
+        <source>Update notifications from your child on rapmis</source>
+        <target>Update notifications from your child on rapmis</target>
+      </trans-unit>
+      <trans-unit id="W2N0qvf" resname="Hello dear parent of student">
+        <source>Hello dear parent of student</source>
+        <target>Hello dear parent of student</target>
+      </trans-unit>
+      <trans-unit id=".Bfgonp" resname="from the class of">
+        <source>from the class of</source>
+        <target>from the class of</target>
+      </trans-unit>
+      <trans-unit id="sJZtFGQ" resname="We want to notify you that information about your child has been updated. There is an update on the tab">
+        <source>We want to notify you that information about your child has been updated. There is an update on the tab</source>
+        <target>We want to notify you that information about your child has been updated. There is an update on the tab</target>
+      </trans-unit>
+      <trans-unit id="vjsHrAo" resname="Your child has committed the following offense">
+        <source>Your child has committed the following offense</source>
+        <target>Your child has committed the following offense</target>
+      </trans-unit>
+      <trans-unit id="kH1Ig81" resname="Please">
+        <source>Please</source>
+        <target>Please</target>
+      </trans-unit>
+      <trans-unit id="YtygB6C" resname="Click here">
+        <source>Click here</source>
+        <target>Click here</target>
+      </trans-unit>
+      <trans-unit id="u0e4.19" resname="Thanks">
+        <source>Thanks</source>
+        <target>Thanks</target>
+      </trans-unit>
+      <trans-unit id="vIPTZnv" resname="Subject(s)">
+        <source>Subject(s)</source>
+        <target>Subject(s)</target>
+      </trans-unit>
+      <trans-unit id="OVE3YCv" resname="Gap(s)">
+        <source>Gap(s)</source>
+        <target>Gap(s)</target>
+      </trans-unit>
+      <trans-unit id="bHxXgpG" resname="TimeTable">
+        <source>TimeTable</source>
+        <target>TimeTable</target>
+      </trans-unit>
+      <trans-unit id="aMVymBV" resname="Report Card">
+        <source>Report Card</source>
+        <target>Report Card</target>
+      </trans-unit>
+      <trans-unit id="CoHTYmb" resname="Tel">
+        <source>Tel</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="ecRCcRK" resname="General Information">
+        <source>General Information</source>
+        <target>General Information</target>
+      </trans-unit>
+      <trans-unit id="kna7TYg" resname="Additional Information">
+        <source>Additional Information</source>
+        <target>Additional Information</target>
+      </trans-unit>
+      <trans-unit id="0mZbiFE" resname="Health book">
+        <source>Health book</source>
+        <target>Health book</target>
+      </trans-unit>
+      <trans-unit id="ngRIn4C" resname="Emergency contact">
+        <source>Emergency contact</source>
+        <target>Emergency contact</target>
+      </trans-unit>
+      <trans-unit id="HltxzO2" resname="Educational follow-up">
+        <source>Educational follow-up</source>
+        <target>Educational follow-up</target>
+      </trans-unit>
+      <trans-unit id="60xOI5E" resname="Date of birth">
+        <source>Date of birth</source>
+        <target>Date of birth</target>
+      </trans-unit>
+      <trans-unit id="He0x9dP" resname="Place of birth">
+        <source>Place of birth</source>
+        <target>Place of birth</target>
+      </trans-unit>
+      <trans-unit id="rVERIQz" resname="Admission date">
+        <source>Admission date</source>
+        <target>Admission date</target>
+      </trans-unit>
+      <trans-unit id="Dq1QP_G" resname="Recrutement path">
+        <source>Recrutement path</source>
+        <target>Recrutement path</target>
+      </trans-unit>
+      <trans-unit id="d1Jtko." resname="File study">
+        <source>File study</source>
+        <target>File study</target>
+      </trans-unit>
+      <trans-unit id="UYZTUwR" resname="Cycle">
+        <source>Cycle</source>
+        <target>Cycle</target>
+      </trans-unit>
+      <trans-unit id="qCleCP9" resname="Series">
+        <source>Series</source>
+        <target>Series</target>
+      </trans-unit>
+      <trans-unit id="KxFVj3I" resname="Last school attended">
+        <source>Last school attended</source>
+        <target>Last school attended</target>
+      </trans-unit>
+      <trans-unit id="H1rhdpe" resname="Class passing average">
+        <source>Class passing average</source>
+        <target>Class passing average</target>
+      </trans-unit>
+      <trans-unit id="pBMNfSw" resname="Rank">
+        <source>Rank</source>
+        <target>Rank</target>
+      </trans-unit>
+      <trans-unit id="_z.1g.J" resname="Name of the last HeadMaster">
+        <source>Name of the last HeadMaster</source>
+        <target>Name of the last HeadMaster</target>
+      </trans-unit>
+      <trans-unit id="pC8kFDU" resname="Additional information">
+        <source>Additional information</source>
+        <target>Additional information</target>
+      </trans-unit>
+      <trans-unit id="vMH7rmz" resname="Father">
+        <source>Father</source>
+        <target>Father</target>
+      </trans-unit>
+      <trans-unit id="hmBcrH8" resname="Mother">
+        <source>Mother</source>
+        <target>Mother</target>
+      </trans-unit>
+      <trans-unit id="6OeDnMG" resname="Tutor(s)">
+        <source>Tutor(s)</source>
+        <target>Tutor(s)</target>
+      </trans-unit>
+      <trans-unit id="F6GHWLR" resname="tutor(s)">
+        <source>tutor(s)</source>
+        <target>tutor(s)</target>
+      </trans-unit>
+      <trans-unit id="abG6hfm" resname="parents' Residence(s)">
+        <source>parents' Residence(s)</source>
+        <target>parents' Residence(s)</target>
+      </trans-unit>
+      <trans-unit id="xxaS1WY" resname="Other(s) brother(s) or sister(s)">
+        <source>Other(s) brother(s) or sister(s)</source>
+        <target>Other(s) brother(s) or sister(s)</target>
+      </trans-unit>
+      <trans-unit id="Kc6Eijl" resname="Student report card">
+        <source>Student report card</source>
+        <target>Student report card</target>
+      </trans-unit>
+      <trans-unit id="DNJ5s6b" resname="Blood group">
+        <source>Blood group</source>
+        <target>Blood group</target>
+      </trans-unit>
+      <trans-unit id="QorZ5hM" resname="Specific pathology">
+        <source>Specific pathology</source>
+        <target>Specific pathology</target>
+      </trans-unit>
+      <trans-unit id="jAd1iA0" resname="Food allergy">
+        <source>Food allergy</source>
+        <target>Food allergy</target>
+      </trans-unit>
+      <trans-unit id="asjz2N6" resname="Drug allergy">
+        <source>Drug allergy</source>
+        <target>Drug allergy</target>
+      </trans-unit>
+      <trans-unit id="wPIwZt3" resname="Exemption">
+        <source>Exemption</source>
+        <target>Exemption</target>
+      </trans-unit>
+      <trans-unit id="b8UB8G7" resname="Family Doctor">
+        <source>Family Doctor</source>
+        <target>Family Doctor</target>
+      </trans-unit>
+      <trans-unit id="FFct2r8" resname="Family insurance">
+        <source>Family insurance</source>
+        <target>Family insurance</target>
+      </trans-unit>
+      <trans-unit id="g_JmctH" resname="Approved hospital">
+        <source>Approved hospital</source>
+        <target>Approved hospital</target>
+      </trans-unit>
+      <trans-unit id="P5vCTjd" resname="Rhesus">
+        <source>Rhesus</source>
+        <target>Rhesus</target>
+      </trans-unit>
+      <trans-unit id=".YNBFbq" resname="Unfit for sport">
+        <source>Unfit for sport</source>
+        <target>Unfit for sport</target>
+      </trans-unit>
+      <trans-unit id="ie0d4gh" resname="Proof of Unfit">
+        <source>Proof of Unfit</source>
+        <target>Proof of Unfit</target>
+      </trans-unit>
+      <trans-unit id="FENdOIS" resname="Assessment Name">
+        <source>Assessment Name</source>
+        <target>Assessment Name</target>
+      </trans-unit>
+      <trans-unit id="GnUpqxT" resname="Subjects">
+        <source>Subjects</source>
+        <target>Subjects</target>
+      </trans-unit>
+      <trans-unit id="ucKzUVt" resname="CLass average">
+        <source>CLass average</source>
+        <target>CLass average</target>
+      </trans-unit>
+      <trans-unit id="NV958p1" resname="Comments">
+        <source>Comments</source>
+        <target>Comments</target>
+      </trans-unit>
+      <trans-unit id="2Hg_9v5" resname="Discipline Information">
+        <source>Discipline Information</source>
+        <target>Discipline Information</target>
+      </trans-unit>
+      <trans-unit id="6q5QHmh" resname="Indiscipline type">
+        <source>Indiscipline type</source>
+        <target>Indiscipline type</target>
+      </trans-unit>
+      <trans-unit id="mcQKtAW" resname="Date">
+        <source>Date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="O4rTjBC" resname="Student Distinction">
+        <source>Student Distinction</source>
+        <target>Student Distinction</target>
+      </trans-unit>
+      <trans-unit id="EGoPOF1" resname="Appreciation">
+        <source>Appreciation</source>
+        <target>Appreciation</target>
+      </trans-unit>
+      <trans-unit id="4TcXeu." resname="Report card">
+        <source>Report card</source>
+        <target>Report card</target>
+      </trans-unit>
+      <trans-unit id="MFVqeji" resname="Programme">
+        <source>Programme</source>
+        <target>Program</target>
+      </trans-unit>
+      <trans-unit id="Rqc9vBt" resname="Suggestion(s)">
+        <source>Suggestion(s)</source>
+        <target>Suggestion(s)</target>
+      </trans-unit>
+      <trans-unit id="Jrm8iqA" resname="Homework(s)">
+        <source>Homework(s)</source>
+        <target>Homework(s)</target>
+      </trans-unit>
+      <trans-unit id="0gXDNnr" resname="Theme label">
+        <source>Theme label</source>
+        <target>Theme label</target>
+      </trans-unit>
+      <trans-unit id="yXVIWbn" resname="Chapter or lesson">
+        <source>Chapter or lesson</source>
+        <target>Chapter or lesson</target>
+      </trans-unit>
+      <trans-unit id="tf1FHd5" resname="Class management">
+        <source>Class management</source>
+        <target>Class management</target>
+      </trans-unit>
+      <trans-unit id="s1URC1b" resname="All  Students">
+        <source>All  Students</source>
+        <target>All  Students</target>
+      </trans-unit>
+      <trans-unit id="KhZNVBV" resname="Student">
+        <source>Student</source>
+        <target>Student</target>
+      </trans-unit>
+      <trans-unit id="jE8RfsE" resname="Whatsapp">
+        <source>Whatsapp</source>
+        <target>Whatsapp</target>
+      </trans-unit>
+      <trans-unit id="jElZCvP" resname="All  Notifications">
+        <source>All  Notifications</source>
+        <target>All  Notifications</target>
+      </trans-unit>
+      <trans-unit id="9B04OnP" resname="All  Messages">
+        <source>All  Messages</source>
+        <target>All  Messages</target>
+      </trans-unit>
+      <trans-unit id="ZYsgBTb" resname="All  Teachers">
+        <source>All  Teachers</source>
+        <target>All  Teachers</target>
+      </trans-unit>
+      <trans-unit id="F7RgjUP" resname="Titular Teacher">
+        <source>Titular Teacher</source>
+        <target>Titular Teacher</target>
+      </trans-unit>
+      <trans-unit id="nZWEKGg" resname="About Teacher">
+        <source>About Teacher</source>
+        <target>About Teacher</target>
+      </trans-unit>
+      <trans-unit id="m4..5rG" resname="All  Classes">
+        <source>All  Classes</source>
+        <target>All  Classes</target>
+      </trans-unit>
+      <trans-unit id="mneBBHV" resname="All  staff">
+        <source>All  staff</source>
+        <target>All  staff</target>
+      </trans-unit>
+      <trans-unit id="2XK0Y3E" resname="All  Courses">
+        <source>All  Courses</source>
+        <target>All  Courses</target>
+      </trans-unit>
+      <trans-unit id="BfAo9Do" resname="All Level">
+        <source>All Level</source>
+        <target>All Level</target>
+      </trans-unit>
+      <trans-unit id="cbQ.otj" resname="All  Departments">
+        <source>All  Departments</source>
+        <target>All  Departments</target>
+      </trans-unit>
+      <trans-unit id="pSrOQg8" resname="All">
+        <source>All</source>
+        <target>All</target>
+      </trans-unit>
+      <trans-unit id="G9NtXkg" resname="All  Holiday">
+        <source>All  Holiday</source>
+        <target>All  Holiday</target>
+      </trans-unit>
+      <trans-unit id="RWOEyzN" resname="All notifications">
+        <source>All notifications</source>
+        <target>All notifications</target>
+      </trans-unit>
+      <trans-unit id="m2sYIN0" resname="All Classes">
+        <source>All Classes</source>
+        <target>All Classes</target>
+      </trans-unit>
+      <trans-unit id="4h7_ag9" resname="All Courses">
+        <source>All Courses</source>
+        <target>All Courses</target>
+      </trans-unit>
+      <trans-unit id="f8NkBzZ" resname="All Departments">
+        <source>All Departments</source>
+        <target>All Departments</target>
+      </trans-unit>
+      <trans-unit id="J9WgLj1" resname="All Holiday">
+        <source>All Holiday</source>
+        <target>All Holiday</target>
+      </trans-unit>
+      <trans-unit id="qiahL3Z" resname="All  Library Assets">
+        <source>All  Library Assets</source>
+        <target>All  Library Assets</target>
+      </trans-unit>
+      <trans-unit id="Fe1Efxe" resname="All  Staff">
+        <source>All  Staff</source>
+        <target>All  Staff</target>
+      </trans-unit>
+      <trans-unit id="21wbw7t" resname="Edit Chapitre">
+        <source>Edit Chapitre</source>
+        <target>Edit Chapter</target>
+      </trans-unit>
+      <trans-unit id="7ejFcHz" resname="Chapitre index">
+        <source>Chapitre index</source>
+        <target>Chapter index</target>
+      </trans-unit>
+      <trans-unit id="M20Wmv7" resname="Objectifs">
+        <source>Objectifs</source>
+        <target>Goals</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id="Q_1zw47" resname="Create new Chapitre">
+        <source>Create new Chapitre</source>
+        <target>Create new Chapter</target>
+      </trans-unit>
+      <trans-unit id="Sh9cZDz" resname="Chapitre">
+        <source>Chapitre</source>
+        <target>Chapter</target>
+      </trans-unit>
+      <trans-unit id="XQYvKPN" resname="Edit City">
+        <source>Edit City</source>
+        <target>Edit City</target>
+      </trans-unit>
+      <trans-unit id="g9PAkIL" resname="City index">
+        <source>City index</source>
+        <target>nameCity index</target>
+      </trans-unit>
+      <trans-unit id="tsp5M5s" resname="Create new City">
+        <source>Create new City</source>
+        <target>nameCreate new City</target>
+      </trans-unit>
+      <trans-unit id=".DP3Mkb" resname="City">
+        <source>City</source>
+        <target>City</target>
+      </trans-unit>
+      <trans-unit id="YWsHuOJ" resname="Edit School">
+        <source>Edit School</source>
+        <target>Edit School</target>
+      </trans-unit>
+      <trans-unit id="89E9mQZ" resname="Etablissements index">
+        <source>Etablissements index</source>
+        <target>School index</target>
+      </trans-unit>
+      <trans-unit id="zydUoRd" resname="DateCreation">
+        <source>DateCreation</source>
+        <target>Creation Date</target>
+      </trans-unit>
+      <trans-unit id="lxuXQjW" resname="Filename">
+        <source>Filename</source>
+        <target>Filename</target>
+      </trans-unit>
+      <trans-unit id="j5Bw1YW" resname="Create new Etablissements">
+        <source>Create new Etablissements</source>
+        <target>Create new School </target>
+      </trans-unit>
+      <trans-unit id="aYhejxW" resname="Etablissements">
+        <source>Etablissements</source>
+        <target>School</target>
+      </trans-unit>
+      <trans-unit id="s8VlJnl" resname="Edit Matieres">
+        <source>Edit Matieres</source>
+        <target>Edit Subject</target>
+      </trans-unit>
+      <trans-unit id="JCHFgab" resname="Matieres index">
+        <source>Matieres index</source>
+        <target>Subject index</target>
+      </trans-unit>
+      <trans-unit id="p0jxZQy" resname="Intitule">
+        <source>Intitule</source>
+        <target>Label</target>
+      </trans-unit>
+      <trans-unit id="Y64xtEW" resname="Create new Matieres">
+        <source>Create new Matieres</source>
+        <target>Create new Subject</target>
+      </trans-unit>
+      <trans-unit id="hql7KPD" resname="Matieres">
+        <source>Matieres</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="NAgibT6" resname="Edit Students">
+        <source>Edit Students</source>
+        <target>Edit Student</target>
+      </trans-unit>
+      <trans-unit id="LHfPnJO" resname="Students index">
+        <source>Students index</source>
+        <target>Students index</target>
+      </trans-unit>
+      <trans-unit id="lsJZgEW" resname="FirstName">
+        <source>FirstName</source>
+        <target>First Name</target>
+      </trans-unit>
+      <trans-unit id="L0Ne_Xw" resname="Pere">
+        <source>Pere</source>
+        <target>Father</target>
+      </trans-unit>
+      <trans-unit id="rnvMYHD" resname="Mere">
+        <source>Mere</source>
+        <target>Mother</target>
+      </trans-unit>
+      <trans-unit id="65rkuUL" resname="Tuteur">
+        <source>Tuteur</source>
+        <target>Guardian</target>
+      </trans-unit>
+      <trans-unit id="9Ord4ps" resname="Matricule">
+        <source>Matricule</source>
+        <target>Matricule</target>
+      </trans-unit>
+      <trans-unit id="mPs7ygy" resname="TelPere">
+        <source>TelPere</source>
+        <target>Father's phone</target>
+      </trans-unit>
+      <trans-unit id="usaJ.nd" resname="TelMere">
+        <source>TelMere</source>
+        <target>Mother's phone</target>
+      </trans-unit>
+      <trans-unit id="03S6QIn" resname="TelTuteur">
+        <source>TelTuteur</source>
+        <target>Guardian's phone</target>
+      </trans-unit>
+      <trans-unit id="AkX1FSh" resname="EmailPere">
+        <source>EmailPere</source>
+        <target>Father's Email</target>
+      </trans-unit>
+      <trans-unit id="dRSyxEh" resname="EmailMere">
+        <source>EmailMere</source>
+        <target>Mother Email</target>
+      </trans-unit>
+      <trans-unit id="ILPIStf" resname="EmailTuteur">
+        <source>EmailTuteur</source>
+        <target>Guardian Email</target>
+      </trans-unit>
+      <trans-unit id="UJzc.Gw" resname="ProfPere">
+        <source>ProfPere</source>
+        <target>Teacher for Father</target>
+      </trans-unit>
+      <trans-unit id="zQtPZGP" resname="ProfMere">
+        <source>ProfMere</source>
+        <target>Teacher for Mother</target>
+      </trans-unit>
+      <trans-unit id="biK3iMb" resname="ProfTuteur">
+        <source>ProfTuteur</source>
+        <target>Teacher for Guardian</target>
+      </trans-unit>
+      <trans-unit id="yfMpnIV" resname="ResidenceParents">
+        <source>ResidenceParents</source>
+        <target>Parent's Residence</target>
+      </trans-unit>
+      <trans-unit id="WngxoJb" resname="Proche1">
+        <source>Proche1</source>
+        <target>Kinship 1</target>
+      </trans-unit>
+      <trans-unit id="1t9xS0g" resname="TelProche1">
+        <source>TelProche1</source>
+        <target>Kinship 1 phone number</target>
+      </trans-unit>
+      <trans-unit id="smiJc1L" resname="Proche2">
+        <source>Proche2</source>
+        <target>Kinship 2</target>
+      </trans-unit>
+      <trans-unit id="1v3y22b" resname="TelProche2">
+        <source>TelProche2</source>
+        <target>Kinship 2 phone number</target>
+      </trans-unit>
+      <trans-unit id="TanCAYb" resname="Proche3">
+        <source>Proche3</source>
+        <target>Kinship 3</target>
+      </trans-unit>
+      <trans-unit id="WOtNcK4" resname="TelProche3">
+        <source>TelProche3</source>
+        <target>Kinship 3 phone number</target>
+      </trans-unit>
+      <trans-unit id="w2NPLt7" resname="Nouveau">
+        <source>Nouveau</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="javKDWz" resname="Redoublant">
+        <source>Redoublant</source>
+        <target>Repeating</target>
+      </trans-unit>
+      <trans-unit id=".4nKkCt" resname="EtudeDossier">
+        <source>EtudeDossier</source>
+        <target>File study</target>
+      </trans-unit>
+      <trans-unit id="WSV6feN" resname="DateDeNaissance">
+        <source>DateDeNaissance</source>
+        <target>Birth's date</target>
+      </trans-unit>
+      <trans-unit id="ljG2rmj" resname="AnneeScolaire">
+        <source>AnneeScolaire</source>
+        <target>school year</target>
+      </trans-unit>
+      <trans-unit id="vdPNtZ9" resname="LieuDeNaissance">
+        <source>LieuDeNaissance</source>
+        <target>Birth's place</target>
+      </trans-unit>
+      <trans-unit id="q3dDpK2" resname="Serie">
+        <source>Serie</source>
+        <target>Series</target>
+      </trans-unit>
+      <trans-unit id="R2T9.sI" resname="MoyPassageClasse">
+        <source>MoyPassageClasse</source>
+        <target>Passing class Average </target>
+      </trans-unit>
+      <trans-unit id="cYbgK8c" resname="Rang">
+        <source>Rang</source>
+        <target>Rank</target>
+      </trans-unit>
+      <trans-unit id="lWPbPap" resname="LastSchool">
+        <source>LastSchool</source>
+        <target>Last School</target>
+      </trans-unit>
+      <trans-unit id="xy5cYaa" resname="NameChefLastSchool">
+        <source>NameChefLastSchool</source>
+        <target>HeadMaster of Last school</target>
+      </trans-unit>
+      <trans-unit id="rtER.gz" resname="Sexe">
+        <source>Sexe</source>
+        <target>Gender</target>
+      </trans-unit>
+      <trans-unit id="YNrlobl" resname="DateCreate">
+        <source>DateCreate</source>
+        <target>CreationDate</target>
+      </trans-unit>
+      <trans-unit id="I9AWIhS" resname="GroupeSanguin">
+        <source>GroupeSanguin</source>
+        <target>Blood group</target>
+      </trans-unit>
+      <trans-unit id="0j6micX" resname="PathogieParticuliere">
+        <source>PathogieParticuliere</source>
+        <target>Specific pathology</target>
+      </trans-unit>
+      <trans-unit id="xdDmRPw" resname="AllergieAlimentaire">
+        <source>AllergieAlimentaire</source>
+        <target>Food allergy</target>
+      </trans-unit>
+      <trans-unit id="jnQ227Q" resname="AllergieMedicamenteuse">
+        <source>AllergieMedicamenteuse</source>
+        <target>Drug Allergy</target>
+      </trans-unit>
+      <trans-unit id="nnhTl1a" resname="Dispense">
+        <source>Dispense</source>
+        <target>Dispense</target>
+      </trans-unit>
+      <trans-unit id="C5QQwlT" resname="MedecinFamiliale">
+        <source>MedecinFamiliale</source>
+        <target>Family doctor</target>
+      </trans-unit>
+      <trans-unit id="60Scqd4" resname="TelMedecinFamiliale">
+        <source>TelMedecinFamiliale</source>
+        <target>Family doctor phone</target>
+      </trans-unit>
+      <trans-unit id="XsWgPXJ" resname="AssuranceFamille">
+        <source>AssuranceFamille</source>
+        <target>Family Insurance</target>
+      </trans-unit>
+      <trans-unit id="wYQypue" resname="HopitalAgree">
+        <source>HopitalAgree</source>
+        <target>Accredited Hospital</target>
+      </trans-unit>
+      <trans-unit id="e6nNsR_" resname="Inaptitude">
+        <source>Inaptitude</source>
+        <target>Sport's Unfit</target>
+      </trans-unit>
+      <trans-unit id="IFqaifu" resname="Inapte">
+        <source>Inapte</source>
+        <target>Unfit</target>
+      </trans-unit>
+      <trans-unit id="YsGuxP." resname="Responsable">
+        <source>Responsable</source>
+        <target>Responsable</target>
+      </trans-unit>
+      <trans-unit id="MAbCEQf" resname="TelResponsable">
+        <source>TelResponsable</source>
+        <target>Responsable's phone</target>
+      </trans-unit>
+      <trans-unit id="aX30R4J" resname="EmailResponsable">
+        <source>EmailResponsable</source>
+        <target>Responsable's mail</target>
+      </trans-unit>
+      <trans-unit id="fRNEqkB" resname="Create new Students">
+        <source>Create new Students</source>
+        <target>Create new Student</target>
+      </trans-unit>
+      <trans-unit id="Khm7eN4" resname="Students">
+        <source>Students</source>
+        <target>Student(s)</target>
+      </trans-unit>
+      <trans-unit id="ytFB1yx" resname="Edit Subdivision">
+        <source>Edit Subdivision</source>
+        <target>Edit Subdivision</target>
+      </trans-unit>
+      <trans-unit id="dvALv4R" resname="Subdivision index">
+        <source>Subdivision index</source>
+        <target>Subdivision index</target>
+      </trans-unit>
+      <trans-unit id="MEFEqgj" resname="Create new Subdivision">
+        <source>Create new Subdivision</source>
+        <target>Create new Subdivision</target>
+      </trans-unit>
+      <trans-unit id="GRsAFN8" resname="Subdivision">
+        <source>Subdivision</source>
+        <target>Subdivision</target>
+      </trans-unit>
+      <trans-unit id="NpIT4ds" resname="Edit Teacher">
+        <source>Edit Teacher</source>
+        <target>Edit Teacher</target>
+      </trans-unit>
+      <trans-unit id="cK_CX8V" resname="Teacher index">
+        <source>Teacher index</source>
+        <target>Teacher index</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="QgQzey." resname="DateDeCreation">
+        <source>DateDeCreation</source>
+        <target>Creation date</target>
+      </trans-unit>
+      <trans-unit id="a7zi7E2" resname="Create new Teacher">
+        <source>Create new Teacher</source>
+        <target>Create new Teacher</target>
+      </trans-unit>
+      <trans-unit id="ayQ5Amm" resname="Edit Contact">
+        <source>Edit Contact</source>
+        <target>Edit Contact</target>
+      </trans-unit>
+      <trans-unit id="oclMM.E" resname="Contact index">
+        <source>Contact index</source>
+        <target>Contact index</target>
+      </trans-unit>
+      <trans-unit id="bvE49N3" resname="NumeroDeTelephone">
+        <source>NumeroDeTelephone</source>
+        <target>Phone number</target>
+      </trans-unit>
+      <trans-unit id="6JYfuP0" resname="AdresseMail">
+        <source>AdresseMail</source>
+        <target>Mail address</target>
+      </trans-unit>
+      <trans-unit id="L3dmip3" resname="Message">
+        <source>Message</source>
+        <target>Message</target>
+      </trans-unit>
+      <trans-unit id="SN0pYmA" resname="Create new Contact">
+        <source>Create new Contact</source>
+        <target>Create new Contact</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="FXOdb6X" resname="Edit DecisionConseilDeClasse">
+        <source>Edit DecisionConseilDeClasse</source>
+        <target>Edit Class council decision</target>
+      </trans-unit>
+      <trans-unit id="mtpohsw" resname="DecisionConseilDeClasse index">
+        <source>DecisionConseilDeClasse index</source>
+        <target>Class council index</target>
+      </trans-unit>
+      <trans-unit id="ikO56py" resname="Absence">
+        <source>Absence</source>
+        <target>Absence</target>
+      </trans-unit>
+      <trans-unit id="sMybctE" resname="Bulletin">
+        <source>Bulletin</source>
+        <target>Report card</target>
+      </trans-unit>
+      <trans-unit id="QlqO0u9" resname="Exclusion">
+        <source>Exclusion</source>
+        <target>Exclusion</target>
+      </trans-unit>
+      <trans-unit id="_.YKlWd" resname="DeuxiemeSequence">
+        <source>DeuxiemeSequence</source>
+        <target>Second Sequence</target>
+      </trans-unit>
+      <trans-unit id="7QoycQ5" resname="PremiereSequence">
+        <source>PremiereSequence</source>
+        <target>First Sequence</target>
+      </trans-unit>
+      <trans-unit id="IR6Ab2z" resname="Trimestre">
+        <source>Trimestre</source>
+        <target>Trimester</target>
+      </trans-unit>
+      <trans-unit id="DvuM2jc" resname="Create new DecisionConseilDeClasse">
+        <source>Create new DecisionConseilDeClasse</source>
+        <target>Create new Class council decision</target>
+      </trans-unit>
+      <trans-unit id="wcNnYM." resname="DecisionConseilDeClasse">
+        <source>DecisionConseilDeClasse</source>
+        <target>Class council decision</target>
+      </trans-unit>
+      <trans-unit id="ftZgeQm" resname="Edit Department">
+        <source>Edit Department</source>
+        <target>Edit Department</target>
+      </trans-unit>
+      <trans-unit id="CVNTPCy" resname="Department index">
+        <source>Department index</source>
+        <target>Department index</target>
+      </trans-unit>
+      <trans-unit id="DXtd1_9" resname="ChefLieu">
+        <source>ChefLieu</source>
+        <target>Chief Town</target>
+      </trans-unit>
+      <trans-unit id="L.Apn6E" resname="Create new Department">
+        <source>Create new Department</source>
+        <target>Create new Department</target>
+      </trans-unit>
+      <trans-unit id="XhPxU4I" resname="Edit Devoir">
+        <source>Edit Devoir</source>
+        <target>Edit Devoir</target>
+      </trans-unit>
+      <trans-unit id="xQAEr7B" resname="Devoir index">
+        <source>Devoir index</source>
+        <target>Homework  index</target>
+      </trans-unit>
+      <trans-unit id="DZLvwyb" resname="Homework">
+        <source>Homework</source>
+        <target>Homework</target>
+      </trans-unit>
+      <trans-unit id="M7XfpkQ" resname="GivenOn">
+        <source>GivenOn</source>
+        <target>Given On</target>
+      </trans-unit>
+      <trans-unit id="yYdS5jw" resname="DoBefore">
+        <source>DoBefore</source>
+        <target>Do Before</target>
+      </trans-unit>
+      <trans-unit id="Zfxtfhe" resname="UpdateAt">
+        <source>UpdateAt</source>
+        <target>Update At</target>
+      </trans-unit>
+      <trans-unit id="pT19bCN" resname="Create new Devoir">
+        <source>Create new Devoir</source>
+        <target>Create new Homework</target>
+      </trans-unit>
+      <trans-unit id="Fjajyxo" resname="Devoir">
+        <source>Devoir</source>
+        <target>Homework</target>
+      </trans-unit>
+      <trans-unit id="1fKFuMp" resname="Edit Lacunes">
+        <source>Edit Lacunes</source>
+        <target>Edit Gap</target>
+      </trans-unit>
+      <trans-unit id="yRznGet" resname="Lacunes index">
+        <source>Lacunes index</source>
+        <target>Gaps index</target>
+      </trans-unit>
+      <trans-unit id="gmmXFxu" resname="Libelle">
+        <source>Libelle</source>
+        <target>Label</target>
+      </trans-unit>
+      <trans-unit id="FsHWAfx" resname="Suggestions">
+        <source>Suggestions</source>
+        <target>Suggestions</target>
+      </trans-unit>
+      <trans-unit id="_HVYhpv" resname="Observations">
+        <source>Observations</source>
+        <target>Remarks</target>
+      </trans-unit>
+      <trans-unit id="Pf1DLjw" resname="Create new Lacunes">
+        <source>Create new Lacunes</source>
+        <target>Create new Gaps</target>
+      </trans-unit>
+      <trans-unit id="JX1j.VN" resname="Lacunes">
+        <source>Lacunes</source>
+        <target>Gap(s)</target>
+      </trans-unit>
+      <trans-unit id="oqsQKQE" resname="Edit LienUtile">
+        <source>Edit LienUtile</source>
+        <target>Edit Useful Link</target>
+      </trans-unit>
+      <trans-unit id="BzKmUKb" resname="LienUtile index">
+        <source>LienUtile index</source>
+        <target>Useful link index</target>
+      </trans-unit>
+      <trans-unit id="QamdIQ7" resname="LinkToWebsite">
+        <source>LinkToWebsite</source>
+        <target>Link To Website</target>
+      </trans-unit>
+      <trans-unit id="uhmr64b" resname="Create new LienUtile">
+        <source>Create new LienUtile</source>
+        <target>Create new Useful link</target>
+      </trans-unit>
+      <trans-unit id="fDjnaB0" resname="LienUtile">
+        <source>LienUtile</source>
+        <target>Useful link</target>
+      </trans-unit>
+      <trans-unit id="VSFpuLp" resname="Edit Niveau">
+        <source>Edit Niveau</source>
+        <target>Edit Level</target>
+      </trans-unit>
+      <trans-unit id="vWA2mh_" resname="Niveau index">
+        <source>Niveau index</source>
+        <target>Level index</target>
+      </trans-unit>
+      <trans-unit id="y8vnQxC" resname="TypeEtablissement">
+        <source>TypeEtablissement</source>
+        <target>School type</target>
+      </trans-unit>
+      <trans-unit id="CYkWZti" resname="Create new Niveau">
+        <source>Create new Niveau</source>
+        <target>Create new Level</target>
+      </trans-unit>
+      <trans-unit id="K1EE9fw" resname="Niveau">
+        <source>Niveau</source>
+        <target>Level</target>
+      </trans-unit>
+      <trans-unit id="i5Iqvzg" resname="Edit Programme">
+        <source>Edit Programme</source>
+        <target>Edit Program</target>
+      </trans-unit>
+      <trans-unit id="oSi9wC8" resname="Programme index">
+        <source>Programme index</source>
+        <target>Program index</target>
+      </trans-unit>
+      <trans-unit id="Lu5_xcJ" resname="Create new Programme">
+        <source>Create new Programme</source>
+        <target>Create new Program</target>
+      </trans-unit>
+      <trans-unit id="el9epep" resname="Edit Regions">
+        <source>Edit Regions</source>
+        <target>Edit Region</target>
+      </trans-unit>
+      <trans-unit id="jUdTEXN" resname="Regions index">
+        <source>Regions index</source>
+        <target>Regions index</target>
+      </trans-unit>
+      <trans-unit id="lp1EBOC" resname="Create new Regions">
+        <source>Create new Regions</source>
+        <target>Create new Region</target>
+      </trans-unit>
+      <trans-unit id="YQxl2EU" resname="Regions">
+        <source>Regions</source>
+        <target>Region(s)</target>
+      </trans-unit>
+      <trans-unit id="6KiDUxl" resname="Edit User">
+        <source>Edit User</source>
+        <target>Edit User</target>
+      </trans-unit>
+      <trans-unit id="ezuwN7u" resname="User index">
+        <source>User index</source>
+        <target>User index</target>
+      </trans-unit>
+      <trans-unit id="47ienTP" resname="Username">
+        <source>Username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="wlM3BVR" resname="Roles">
+        <source>Roles</source>
+        <target>Roles</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="zX3aSUS" resname="PhoneNumber">
+        <source>PhoneNumber</source>
+        <target>Phone Number</target>
+      </trans-unit>
+      <trans-unit id="qKBuSla" resname="Zone">
+        <source>Zone</source>
+        <target>Zone</target>
+      </trans-unit>
+      <trans-unit id="ksHN.fT" resname="Enabled">
+        <source>Enabled</source>
+        <target>Enabled</target>
+      </trans-unit>
+      <trans-unit id="yj3GEvR" resname="Locale">
+        <source>Locale</source>
+        <target>Locale</target>
+      </trans-unit>
+      <trans-unit id="g36VwXo" resname="Create new User">
+        <source>Create new User</source>
+        <target>Create new User</target>
+      </trans-unit>
+      <trans-unit id="LIzfY_J" resname="Numero de telephone">
+        <source>Numero de telephone</source>
+        <target>Phone number</target>
+      </trans-unit>
+      <trans-unit id="Rkn0tV4" resname="Date de naissance">
+        <source>Date de naissance</source>
+        <target>Birth's date</target>
+      </trans-unit>
+      <trans-unit id="sB0RYun" resname="Adresse mail">
+        <source>Adresse mail</source>
+        <target>Mail address</target>
+      </trans-unit>
+      <trans-unit id="YrdnRIm" resname="Place of ">
+        <source>Place of </source>
+        <target>Numero de téléphone</target>
+      </trans-unit>
+      <trans-unit id="OCN9GcW" resname="Addresses list">
+        <source>Addresses list</source>
+        <target>Addresses list</target>
+      </trans-unit>
+      <trans-unit id="jxBteJB" resname="Bp">
+        <source>Bp</source>
+        <target>P.O BOX</target>
+      </trans-unit>
+      <trans-unit id="ANhKtG5" resname="Fax">
+        <source>Fax</source>
+        <target>Fax</target>
+      </trans-unit>
+      <trans-unit id="CzMdlHd" resname="City edit">
+        <source>City edit</source>
+        <target>City edit</target>
+      </trans-unit>
+      <trans-unit id="NKcaxfC" resname="City Creation">
+        <source>City Creation</source>
+        <target>City Creation</target>
+      </trans-unit>
+      <trans-unit id="3kA6i" resname="Department edit">
+        <source>Department edit</source>
+        <target>Department edit</target>
+      </trans-unit>
+      <trans-unit id="6riQtKN" resname="&lt;label class=&quot;rt-chkbox rt-chkbox-single rt-chkbox-outline&quot;&gt;&#10;                                                &lt;input type=&quot;checkbox&quot; class=&quot;group-checkable&quot; data-set=&quot;#sample_1 .checkboxes&quot; /&gt;&#10;                                                &lt;span&gt;&lt;/span&gt;&#10;                                            &lt;/label&gt;">
+        <source>&lt;label class="rt-chkbox rt-chkbox-single rt-chkbox-outline"&gt;
+                                                &lt;input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /&gt;
+                                                &lt;span&gt;&lt;/span&gt;
+                                            &lt;/label&gt;</source>
+        <target><![CDATA[<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+                                                <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                                <span></span>
+                                            </label>]]></target>
+      </trans-unit>
+      <trans-unit id="3zwj2yZ" resname="Cheflieu">
+        <source>Cheflieu</source>
+        <target>Chieftown</target>
+      </trans-unit>
+      <trans-unit id="yBd6Dg2" resname="Department Creation">
+        <source>Department Creation</source>
+        <target>Department Creation</target>
+      </trans-unit>
+      <trans-unit id="JkvNwpp" resname="Etablissement edit">
+        <source>Etablissement edit</source>
+        <target>School edit</target>
+      </trans-unit>
+      <trans-unit id="jvRB2Fn" resname="&lt;label class=&quot;rt-chkbox rt-chkbox-single rt-chkbox-outline&quot;&gt;&#10;                                            &lt;input type=&quot;checkbox&quot; class=&quot;group-checkable&quot; data-set=&quot;#sample_1 .checkboxes&quot; /&gt;&#10;                                            &lt;span&gt;&lt;/span&gt;&#10;                                        &lt;/label&gt;">
+        <source>&lt;label class="rt-chkbox rt-chkbox-single rt-chkbox-outline"&gt;
+                                            &lt;input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /&gt;
+                                            &lt;span&gt;&lt;/span&gt;
+                                        &lt;/label&gt;</source>
+        <target><![CDATA[<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+                                            <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                            <span></span>
+                                        </label>]]></target>
+      </trans-unit>
+      <trans-unit id="GvXTulY" resname="Etablissement Creation">
+        <source>Etablissement Creation</source>
+        <target>Add school</target>
+      </trans-unit>
+      <trans-unit id="7Su4UMO" resname="Etablissement">
+        <source>Etablissement</source>
+        <target>School</target>
+      </trans-unit>
+      <trans-unit id="dvt6wyt" resname="Datecreation">
+        <source>Datecreation</source>
+        <target>Creation date</target>
+      </trans-unit>
+      <trans-unit id="1wfcLxk" resname="Logo">
+        <source>Logo</source>
+        <target>Logo</target>
+      </trans-unit>
+      <trans-unit id="cC75Ie0" resname="First name">
+        <source>First name</source>
+        <target>First name</target>
+      </trans-unit>
+      <trans-unit id="YixzKTk" resname="Admission Date">
+        <source>Admission Date</source>
+        <target>Admission Date</target>
+      </trans-unit>
+      <trans-unit id="ZM.xMZ0" resname="Action">
+        <source>Action</source>
+        <target>Action</target>
+      </trans-unit>
+      <trans-unit id="yaF4k6a" resname="Student Creation">
+        <source>Student Creation</source>
+        <target>Student Creation</target>
+      </trans-unit>
+      <trans-unit id="FHW7tDc" resname="Region edit">
+        <source>Region edit</source>
+        <target>Region edit</target>
+      </trans-unit>
+      <trans-unit id="wLl4xTi" resname="Choisir un departement">
+        <source>Choisir un departement</source>
+        <target>choose a department</target>
+      </trans-unit>
+      <trans-unit id="b0CQlwt" resname="Region Creation">
+        <source>Region Creation</source>
+        <target>Region Creation</target>
+      </trans-unit>
+      <trans-unit id="06AI7xM" resname="Region">
+        <source>Region</source>
+        <target>Region</target>
+      </trans-unit>
+      <trans-unit id="dFgZn_l" resname="French">
+        <source>French</source>
+        <target>French</target>
+      </trans-unit>
+      <trans-unit id="uhGL9.y" resname="English">
+        <source>English</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="oy1oNLz" resname="Create User for subdivision">
+        <source>Create User for subdivision</source>
+        <target>Create User for subdivision</target>
+      </trans-unit>
+      <trans-unit id="6PQzZvI" resname="Create User for deparment">
+        <source>Create User for deparment</source>
+        <target>Create User for deparment</target>
+      </trans-unit>
+      <trans-unit id="jUDlIH." resname="Create User for region">
+        <source>Create User for region</source>
+        <target>Create User for region</target>
+      </trans-unit>
+      <trans-unit id="_jV3tfY" resname="Create User for all state">
+        <source>Create User for all state</source>
+        <target>Create User for all state</target>
+      </trans-unit>
+      <trans-unit id="obFNuUQ" resname="Discipline">
+        <source>Discipline</source>
+        <target>Discipline</target>
+      </trans-unit>
+      <trans-unit id="90yjZEf" resname="Disciplinary Note">
+        <source>Disciplinary Note</source>
+        <target>Disciplinary Note</target>
+      </trans-unit>
+      <trans-unit id="zn4ENPg" resname="Back to school in">
+        <source>Back to school in</source>
+        <target>Back to school in</target>
+      </trans-unit>
+      <trans-unit id="3j8lQbw" resname="Since start of school year,it has passed">
+        <source>Since start of school year,it has passed</source>
+        <target>Since start of school year,it has passed</target>
+      </trans-unit>
+      <trans-unit id="YgERG4O" resname="and">
+        <source>and</source>
+        <target>and</target>
+      </trans-unit>
+      <trans-unit id="1JSMDGU" resname="days,">
+        <source>days,</source>
+        <target>days,</target>
+      </trans-unit>
+      <trans-unit id="pOGCV1L" resname="Hours,">
+        <source>Hours,</source>
+        <target>Hours,</target>
+      </trans-unit>
+      <trans-unit id="DlhBSEq" resname="minutes,">
+        <source>minutes,</source>
+        <target>minutes,</target>
+      </trans-unit>
+      <trans-unit id="WfAG1jv" resname="seconds">
+        <source>seconds</source>
+        <target>seconds</target>
+      </trans-unit>
+      <trans-unit id="NrXUqlm" resname="day,">
+        <source>day,</source>
+        <target>day,</target>
+      </trans-unit>
+      <trans-unit id="5rh5IhZ" resname="Hour,">
+        <source>Hour,</source>
+        <target>Hour,</target>
+      </trans-unit>
+      <trans-unit id="3FXXezZ" resname="minute,">
+        <source>minute,</source>
+        <target>minute,</target>
+      </trans-unit>
+      <trans-unit id="FjZ6rLZ" resname="second">
+        <source>second</source>
+        <target>second</target>
+      </trans-unit>
+      <trans-unit id="7mJQcKt" resname="Epreuve edit">
+        <source>Epreuve edit</source>
+        <target>Epreuve edit</target>
+      </trans-unit>
+      <trans-unit id="_G9WN7D" resname="Eleves">
+        <source>Eleves</source>
+        <target>Eleves</target>
+      </trans-unit>
+      <trans-unit id="aGQoADV" resname="Nombre d'heures d'absence">
+        <source>Nombre d'heures d'absence</source>
+        <target>Absences(Hours)</target>
+      </trans-unit>
+      <trans-unit id="lAhE2mH" resname="Epreuve">
+        <source>Epreuve</source>
+        <target>Test</target>
+      </trans-unit>
+      <trans-unit id="vkn21rL" resname="appreciation">
+        <source>appreciation</source>
+        <target>appreciation</target>
+      </trans-unit>
+      <trans-unit id="v8WmtFt" resname="observations">
+        <source>observations</source>
+        <target>observations</target>
+      </trans-unit>
+      <trans-unit id="9vCWpPt" resname="Contact edit">
+        <source>Contact edit</source>
+        <target>Contact edit</target>
+      </trans-unit>
+      <trans-unit id="mTL3tJw" resname="Contacts list">
+        <source>Contacts list</source>
+        <target>Contacts list</target>
+      </trans-unit>
+      <trans-unit id="ssEkU20" resname="Nom">
+        <source>Nom</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="o9bc353" resname="Numerodetelephone">
+        <source>Numerodetelephone</source>
+        <target>Phone Number</target>
+      </trans-unit>
+      <trans-unit id="IFCfHY7" resname="Adressemail">
+        <source>Adressemail</source>
+        <target>Adresse mail</target>
+      </trans-unit>
+      <trans-unit id="zqluIiZ" resname="Contact Creation">
+        <source>Contact Creation</source>
+        <target>Contact Creation</target>
+      </trans-unit>
+      <trans-unit id="6lKPYYx" resname="Country edit">
+        <source>Country edit</source>
+        <target>Country edit</target>
+      </trans-unit>
+      <trans-unit id="eUTTviZ" resname="Capital city">
+        <source>Capital city</source>
+        <target>Capital city</target>
+      </trans-unit>
+      <trans-unit id="Nz73tPk" resname="Country Creation">
+        <source>Country Creation</source>
+        <target>Country Creation</target>
+      </trans-unit>
+      <trans-unit id="cB0CHQj" resname="Country">
+        <source>Country</source>
+        <target>Country</target>
+      </trans-unit>
+      <trans-unit id="Ghz3kle" resname="Capital">
+        <source>Capital</source>
+        <target>Capital</target>
+      </trans-unit>
+      <trans-unit id="3ueAjdQ" resname="Download Subject">
+        <source>Download Subject</source>
+        <target>Download Subject</target>
+      </trans-unit>
+      <trans-unit id="1q2ef9B" resname="Download a test or a course at the level of your choice">
+        <source>Download a test or a course at the level of your choice</source>
+        <target>Download a test or a course at the level of your choice</target>
+      </trans-unit>
+      <trans-unit id="RgeRv2w" resname="A rich content regularly updated by teachers from partner schools">
+        <source>A rich content regularly updated by teachers from partner schools</source>
+        <target>A rich content regularly updated by teachers from partner schools</target>
+      </trans-unit>
+      <trans-unit id="LBXd75w" resname="Useful Link">
+        <source>Useful Link</source>
+        <target>Useful Link</target>
+      </trans-unit>
+      <trans-unit id="hctw4PU" resname="School Partners">
+        <source>School Partners</source>
+        <target>School Partners</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>name</target>
+      </trans-unit>
+      <trans-unit id="5CM4msZ" resname="Adresses">
+        <source>Adresses</source>
+        <target>Adresses</target>
+      </trans-unit>
+      <trans-unit id="wOUkOKd" resname="test de l'admin">
+        <source>test de l'admin</source>
+        <target>admin test</target>
+      </trans-unit>
+      <trans-unit id="yrqb8To" resname="test du client">
+        <source>test du client</source>
+        <target>client test</target>
+      </trans-unit>
+      <trans-unit id="Xvlvnf7" resname="Nom de l'élève">
+        <source>Nom de l'élève</source>
+        <target>Student name</target>
+      </trans-unit>
+      <trans-unit id="..Dg_7e" resname="libelle de la distinction">
+        <source>libelle de la distinction</source>
+        <target>Distinction label</target>
+      </trans-unit>
+      <trans-unit id="O.d5OTd" resname="Distinction Creation">
+        <source>Distinction Creation</source>
+        <target>Distinction Creation</target>
+      </trans-unit>
+      <trans-unit id="zAEAMGz" resname="Enseignants_titulaire edit">
+        <source>Enseignants_titulaire edit</source>
+        <target>Tenured Teacher Edition</target>
+      </trans-unit>
+      <trans-unit id="WsZkoGU" resname="Enseignants_titulaire Creation">
+        <source>Enseignants_titulaire Creation</source>
+        <target>Add tenured Teacher</target>
+      </trans-unit>
+      <trans-unit id="c9sDojX" resname="Enseignants_titulaire">
+        <source>Enseignants_titulaire</source>
+        <target>Tenured Teacher</target>
+      </trans-unit>
+      <trans-unit id="9XcvcRc" resname="Matière">
+        <source>Matière</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id=".sGf49V" resname="Classe">
+        <source>Classe</source>
+        <target>Classe</target>
+      </trans-unit>
+      <trans-unit id="CKIcKfY" resname="Intitulé">
+        <source>Intitulé</source>
+        <target>Label</target>
+      </trans-unit>
+      <trans-unit id="uq3fcPt" resname="Type">
+        <source>Type</source>
+        <target>Type</target>
+      </trans-unit>
+      <trans-unit id="Ue19Jd8" resname="Events_extracurricular edit">
+        <source>Events_extracurricular edit</source>
+        <target>Events extracurricular edit</target>
+      </trans-unit>
+      <trans-unit id="dnx6pIQ" resname="Events_extracurriculars list">
+        <source>Events_extracurriculars list</source>
+        <target>Events extracurriculars list</target>
+      </trans-unit>
+      <trans-unit id="FHNqLrn" resname="Role">
+        <source>Role</source>
+        <target>Role</target>
+      </trans-unit>
+      <trans-unit id="3YREhQd" resname="Prime">
+        <source>Prime</source>
+        <target>Prime</target>
+      </trans-unit>
+      <trans-unit id="WHGCMeD" resname="Events_extracurricular Creation">
+        <source>Events_extracurricular Creation</source>
+        <target>Events extracurricular Creation</target>
+      </trans-unit>
+      <trans-unit id="TEa88M9" resname="Events_extracurricular">
+        <source>Events_extracurricular</source>
+        <target>Event extracurricular</target>
+      </trans-unit>
+      <trans-unit id=".qLTsy." resname="Facteurs_disciplinaire edit">
+        <source>Facteurs_disciplinaire edit</source>
+        <target>Facteurs_disciplinaire edit</target>
+      </trans-unit>
+      <trans-unit id="If1USXY" resname="Facteurs_disciplinaires list">
+        <source>Facteurs_disciplinaires list</source>
+        <target>Discipline list</target>
+      </trans-unit>
+      <trans-unit id="yJrI8NQ" resname="Motif">
+        <source>Motif</source>
+        <target>Cause</target>
+      </trans-unit>
+      <trans-unit id="am_TaWk" resname="Compteur">
+        <source>Compteur</source>
+        <target>Counter</target>
+      </trans-unit>
+      <trans-unit id="Rr_7CT0" resname="Datemotif">
+        <source>Datemotif</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="BzImb6C" resname="Creation of disciplinary factors">
+        <source>Creation of disciplinary factors</source>
+        <target>Creation of disciplinary factors</target>
+      </trans-unit>
+      <trans-unit id="nYI5sDo" resname="Facteurs_disciplinaire">
+        <source>Facteurs_disciplinaire</source>
+        <target>Disciplinary factor</target>
+      </trans-unit>
+      <trans-unit id="lY669cE" resname="Fiche_parent edit">
+        <source>Fiche_parent edit</source>
+        <target>Edit parent</target>
+      </trans-unit>
+      <trans-unit id="_nKmk9W" resname="Fiche_parents list">
+        <source>Fiche_parents list</source>
+        <target>Parent list</target>
+      </trans-unit>
+      <trans-unit id="uwTchnu" resname="NomfirstNamepere">
+        <source>NomfirstNamepere</source>
+        <target>Name and first Name of father</target>
+      </trans-unit>
+      <trans-unit id="E6FQ4.0" resname="Profession">
+        <source>Profession</source>
+        <target>Profession</target>
+      </trans-unit>
+      <trans-unit id="orV63aa" resname="Residence">
+        <source>Residence</source>
+        <target>Residence</target>
+      </trans-unit>
+      <trans-unit id="MR5kc5_" resname="Medecinfamille">
+        <source>Medecinfamille</source>
+        <target>Family doctor</target>
+      </trans-unit>
+      <trans-unit id="0QWuEmE" resname="Telpere">
+        <source>Telpere</source>
+        <target>Father's Phone</target>
+      </trans-unit>
+      <trans-unit id="QIDpLnI" resname="Emailpere">
+        <source>Emailpere</source>
+        <target>Faher Email</target>
+      </trans-unit>
+      <trans-unit id="8ac_IgS" resname="Signature">
+        <source>Signature</source>
+        <target>Signature</target>
+      </trans-unit>
+      <trans-unit id="IbHPOQm" resname="NomfirstNamemere">
+        <source>NomfirstNamemere</source>
+        <target>Name and firstName of Mother</target>
+      </trans-unit>
+      <trans-unit id="Z63Go03" resname="Professionmere">
+        <source>Professionmere</source>
+        <target>Mother's Profession</target>
+      </trans-unit>
+      <trans-unit id="p7Tk3Pt" resname="Assurancepere">
+        <source>Assurancepere</source>
+        <target>Father insurance</target>
+      </trans-unit>
+      <trans-unit id="SvafV8B" resname="Assurancemere">
+        <source>Assurancemere</source>
+        <target>Mother insurance</target>
+      </trans-unit>
+      <trans-unit id="nQxWnQX" resname="Residencemere">
+        <source>Residencemere</source>
+        <target>Mother Residence </target>
+      </trans-unit>
+      <trans-unit id="112efAi" resname="Medecinfamillemere">
+        <source>Medecinfamillemere</source>
+        <target>Mother Family doctor</target>
+      </trans-unit>
+      <trans-unit id="_0WYtdu" resname="Telmere">
+        <source>Telmere</source>
+        <target>Mother Pnone</target>
+      </trans-unit>
+      <trans-unit id="UacVNEY" resname="Emailmere">
+        <source>Emailmere</source>
+        <target>Mother Email</target>
+      </trans-unit>
+      <trans-unit id="5esTFeb" resname="Signaturemere">
+        <source>Signaturemere</source>
+        <target>Mother's Signature</target>
+      </trans-unit>
+      <trans-unit id="JitpSA_" resname="NomfirstNametuteur">
+        <source>NomfirstNametuteur</source>
+        <target>Name and first name of the guardian</target>
+      </trans-unit>
+      <trans-unit id="iSuDeNA" resname="Professiontuteur">
+        <source>Professiontuteur</source>
+        <target>Guardian Profession</target>
+      </trans-unit>
+      <trans-unit id="igqcOZb" resname="Assurancetuteur">
+        <source>Assurancetuteur</source>
+        <target>Guardian Insurance</target>
+      </trans-unit>
+      <trans-unit id="8YWtemi" resname="Residencetuteur">
+        <source>Residencetuteur</source>
+        <target>Guardian Residence</target>
+      </trans-unit>
+      <trans-unit id="V2XfKSd" resname="Medecinfamilletuteur">
+        <source>Medecinfamilletuteur</source>
+        <target>Guardian's Family doctor</target>
+      </trans-unit>
+      <trans-unit id="HQQV8Ou" resname="Teltuteur">
+        <source>Teltuteur</source>
+        <target>Guardian phone number</target>
+      </trans-unit>
+      <trans-unit id="mHg5rRR" resname="Emailtuteur">
+        <source>Emailtuteur</source>
+        <target>Guardian Email</target>
+      </trans-unit>
+      <trans-unit id="hjwJxgj" resname="Signaturetuteur">
+        <source>Signaturetuteur</source>
+        <target>Guardian Signature</target>
+      </trans-unit>
+      <trans-unit id="etFb13A" resname="Frerenom1">
+        <source>Frerenom1</source>
+        <target>Brother name 1</target>
+      </trans-unit>
+      <trans-unit id="Z5Ugl4I" resname="Frerenom2">
+        <source>Frerenom2</source>
+        <target>Brother name 2</target>
+      </trans-unit>
+      <trans-unit id="0I57xNm" resname="Frerenom3">
+        <source>Frerenom3</source>
+        <target>Brother name 3</target>
+      </trans-unit>
+      <trans-unit id="KhoxmJq" resname="Telfrere1">
+        <source>Telfrere1</source>
+        <target>Brother phone 1</target>
+      </trans-unit>
+      <trans-unit id="HzvPvo0" resname="Telfrere2">
+        <source>Telfrere2</source>
+        <target>Brother phone 2</target>
+      </trans-unit>
+      <trans-unit id="2SVKjX3" resname="Telfrere3">
+        <source>Telfrere3</source>
+        <target>Brother phone 3</target>
+      </trans-unit>
+      <trans-unit id="bix8iNT" resname="Mailfrere1">
+        <source>Mailfrere1</source>
+        <target>Brother Email 1</target>
+      </trans-unit>
+      <trans-unit id="WtPwtgV" resname="Mailfrere2">
+        <source>Mailfrere2</source>
+        <target>Brother Email 2</target>
+      </trans-unit>
+      <trans-unit id="iNn01Ti" resname="Mailfrere3">
+        <source>Mailfrere3</source>
+        <target>Brother Email 3</target>
+      </trans-unit>
+      <trans-unit id="yhA5xLK" resname="Niveauscolairefrere1">
+        <source>Niveauscolairefrere1</source>
+        <target>School level Brother 1</target>
+      </trans-unit>
+      <trans-unit id="ikEDbL9" resname="Niveauscolairefrere2">
+        <source>Niveauscolairefrere2</source>
+        <target>School level Brother 2</target>
+      </trans-unit>
+      <trans-unit id="dfSZjIk" resname="Niveauscolairefrere3">
+        <source>Niveauscolairefrere3</source>
+        <target>School level Brother 3</target>
+      </trans-unit>
+      <trans-unit id="K4jh07Y" resname="Professionfrere1">
+        <source>Professionfrere1</source>
+        <target>Profession Brother 1</target>
+      </trans-unit>
+      <trans-unit id="Pmn1m2r" resname="Professionfrere2">
+        <source>Professionfrere2</source>
+        <target>Profession Brother 2</target>
+      </trans-unit>
+      <trans-unit id="PgJwB8I" resname="Professionfrere3">
+        <source>Professionfrere3</source>
+        <target>Profession Brother 3</target>
+      </trans-unit>
+      <trans-unit id="yEopH9Q" resname="Fiche_parent Creation">
+        <source>Fiche_parent Creation</source>
+        <target>Add Parent</target>
+      </trans-unit>
+      <trans-unit id="t0.JBjA" resname="Fiche_parent">
+        <source>Fiche_parent</source>
+        <target>Parent sheet</target>
+      </trans-unit>
+      <trans-unit id="eMjNpWc" resname="Student edit">
+        <source>Student edit</source>
+        <target>Student edit</target>
+      </trans-unit>
+      <trans-unit id="ipqR2Xb" resname="Matières">
+        <source>Matières</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="4r2f1AU" resname="Roll No">
+        <source>Roll No</source>
+        <target>Roll No</target>
+      </trans-unit>
+      <trans-unit id="MqsBj9O" resname="Graph">
+        <source>Graph</source>
+        <target>Graph</target>
+      </trans-unit>
+      <trans-unit id="HqRCoTS" resname="No">
+        <source>No</source>
+        <target>No</target>
+      </trans-unit>
+      <trans-unit id="vMFHuAD" resname="Assigned Professor">
+        <source>Assigned Professor</source>
+        <target>Assigned Teacher</target>
+      </trans-unit>
+      <trans-unit id="Xg.zoSU" resname="Date Of Admit">
+        <source>Date Of Admit</source>
+        <target>Admission date</target>
+      </trans-unit>
+      <trans-unit id="bYBIbMM" resname="Fees">
+        <source>Fees</source>
+        <target>Fees</target>
+      </trans-unit>
+      <trans-unit id="UmVugQT" resname="Branch">
+        <source>Branch</source>
+        <target>Branch</target>
+      </trans-unit>
+      <trans-unit id="dYlYR1S" resname="Lienutile edit">
+        <source>Lienutile edit</source>
+        <target>Useful link edit</target>
+      </trans-unit>
+      <trans-unit id="GkrzIIg" resname="Lienutiles list">
+        <source>Lienutiles list</source>
+        <target>Useful link list</target>
+      </trans-unit>
+      <trans-unit id="80VuDNR" resname="Linktowebsite">
+        <source>Linktowebsite</source>
+        <target>Link to website</target>
+      </trans-unit>
+      <trans-unit id="C4RyzKm" resname="Lienutile Creation">
+        <source>Lienutile Creation</source>
+        <target>Add Useful link </target>
+      </trans-unit>
+      <trans-unit id="flHr85H" resname="Lienutile">
+        <source>Lienutile</source>
+        <target>Useful link</target>
+      </trans-unit>
+      <trans-unit id="XIUCMC8" resname="Rapmis">
+        <source>Rapmis</source>
+        <target>Rapmis</target>
+      </trans-unit>
+      <trans-unit id="OSe2XOs" resname="Matiere edit">
+        <source>Matiere edit</source>
+        <target>Subject edit</target>
+      </trans-unit>
+      <trans-unit id="UATC4p7" resname="Matiere Creation">
+        <source>Matiere Creation</source>
+        <target>Add Subject</target>
+      </trans-unit>
+      <trans-unit id="HW3AtFT" resname="Matiere">
+        <source>Matiere</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="KGuqpgB" resname="Media edit">
+        <source>Media edit</source>
+        <target>Media edit</target>
+      </trans-unit>
+      <trans-unit id="jFoKmK1" resname="Media list">
+        <source>Media list</source>
+        <target>Media list</target>
+      </trans-unit>
+      <trans-unit id="01cXXP6" resname="Media">
+        <source>Media</source>
+        <target>Media</target>
+      </trans-unit>
+      <trans-unit id="rV3_Wlb" resname="Module edit">
+        <source>Module edit</source>
+        <target>Module edit</target>
+      </trans-unit>
+      <trans-unit id="xN3vBjE" resname="Modules list">
+        <source>Modules list</source>
+        <target>Modules list</target>
+      </trans-unit>
+      <trans-unit id="xuatYh1" resname="Coeff">
+        <source>Coeff</source>
+        <target>Coefficient</target>
+      </trans-unit>
+      <trans-unit id="8UgiSuR" resname="Module">
+        <source>Module</source>
+        <target>Module</target>
+      </trans-unit>
+      <trans-unit id="eRZNJWz" resname="Watch over your sleep">
+        <source>Watch over your sleep</source>
+        <target>Watch over your sleep</target>
+      </trans-unit>
+      <trans-unit id="ngpFclg" resname="Dear students,  Pleaseget enough sleep, Olympic form ensures better academic performance">
+        <source>Dear students,  Pleaseget enough sleep, Olympic form ensures better academic performance</source>
+        <target>Dear students,  Pleaseget enough sleep, Olympic form ensures better academic performance</target>
+      </trans-unit>
+      <trans-unit id="ZZV3S3N" resname="Promote yours strengths">
+        <source>Promote yours strengths</source>
+        <target>Promote yours strengths</target>
+      </trans-unit>
+      <trans-unit id="5wU.gnz" resname="Don't get stuck on a bad school result, a mistake is an opportunity to learn">
+        <source>Don't get stuck on a bad school result, a mistake is an opportunity to learn</source>
+        <target>Don't get stuck on a bad school result, a mistake is an opportunity to learn</target>
+      </trans-unit>
+      <trans-unit id="7cxQqXM" resname="Have a plan">
+        <source>Have a plan</source>
+        <target>Have a plan</target>
+      </trans-unit>
+      <trans-unit id="qyugmCS" resname="At the beginning of each year, identify common mistakes and threatening subjects &#10;                    from the past year&#10;.">
+        <source>At the beginning of each year, identify common mistakes and threatening subjects 
+                    from the past year
+.</source>
+        <target>At the beginning of each year, identify common mistakes and threatening subjects 
+                    from the past year
+.</target>
+      </trans-unit>
+      <trans-unit id="3Ha1_tu" resname="Detect negative behavior">
+        <source>Detect negative behavior</source>
+        <target>Detect negative behavior</target>
+      </trans-unit>
+      <trans-unit id="QWSNagI" resname="We must prioritize dialogue with our loved ones. They are  the most likely &#10;                    to inform us when we get lost.">
+        <source>We must prioritize dialogue with our loved ones. They are  the most likely 
+                    to inform us when we get lost.</source>
+        <target>We must prioritize dialogue with our loved ones. They are  the most likely 
+                    to inform us when we get lost.</target>
+      </trans-unit>
+      <trans-unit id="yLM7t1X" resname="Finding the right balance">
+        <source>Finding the right balance</source>
+        <target>Finding the right balance</target>
+      </trans-unit>
+      <trans-unit id="FtzTMKi" resname="It's important to ask for help, but don't fall into the trap of letting others do your homework and homework.">
+        <source>It's important to ask for help, but don't fall into the trap of letting others do your homework and homework.</source>
+        <target>It's important to ask for help, but don't fall into the trap of letting others do your homework and homework.</target>
+      </trans-unit>
+      <trans-unit id="p90S7WB" resname="Learn to imagine and find solutions.">
+        <source>Learn to imagine and find solutions.</source>
+        <target>Learn to imagine and find solutions.</target>
+      </trans-unit>
+      <trans-unit id="8Bmy58T" resname="Find your rhythm">
+        <source>Find your rhythm</source>
+        <target>Find your rhythm</target>
+      </trans-unit>
+      <trans-unit id="ITo_o.a" resname="Finding your own pace of work is fundamental for a learner.">
+        <source>Finding your own pace of work is fundamental for a learner.</source>
+        <target>Finding your own pace of work is fundamental for a learner.</target>
+      </trans-unit>
+      <trans-unit id="QF4ldv2" resname="Your success depends at least as much on your attitude as on your skills.">
+        <source>Your success depends at least as much on your attitude as on your skills.</source>
+        <target>Your success depends at least as much on your attitude as on your skills.</target>
+      </trans-unit>
+      <trans-unit id="wMYtvMh" resname="Promote studies">
+        <source>Promote studies</source>
+        <target>Promote studies</target>
+      </trans-unit>
+      <trans-unit id="KC0T0y3" resname="Do You want to be a doctor? Read biology">
+        <source>Do You want to be a doctor? Read biology</source>
+        <target>Do You want to be a doctor? Read biology</target>
+      </trans-unit>
+      <trans-unit id="VUZz1Dy" resname="You want to become a reporter? Review your language.">
+        <source>You want to become a reporter? Review your language.</source>
+        <target>You want to become a reporter? Review your language.</target>
+      </trans-unit>
+      <trans-unit id="g9bajlX" resname="You want to become an astronaut? Do not mess with Physic,">
+        <source>You want to become an astronaut? Do not mess with Physic,</source>
+        <target>You want to become an astronaut? Do not mess with Physic,</target>
+      </trans-unit>
+      <trans-unit id="EbKTzh0" resname="Do you want to become scientist? Do not give up,Einstein">
+        <source>Do you want to become scientist? Do not give up,Einstein</source>
+        <target>Do you want to become scientist? Do not give up,Einstein</target>
+      </trans-unit>
+      <trans-unit id="SWeZCKj" resname="Set clear goals">
+        <source>Set clear goals</source>
+        <target>Set clear goals</target>
+      </trans-unit>
+      <trans-unit id="SJXZo_2" resname="Get fifteen out of twenty in dictation">
+        <source>Get fifteen out of twenty in dictation</source>
+        <target>Get fifteen out of twenty in dictation</target>
+      </trans-unit>
+      <trans-unit id="MqlY21B" resname="Understand the equations in one week.">
+        <source>Understand the equations in one week.</source>
+        <target>Understand the equations in one week.</target>
+      </trans-unit>
+      <trans-unit id="cRweuBH" resname="Increase your level in physic">
+        <source>Increase your level in physic</source>
+        <target>Increase your level in physic</target>
+      </trans-unit>
+      <trans-unit id="jnGOY2D" resname="Do not forget that : You are the Boss.">
+        <source>Do not forget that : You are the Boss.</source>
+        <target>Do not forget that : You are the Boss.</target>
+      </trans-unit>
+      <trans-unit id="_R6WjLG" resname="ALL THE INFORMATION ABOUT YOUR CHILD WHEREVER YOU ARE">
+        <source>ALL THE INFORMATION ABOUT YOUR CHILD WHEREVER YOU ARE</source>
+        <target>ALL THE INFORMATION ABOUT YOUR CHILD WHEREVER YOU ARE</target>
+      </trans-unit>
+      <trans-unit id="Lfaf5Zm" resname="YOU ARE INFORMED ON THE GAPS TO HELP THE CHILD">
+        <source>YOU ARE INFORMED ON THE GAPS TO HELP THE CHILD</source>
+        <target>YOU ARE INFORMED ON THE GAPS TO HELP THE CHILD</target>
+      </trans-unit>
+      <trans-unit id="BQ_89wa" resname="YOU ARE INFORMED OF CHILD'S DISCIPLINE">
+        <source>YOU ARE INFORMED OF CHILD'S DISCIPLINE</source>
+        <target>YOU ARE INFORMED OF CHILD'S DISCIPLINE</target>
+      </trans-unit>
+      <trans-unit id="FfGmMVB" resname="YOU WILL BE INFORMED OF THE ARRIVING TIME IN CLASS">
+        <source>YOU WILL BE INFORMED OF THE ARRIVING TIME IN CLASS</source>
+        <target>YOU WILL BE INFORMED OF THE ARRIVING TIME IN CLASS</target>
+      </trans-unit>
+      <trans-unit id="lFpcIhg" resname="EXCHANGE PLATFORM WITH SCHOOL">
+        <source>EXCHANGE PLATFORM WITH SCHOOL</source>
+        <target>EXCHANGE PLATFORM WITH SCHOOL</target>
+      </trans-unit>
+      <trans-unit id="QspEgQu" resname="ALL SCHOOL LIFE OF UOUR CHILD IN ONE CLICK">
+        <source>ALL SCHOOL LIFE OF UOUR CHILD IN ONE CLICK</source>
+        <target>ALL SCHOOL LIFE OF YOUR CHILD IN ONE CLICK</target>
+      </trans-unit>
+      <trans-unit id="kGF5qLI" resname="YOU WILL BE INFORMED OF THE LESSONS THE CHILD MISSING">
+        <source>YOU WILL BE INFORMED OF THE LESSONS THE CHILD MISSING</source>
+        <target>YOU WILL BE INFORMED OF THE LESSONS THE CHILD MISSING</target>
+      </trans-unit>
+      <trans-unit id="TtVWCTR" resname="YOU WILL BE INFORMED ABOUT LESSON AND AVERAGE">
+        <source>YOU WILL BE INFORMED ABOUT LESSON AND AVERAGE</source>
+        <target>YOU WILL BE INFORMED ABOUT LESSON AND AVERAGE</target>
+      </trans-unit>
+      <trans-unit id="TSmfO8l" resname="BETTER CONTROL OF YOUR CHILD">
+        <source>BETTER CONTROL OF YOUR CHILD</source>
+        <target>BETTER CONTROL OF YOUR CHILD</target>
+      </trans-unit>
+      <trans-unit id="w2lz020" resname="YOU WILL BE INFORMED ON EVERYTHING">
+        <source>YOU WILL BE INFORMED ON EVERYTHING</source>
+        <target>YOU WILL BE INFORMED ON EVERYTHING</target>
+      </trans-unit>
+      <trans-unit id="2QgJrs5" resname="Possibility for the parent, the guardian, or the student himself to consult for all the information">
+        <source>Possibility for the parent, the guardian, or the student himself to consult for all the information</source>
+        <target>Possibility for the parent, the guardian, or the student himself to consult for all the information</target>
+      </trans-unit>
+      <trans-unit id="HkAQadR" resname="Daily information about the child and sent by sms and / or email">
+        <source>Daily information about the child and sent by sms and / or email</source>
+        <target>Daily information about the child and sent by sms and / or email</target>
+      </trans-unit>
+      <trans-unit id="8IBZ0Em" resname="Information on specific shortcomings to guide follow-up action at home">
+        <source>Information on specific shortcomings to guide follow-up action at home</source>
+        <target>Information on specific shortcomings to guide follow-up action at home</target>
+      </trans-unit>
+      <trans-unit id="XaBCXyh" resname="Information by phone call">
+        <source>Information by phone call</source>
+        <target>Information by phone call</target>
+      </trans-unit>
+      <trans-unit id="BphLrdf" resname="Integration of all information related to the discipline,&#10;         grades, school activities, attendance, homework not done,&#10;         active participation in classes, extracurricular and extracurricular activities, etc.…">
+        <source>Integration of all information related to the discipline,
+         grades, school activities, attendance, homework not done,
+         active participation in classes, extracurricular and extracurricular activities, etc.…</source>
+        <target>Integration of all information related to the discipline,
+         grades, school activities, attendance, homework not done,
+         active participation in classes, extracurricular and extracurricular activities, etc.…</target>
+      </trans-unit>
+      <trans-unit id="f.H5tzE" resname="Availability of a reliable information sheet of the student  obtained&#10;         directly from parents.">
+        <source>Availability of a reliable information sheet of the student  obtained
+         directly from parents.</source>
+        <target>Availability of a reliable information sheet of the student  obtained
+         directly from parents.</target>
+      </trans-unit>
+      <trans-unit id="nmnu3OE" resname="Possibility, for teachers and other administrative staff,&#10;             to make the tests and corrections available, free of charge,&#10;             with the possibility for students to consult easily and free of charge">
+        <source>Possibility, for teachers and other administrative staff,
+             to make the tests and corrections available, free of charge,
+             with the possibility for students to consult easily and free of charge</source>
+        <target>Possibility, for teachers and other administrative staff,
+             to make the tests and corrections available, free of charge,
+             with the possibility for students to consult easily and free of charge</target>
+      </trans-unit>
+      <trans-unit id="8vNFyxr" resname="Availability of the child's up-to-date medical record for&#10;         allow rapid support in the event of a problem">
+        <source>Availability of the child's up-to-date medical record for
+         allow rapid support in the event of a problem</source>
+        <target>Availability of the child's up-to-date medical record for
+         allow rapid support in the event of a problem</target>
+      </trans-unit>
+      <trans-unit id="O9k9k0o" resname="Possibility of retrospectively entering student files">
+        <source>Possibility of retrospectively entering student files</source>
+        <target>Possibility of retrospectively entering student files</target>
+      </trans-unit>
+      <trans-unit id="MzXrhJj" resname="136/5000&#10;Section reserved for advice, useful websites,&#10;         civic instruction, etc ... that students can consult for free">
+        <source>136/5000
+Section reserved for advice, useful websites,
+         civic instruction, etc ... that students can consult for free</source>
+        <target>Section reserved for advice, useful websites,
+         civic instruction, etc ... that students can consult for free</target>
+      </trans-unit>
+      <trans-unit id="8gdyNIj" resname="Ours differents solutions">
+        <source>Ours differents solutions</source>
+        <target>Ours differents solutions</target>
+      </trans-unit>
+      <trans-unit id="_kdrMAZ" resname="THEY TRUST US">
+        <source>THEY TRUST US</source>
+        <target>THEY TRUST US</target>
+      </trans-unit>
+      <trans-unit id="DwsJ8W3" resname="What is rapmis ?">
+        <source>What is rapmis ?</source>
+        <target>What is rapmis ?</target>
+      </trans-unit>
+      <trans-unit id="HLf3AzB" resname="Greetings dear members of the educational community">
+        <source>Greetings dear members of the educational community</source>
+        <target>Greetings dear members of the educational community</target>
+      </trans-unit>
+      <trans-unit id="_S8nCFj" resname="RAPMIS solution supports both the administration&#10;       of the establishment than the parent in better monitoring and supervision of the student so that all&#10;       efforts to make it a good product for society are achieved.">
+        <source>RAPMIS solution supports both the administration
+       of the establishment than the parent in better monitoring and supervision of the student so that all
+       efforts to make it a good product for society are achieved.</source>
+        <target>RAPMIS solution supports both the administration
+       of the establishment than the parent in better monitoring and supervision of the student so that all
+       efforts to make it a good product for society are achieved.</target>
+      </trans-unit>
+      <trans-unit id="3AExoOi" resname="Read More...">
+        <source>Read More...</source>
+        <target>Read More...</target>
+      </trans-unit>
+      <trans-unit id="XVFPSmh" resname="Dear parents, with RAPMIS installed in the child's establishment, you will be informed in time and in detail&#10;       to allow you to carry out specific actions in the supervision of your child.">
+        <source>Dear parents, with RAPMIS installed in the child's establishment, you will be informed in time and in detail
+       to allow you to carry out specific actions in the supervision of your child.</source>
+        <target>Dear parents, with RAPMIS installed in the child's establishment, you will be informed in time and in detail
+       to allow you to carry out specific actions in the supervision of your child.</target>
+      </trans-unit>
+      <trans-unit id="yIHaZLG" resname="Absences from classes">
+        <source>Absences from classes</source>
+        <target>Absences from classes</target>
+      </trans-unit>
+      <trans-unit id="GMWXHE4" resname="Absences at specific times">
+        <source>Absences at specific times</source>
+        <target>Absences at specific times</target>
+      </trans-unit>
+      <trans-unit id="QENVUiO" resname="homework">
+        <source>homework</source>
+        <target>homework</target>
+      </trans-unit>
+      <trans-unit id="OOdrz0j" resname="Gap(s) on the lessons">
+        <source>Gap(s) on the lessons</source>
+        <target>Gap(s) on the lessons</target>
+      </trans-unit>
+      <trans-unit id="QWN5.bQ" resname="Requested permissions">
+        <source>Requested permissions</source>
+        <target>Requested permissions</target>
+      </trans-unit>
+      <trans-unit id="GdFglYu" resname="Participation in courses">
+        <source>Participation in courses</source>
+        <target>Participation in courses</target>
+      </trans-unit>
+      <trans-unit id="eLKJfCn" resname="General school life">
+        <source>General school life</source>
+        <target>General school life</target>
+      </trans-unit>
+      <trans-unit id="fSsqONT" resname="Attitudes">
+        <source>Attitudes</source>
+        <target>Attitudes</target>
+      </trans-unit>
+      <trans-unit id="iWcSAUp" resname="Community life">
+        <source>Community life</source>
+        <target>Community life</target>
+      </trans-unit>
+      <trans-unit id="tQtgQTO" resname="School life Archiving">
+        <source>School life Archiving</source>
+        <target>School life Archiving</target>
+      </trans-unit>
+      <trans-unit id="CryM_Cu" resname="Updated timetable">
+        <source>Updated timetable</source>
+        <target>Updated timetable</target>
+      </trans-unit>
+      <trans-unit id="eMdqvya" resname="Punctual stop of courses">
+        <source>Punctual stop of courses</source>
+        <target>Punctual stop of courses</target>
+      </trans-unit>
+      <trans-unit id="PA.NA4U" resname="Etc...">
+        <source>Etc...</source>
+        <target>Etc...</target>
+      </trans-unit>
+      <trans-unit id="ouOsthL" resname="Punctuality (delay in class)">
+        <source>Punctuality (delay in class)</source>
+        <target>Punctuality (delay in class)</target>
+      </trans-unit>
+      <trans-unit id="LEbyvrw" resname="Deviations or any  other  behavior related to indiscipline">
+        <source>Deviations or any  other  behavior related to indiscipline</source>
+        <target>Deviations or any  other  behavior related to indiscipline</target>
+      </trans-unit>
+      <trans-unit id="fBzk7lM" resname="Absences and their impact on results">
+        <source>Absences and their impact on results</source>
+        <target>Absences and their impact on results</target>
+      </trans-unit>
+      <trans-unit id="Q3EXdCX" resname="The fanciful and unknown permissions of you, parents or guardians">
+        <source>The fanciful and unknown permissions of you, parents or guardians</source>
+        <target>The fanciful and unknown permissions of you, parents or guardians</target>
+      </trans-unit>
+      <trans-unit id="XDOMLiP" resname="Disciplinary sanctions">
+        <source>Disciplinary sanctions</source>
+        <target>Disciplinary sanctions</target>
+      </trans-unit>
+      <trans-unit id="Yi3ZILx" resname="The summons">
+        <source>The summons</source>
+        <target>The summons</target>
+      </trans-unit>
+      <trans-unit id="4j811x7" resname="Notes and Suggestion(s) for improvement">
+        <source>Notes and Suggestion(s) for improvement</source>
+        <target>Notes and Suggestion(s) for improvement</target>
+      </trans-unit>
+      <trans-unit id="mJRyP6a" resname="Weaknesses and gap (s) to be filled">
+        <source>Weaknesses and gap (s) to be filled</source>
+        <target>Weaknesses and gap (s) to be filled</target>
+      </trans-unit>
+      <trans-unit id="DIL_XWT" resname="Timetable and his variation">
+        <source>Timetable and his variation</source>
+        <target>Timetable and his variation</target>
+      </trans-unit>
+      <trans-unit id="Mw2ahpr" resname="All fees charged by the establishment">
+        <source>All fees charged by the establishment</source>
+        <target>All fees charged by the establishment</target>
+      </trans-unit>
+      <trans-unit id="9J9ywDg" resname="Homework not done">
+        <source>Homework not done</source>
+        <target>Homework not done</target>
+      </trans-unit>
+      <trans-unit id="cIYUBlT" resname="Teachers, supervisors and censors and their contacts">
+        <source>Teachers, supervisors and censors and their contacts</source>
+        <target>Teachers, supervisors and censors and their contacts</target>
+      </trans-unit>
+      <trans-unit id="LOKVbAF" resname="Temporary court stopping">
+        <source>Temporary court stopping</source>
+        <target>Temporary court stopping</target>
+      </trans-unit>
+      <trans-unit id="clFeKO8" resname="The merit and prowess">
+        <source>The merit and prowess</source>
+        <target>The merit and prowess</target>
+      </trans-unit>
+      <trans-unit id="StTfVPp" resname="Skills and abilities">
+        <source>Skills and abilities</source>
+        <target>Skills and abilities</target>
+      </trans-unit>
+      <trans-unit id="MaaMkX9" resname="Etc…;">
+        <source>Etc…;</source>
+        <target>Etc…;</target>
+      </trans-unit>
+      <trans-unit id="W9VTU6x" resname="Dear Parents,&#10;If this solution is not yet used in the school where your child's school,&#10;enter us and we will get closer to the administration of the establishment&#10;so that he appropriates it for the benefit of everyone and particularly you the parent.">
+        <source>Dear Parents,
+If this solution is not yet used in the school where your child's school,
+enter us and we will get closer to the administration of the establishment
+so that he appropriates it for the benefit of everyone and particularly you the parent.</source>
+        <target>Dear Parents,
+If this solution is not yet used in the school where your child's school,
+enter us and we will get closer to the administration of the establishment
+so that he appropriates it for the benefit of everyone and particularly you the parent.</target>
+      </trans-unit>
+      <trans-unit id="wpYC9Hd" resname="Read More">
+        <source>Read More</source>
+        <target>Read More</target>
+      </trans-unit>
+      <trans-unit id="oVo_4PY" resname="Dear heads of nursery, primary, secondary, university and other establishments&#10;                                             training centers, this monitoring solution will allow you to have all the&#10;                                             information about each of your students without the need to go through a third party. Thanks to RAPMIS,&#10;                                             the student's file will be at your fingertips and you will be able, thanks to the amount of information gathered,&#10;                                             make direct statistics, carry out an action on the basis of convincing and concrete elements, guide&#10;                                             a new policy thanks to the amount of information available, to provide reliable information to&#10;                                             parents and other guardian (s) when needed.">
+        <source>Dear heads of nursery, primary, secondary, university and other establishments
+                                             training centers, this monitoring solution will allow you to have all the
+                                             information about each of your students without the need to go through a third party. Thanks to RAPMIS,
+                                             the student's file will be at your fingertips and you will be able, thanks to the amount of information gathered,
+                                             make direct statistics, carry out an action on the basis of convincing and concrete elements, guide
+                                             a new policy thanks to the amount of information available, to provide reliable information to
+                                             parents and other guardian (s) when needed.</source>
+        <target>Dear heads of nursery, primary, secondary, university and other establishments
+                                             training centers, this monitoring solution will allow you to have all the
+                                             information about each of your students without the need to go through a third party. Thanks to RAPMIS,
+                                             the student's file will be at your fingertips and you will be able, thanks to the amount of information gathered,
+                                             make direct statistics, carry out an action on the basis of convincing and concrete elements, guide
+                                             a new policy thanks to the amount of information available, to provide reliable information to
+                                             parents and other guardian (s) when needed.</target>
+      </trans-unit>
+      <trans-unit id="YNHa.3M" resname="Cette solution vous facilitera la tâche en bien des points :">
+        <source>Cette solution vous facilitera la tâche en bien des points :</source>
+        <target>Cette solution vous facilitera la tâche en bien des points :</target>
+      </trans-unit>
+      <trans-unit id="IcJAi4R" resname="Dossier disciplinaire à portée de mains">
+        <source>Dossier disciplinaire à portée de mains</source>
+        <target>Dossier disciplinaire à portée de mains</target>
+      </trans-unit>
+      <trans-unit id="fdvCZWN" resname="Educational file at your fingertips">
+        <source>Educational file at your fingertips</source>
+        <target>Educational file at your fingertips</target>
+      </trans-unit>
+      <trans-unit id="dEwB3vQ" resname="Contact person">
+        <source>Contact person</source>
+        <target>Contact person</target>
+      </trans-unit>
+      <trans-unit id="BGLaoYE" resname="Student health book">
+        <source>Student health book</source>
+        <target>Student health book</target>
+      </trans-unit>
+      <trans-unit id="jkYZHzq" resname="Detailed identification of the pupil's shortcomings">
+        <source>Detailed identification of the pupil's shortcomings</source>
+        <target>Detailed identification of the pupil's shortcomings</target>
+      </trans-unit>
+      <trans-unit id="dcyF2UR" resname="Program advanced level by class">
+        <source>Program advanced level by class</source>
+        <target>Program advanced level by class</target>
+      </trans-unit>
+      <trans-unit id="6M7IBS8" resname="Observation of the student's performance curve">
+        <source>Observation of the student's performance curve</source>
+        <target>Observation of the student's performance curve</target>
+      </trans-unit>
+      <trans-unit id="V8hdXBw" resname="Contacts of parents or guardians at your fingertip">
+        <source>Contacts of parents or guardians at your fingertip</source>
+        <target>Contacts of parents or guardians at your fingertip</target>
+      </trans-unit>
+      <trans-unit id="vkMYhmE" resname="RAPMIS: &quot;a safe and profitable investment for your children&quot;">
+        <source>RAPMIS: "a safe and profitable investment for your children"</source>
+        <target>RAPMIS: "a safe and profitable investment for your children"</target>
+      </trans-unit>
+      <trans-unit id="XYqZWm_" resname="Why?">
+        <source>Why?</source>
+        <target>Why?</target>
+      </trans-unit>
+      <trans-unit id="WdAy6m3" resname="Finding">
+        <source>Finding</source>
+        <target>Finding</target>
+      </trans-unit>
+      <trans-unit id="DnzPwtv" resname="Difficulty for parents to honor school invitations">
+        <source>Difficulty for parents to honor school invitations</source>
+        <target>Difficulty for parents to honor school invitations</target>
+      </trans-unit>
+      <trans-unit id="p6230WX" resname="Feeling of abandonment of the right of supervision of children, the sole responsibility of the school">
+        <source>Feeling of abandonment of the right of supervision of children, the sole responsibility of the school</source>
+        <target>Feeling of abandonment of the right of supervision of children, the sole responsibility of the school</target>
+      </trans-unit>
+      <trans-unit id="NMbjthC" resname="False information about parents and other legal guardians or supervisors">
+        <source>False information about parents and other legal guardians or supervisors</source>
+        <target>False information about parents and other legal guardians or supervisors</target>
+      </trans-unit>
+      <trans-unit id="AqY1aQf" resname="Misuse of informations sent to parents">
+        <source>Misuse of informations sent to parents</source>
+        <target>Misuse of informations sent to parents</target>
+      </trans-unit>
+      <trans-unit id="1_oX2gj" resname="Slowness observed when finding a student's complete file">
+        <source>Slowness observed when finding a student's complete file</source>
+        <target>Slowness observed when finding a student's complete file</target>
+      </trans-unit>
+      <trans-unit id="iBbYZ3h" resname="Lack of knowledge of the pupil's health report with the corollary of care that could jeopardize the pupil's health">
+        <source>Lack of knowledge of the pupil's health report with the corollary of care that could jeopardize the pupil's health</source>
+        <target>Lack of knowledge of the pupil's health report with the corollary of care that could jeopardize the pupil's health</target>
+      </trans-unit>
+      <trans-unit id="lo_7QO4" resname="False representatives or parents at the summons">
+        <source>False representatives or parents at the summons</source>
+        <target>False representatives or parents at the summons</target>
+      </trans-unit>
+      <trans-unit id="oDjj7Qa" resname="Late taking of action by the parent of the corrections or improvements to be made in the education of his child">
+        <source>Late taking of action by the parent of the corrections or improvements to be made in the education of his child</source>
+        <target>Late taking of action by the parent of the corrections or improvements to be made in the education of his child</target>
+      </trans-unit>
+      <trans-unit id="MDv5OfC" resname="Differents level of knowledge and information about children">
+        <source>Differents level of knowledge and information about children</source>
+        <target>Differents level of knowledge and information about children</target>
+      </trans-unit>
+      <trans-unit id="7lTiJdn" resname="The people to contact are not always those who can influence the child's behavior">
+        <source>The people to contact are not always those who can influence the child's behavior</source>
+        <target>The people to contact are not always those who can influence the child's behavior</target>
+      </trans-unit>
+      <trans-unit id="nZmM9y0" resname="Mixed ability of parents to hold children after school or for homework">
+        <source>Mixed ability of parents to hold children after school or for homework</source>
+        <target>Mixed ability of parents to hold children after school or for homework</target>
+      </trans-unit>
+      <trans-unit id="lVZBqox" resname="Contribute to the provision of adapted solutions in the educational monitoring of our youth to guarantee better and certain performance,">
+        <source>Contribute to the provision of adapted solutions in the educational monitoring of our youth to guarantee better and certain performance,</source>
+        <target>Contribute to the provision of adapted solutions in the educational monitoring of our youth to guarantee better and certain performance,</target>
+      </trans-unit>
+      <trans-unit id="QH5Btut" resname="Reduce the rate of school delinquency and indiscipline through the identification of sources of seizure">
+        <source>Reduce the rate of school delinquency and indiscipline through the identification of sources of seizure</source>
+        <target>Reduce the rate of school delinquency and indiscipline through the identification of sources of seizure</target>
+      </trans-unit>
+      <trans-unit id="4zBG8OQ" resname="Help the parent in the supervision and school follow-up of his child">
+        <source>Help the parent in the supervision and school follow-up of his child</source>
+        <target>Help the parent in the supervision and school follow-up of his child</target>
+      </trans-unit>
+      <trans-unit id="L.bIJ9u" resname="Provide the school administration with decision-making and proactive tools">
+        <source>Provide the school administration with decision-making and proactive tools</source>
+        <target>Provide the school administration with decision-making and proactive tools</target>
+      </trans-unit>
+      <trans-unit id="a4dF.HL" resname="Create a solution that helps all links in the educational chain from where they are and without any constraint">
+        <source>Create a solution that helps all links in the educational chain from where they are and without any constraint</source>
+        <target>Create a solution that helps all links in the educational chain from where they are and without any constraint</target>
+      </trans-unit>
+      <trans-unit id="udlllGj" resname="Ensure that parents, the main providers of funds, can benefit from the repercussions of their investment on their children through their good results and behavior">
+        <source>Ensure that parents, the main providers of funds, can benefit from the repercussions of their investment on their children through their good results and behavior</source>
+        <target>Ensure that parents, the main providers of funds, can benefit from the repercussions of their investment on their children through their good results and behavior</target>
+      </trans-unit>
+      <trans-unit id="M7ddmT4" resname="Track all the factors of poor student performance">
+        <source>Track all the factors of poor student performance</source>
+        <target>Track all the factors of poor student performance</target>
+      </trans-unit>
+      <trans-unit id="EWzTmCq" resname="Goals">
+        <source>Goals</source>
+        <target>Goals</target>
+      </trans-unit>
+      <trans-unit id="kBJ5hNH" resname="Create a synergy of actions around the student to change behavior">
+        <source>Create a synergy of actions around the student to change behavior</source>
+        <target>Create a synergy of actions around the student to change behavior</target>
+      </trans-unit>
+      <trans-unit id="zTZf518" resname="Deter and prevent reccurence">
+        <source>Deter and prevent reccurence</source>
+        <target>Deter and prevent reccurence</target>
+      </trans-unit>
+      <trans-unit id="p46i4Qt" resname="Provide a solution that take into account the occupations and educational level of parents">
+        <source>Provide a solution that take into account the occupations and educational level of parents</source>
+        <target>Provide a solution that take into account the occupations and educational level of parents</target>
+      </trans-unit>
+      <trans-unit id="oWtEmQB" resname="Involve the children themselves as well as the parents in the effort to clean up the school environment">
+        <source>Involve the children themselves as well as the parents in the effort to clean up the school environment</source>
+        <target>Involve the children themselves as well as the parents in the effort to clean up the school environment</target>
+      </trans-unit>
+      <trans-unit id="FtpclHe" resname="Create a real proximity between parents and school administration">
+        <source>Create a real proximity between parents and school administration</source>
+        <target>Create a real proximity between parents and school administration</target>
+      </trans-unit>
+      <trans-unit id="JxhYe3d" resname="Challenge the parent on a specific aspect to improve or supervise in his child">
+        <source>Challenge the parent on a specific aspect to improve or supervise in his child</source>
+        <target>Challenge the parent on a specific aspect to improve or supervise in his child</target>
+      </trans-unit>
+      <trans-unit id="brU6l7Q" resname="Provide as much information as possible for both the parent and the establishment">
+        <source>Provide as much information as possible for both the parent and the establishment</source>
+        <target>Provide as much information as possible for both the parent and the establishment</target>
+      </trans-unit>
+      <trans-unit id="iegC0uq" resname="Provide parents with directly exploitable and understandable information &#10;                                            to ensure actions are taken to bring their own to their education">
+        <source>Provide parents with directly exploitable and understandable information 
+                                            to ensure actions are taken to bring their own to their education</source>
+        <target>Provide parents with directly exploitable and understandable information 
+                                            to ensure actions are taken to bring their own to their education</target>
+      </trans-unit>
+      <trans-unit id="A15h3A4" resname="Communicate on all aspects of the student's school life">
+        <source>Communicate on all aspects of the student's school life</source>
+        <target>Communicate on all aspects of the student's school life</target>
+      </trans-unit>
+      <trans-unit id="VpfQPa7" resname="Features">
+        <source>Features</source>
+        <target>Features</target>
+      </trans-unit>
+      <trans-unit id="QFE9CJd" resname="Daily information about child send by mail or sms">
+        <source>Daily information about child send by mail or sms</source>
+        <target>Daily information about child send by mail or sms</target>
+      </trans-unit>
+      <trans-unit id="3eO9Nnw" resname="Informations by phone call">
+        <source>Informations by phone call</source>
+        <target>Informations by phone call</target>
+      </trans-unit>
+      <trans-unit id="B23dAp_" resname="Integration of all information related to discipline, grades, school activities, attendance, homework not done, active participation in classes, extracurricular and extracurricular activities, etc.">
+        <source>Integration of all information related to discipline, grades, school activities, attendance, homework not done, active participation in classes, extracurricular and extracurricular activities, etc.</source>
+        <target>Integration of all information related to discipline, grades, school activities, attendance, homework not done, active participation in classes, extracurricular and extracurricular activities, etc.</target>
+      </trans-unit>
+      <trans-unit id="QsKvBWq" resname="Availability of the child's up-to-date medical record to allow rapid treatment in the event of a problem">
+        <source>Availability of the child's up-to-date medical record to allow rapid treatment in the event of a problem</source>
+        <target>Availability of the child's up-to-date medical record to allow rapid treatment in the event of a problem</target>
+      </trans-unit>
+      <trans-unit id="56byYlu" resname="Availability of a reliable information sheet of the pupil as obtained directly from parents.">
+        <source>Availability of a reliable information sheet of the pupil as obtained directly from parents.</source>
+        <target>Availability of a reliable information sheet of the pupil as obtained directly from parents.</target>
+      </trans-unit>
+      <trans-unit id="ntHbw.m" resname="Availability of the student's detailed school file containing: Notes - Information sheet - Health sheet - Discipline - Peri and extracurricular activities - Various distinctions">
+        <source>Availability of the student's detailed school file containing: Notes - Information sheet - Health sheet - Discipline - Peri and extracurricular activities - Various distinctions</source>
+        <target>Availability of the student's detailed school file containing: Notes - Information sheet - Health sheet - Discipline - Peri and extracurricular activities - Various distinctions</target>
+      </trans-unit>
+      <trans-unit id="vQlZsGb" resname="Possibility, for teachers and other administrative staff (s),&#10;    to make the tests and corrections available, free of charge, with the&#10;    possibility for students to consult easily and free of charge">
+        <source>Possibility, for teachers and other administrative staff (s),
+    to make the tests and corrections available, free of charge, with the
+    possibility for students to consult easily and free of charge</source>
+        <target>Possibility, for teachers and other administrative staff (s),
+    to make the tests and corrections available, free of charge, with the
+    possibility for students to consult easily and free of charge</target>
+      </trans-unit>
+      <trans-unit id="DqGSbH." resname="Section reserved for advice, useful websites,&#10;     civic instruction, etc ... that students can consult for free">
+        <source>Section reserved for advice, useful websites,
+     civic instruction, etc ... that students can consult for free</source>
+        <target>Section reserved for advice, useful websites,
+     civic instruction, etc ... that students can consult for free</target>
+      </trans-unit>
+      <trans-unit id="9pkI8jx" resname="athlecte at school">
+        <source>athlecte at school</source>
+        <target>athlecte at school</target>
+      </trans-unit>
+      <trans-unit id="Cs0rb8i" resname="artistique,">
+        <source>artistique,</source>
+        <target>artistique,</target>
+      </trans-unit>
+      <trans-unit id="HqQLtPf" resname="la participation de l'enfant dans les club, association au sein de l'établissement">
+        <source>la participation de l'enfant dans les club, association au sein de l'établissement</source>
+        <target>la participation de l'enfant dans les club, association au sein de l'établissement</target>
+      </trans-unit>
+      <trans-unit id="7lltg2l" resname="Niveaux list">
+        <source>Niveaux list</source>
+        <target>Level list</target>
+      </trans-unit>
+      <trans-unit id="S_88CsS" resname="Note edit">
+        <source>Note edit</source>
+        <target>Note edit</target>
+      </trans-unit>
+      <trans-unit id="NHxw7tZ" resname="Note Creation">
+        <source>Note Creation</source>
+        <target>Note Creation</target>
+      </trans-unit>
+      <trans-unit id="u3I07BJ" resname="Register">
+        <source>Register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="CJ7vt_e" resname="Thanks for your registration">
+        <source>Thanks for your registration</source>
+        <target>Thanks for your registration</target>
+      </trans-unit>
+      <trans-unit id="wl8RdWc" resname="Update your registration">
+        <source>Update your registration</source>
+        <target>Update your registration</target>
+      </trans-unit>
+      <trans-unit id="a4hoZoT" resname="Regsel edit">
+        <source>Regsel edit</source>
+        <target>Regsel edit</target>
+      </trans-unit>
+      <trans-unit id="J357I2_" resname="Regsels list">
+        <source>Regsels list</source>
+        <target>Regsels list</target>
+      </trans-unit>
+      <trans-unit id="67IOQ1q" resname="Regsel">
+        <source>Regsel</source>
+        <target>Regsel</target>
+      </trans-unit>
+      <trans-unit id="cGLoClC" resname="Schoolyear edit">
+        <source>Schoolyear edit</source>
+        <target>Schoolyear edit</target>
+      </trans-unit>
+      <trans-unit id="8X_sZFh" resname="Schoolyears list">
+        <source>Schoolyears list</source>
+        <target>Schoolyears list</target>
+      </trans-unit>
+      <trans-unit id="QTUg.ZY" resname="libelle">
+        <source>libelle</source>
+        <target>Label</target>
+      </trans-unit>
+      <trans-unit id="08uCw5M" resname="Beginningyear">
+        <source>Beginningyear</source>
+        <target>Beginning year</target>
+      </trans-unit>
+      <trans-unit id="Dits.71" resname="Schoolyear Creation">
+        <source>Schoolyear Creation</source>
+        <target>Schoolyear Creation</target>
+      </trans-unit>
+      <trans-unit id="5IB7B.N" resname="Schoolyear">
+        <source>Schoolyear</source>
+        <target>Schoolyear</target>
+      </trans-unit>
+      <trans-unit id="X1AYWY4" resname="Sectioneduc edit">
+        <source>Sectioneduc edit</source>
+        <target>educational section edit</target>
+      </trans-unit>
+      <trans-unit id="F5oG44W" resname="Sectioneducs list">
+        <source>Sectioneducs list</source>
+        <target>Educational section list</target>
+      </trans-unit>
+      <trans-unit id="DjkmrbG" resname="Sectioneduc Creation">
+        <source>Sectioneduc Creation</source>
+        <target>Add educational section</target>
+      </trans-unit>
+      <trans-unit id="KRAVrvh" resname="Sectioneduc">
+        <source>Sectioneduc</source>
+        <target>Educational section</target>
+      </trans-unit>
+      <trans-unit id="dDUw20Q" resname="Please sign in">
+        <source>Please sign in</source>
+        <target>Please sign in</target>
+      </trans-unit>
+      <trans-unit id="OX.tY3U" resname="Staff edit">
+        <source>Staff edit</source>
+        <target>Staff edit</target>
+      </trans-unit>
+      <trans-unit id="yANxAwL" resname="Function">
+        <source>Function</source>
+        <target>Function</target>
+      </trans-unit>
+      <trans-unit id="y6rTz0p" resname="Mobile">
+        <source>Mobile</source>
+        <target>Mobile</target>
+      </trans-unit>
+      <trans-unit id="BRDOYye" resname="Joining Date">
+        <source>Joining Date</source>
+        <target>Joining Date</target>
+      </trans-unit>
+      <trans-unit id="eMbsXox" resname="Staff Creation">
+        <source>Staff Creation</source>
+        <target>Staff Creation</target>
+      </trans-unit>
+      <trans-unit id="aBkn40t" resname="Staff">
+        <source>Staff</source>
+        <target>Staff</target>
+      </trans-unit>
+      <trans-unit id="Ii_d6ee" resname="Fonction">
+        <source>Fonction</source>
+        <target>Fonction</target>
+      </trans-unit>
+      <trans-unit id="B_1sz2v" resname="Mail">
+        <source>Mail</source>
+        <target>Mail</target>
+      </trans-unit>
+      <trans-unit id="2NosSd8" resname="Note">
+        <source>Note</source>
+        <target>Note</target>
+      </trans-unit>
+      <trans-unit id="mrbuLIN" resname="Coefficient">
+        <source>Coefficient</source>
+        <target>Coefficient</target>
+      </trans-unit>
+      <trans-unit id="XsJmNjI" resname="Sequence I">
+        <source>Sequence I</source>
+        <target>Sequence I</target>
+      </trans-unit>
+      <trans-unit id="moPb9zB" resname="Sequence II">
+        <source>Sequence II</source>
+        <target>Sequence II</target>
+      </trans-unit>
+      <trans-unit id="qFWtlTK" resname="Absence(s)">
+        <source>Absence(s)</source>
+        <target>Absence(s)</target>
+      </trans-unit>
+      <trans-unit id="OWqW0yJ" resname="Appreciation(s)">
+        <source>Appreciation(s)</source>
+        <target>Appreciation(s)</target>
+      </trans-unit>
+      <trans-unit id="wZOyhZb" resname="Exclusion(s)">
+        <source>Exclusion(s)</source>
+        <target>Exclusion(s)</target>
+      </trans-unit>
+      <trans-unit id="dRSyQ47" resname="Periode">
+        <source>Periode</source>
+        <target>Period</target>
+      </trans-unit>
+      <trans-unit id="3eLtIdc" resname="Leçon ou chapitre">
+        <source>Leçon ou chapitre</source>
+        <target>Chapter or lesson</target>
+      </trans-unit>
+      <trans-unit id="OPYJWX5" resname="Livrée le">
+        <source>Livrée le</source>
+        <target>Delivered at</target>
+      </trans-unit>
+      <trans-unit id="ioix1eu" resname="Délai de reception">
+        <source>Délai de reception</source>
+        <target>Reception delay</target>
+      </trans-unit>
+      <trans-unit id="H2hQFT1" resname="Leçon">
+        <source>Leçon</source>
+        <target>lesson</target>
+      </trans-unit>
+      <trans-unit id="RCre2Hp" resname="Performance">
+        <source>Performance</source>
+        <target>Performance</target>
+      </trans-unit>
+      <trans-unit id="OQIdoRh" resname="Subdivision Creation">
+        <source>Subdivision Creation</source>
+        <target>Subdivision Creation</target>
+      </trans-unit>
+      <trans-unit id="8ZY1YbP" resname="Syseduc edit">
+        <source>Syseduc edit</source>
+        <target>Educatinal section edit</target>
+      </trans-unit>
+      <trans-unit id="NEBZHvr" resname="Syseducs list">
+        <source>Syseducs list</source>
+        <target>Educatinal section list</target>
+      </trans-unit>
+      <trans-unit id="gglOAWM" resname="Syseduc Creation">
+        <source>Syseduc Creation</source>
+        <target>Educatinal section Creation</target>
+      </trans-unit>
+      <trans-unit id="LR51ap2" resname="Syseduc">
+        <source>Syseduc</source>
+        <target>Educatinal section</target>
+      </trans-unit>
+      <trans-unit id=".DrHnbT" resname="Teacher edit">
+        <source>Teacher edit</source>
+        <target>Teacher edit</target>
+      </trans-unit>
+      <trans-unit id="qnX0Aei" resname="Teachers list">
+        <source>Teachers list</source>
+        <target>Teachers list</target>
+      </trans-unit>
+      <trans-unit id="M8USxu7" resname="Teachers">
+        <source>Teachers</source>
+        <target>Teachers</target>
+      </trans-unit>
+      <trans-unit id="Y9zriAC" resname="Phone">
+        <source>Phone</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="hGNyhsW" resname="Classes">
+        <source>Classes</source>
+        <target>Classes</target>
+      </trans-unit>
+      <trans-unit id="mMSLdAU" resname="exempt subjects">
+        <source>exempt subjects</source>
+        <target>exempt subjects</target>
+      </trans-unit>
+      <trans-unit id=".KbzVJF" resname="Teacher Creation">
+        <source>Teacher Creation</source>
+        <target>Teacher Creation</target>
+      </trans-unit>
+      <trans-unit id="EUvqN_k" resname="Annee de naissance">
+        <source>Annee de naissance</source>
+        <target>Birth date</target>
+      </trans-unit>
+      <trans-unit id="rlajjSz" resname="Date de Création">
+        <source>Date de Création</source>
+        <target>Creation date</target>
+      </trans-unit>
+      <trans-unit id="4f2VBeB" resname="Type_etablissement edit">
+        <source>Type_etablissement edit</source>
+        <target>Type_etablissement edit</target>
+      </trans-unit>
+      <trans-unit id="3y4zT0B" resname="Type_etablissements list">
+        <source>Type_etablissements list</source>
+        <target>Type_etablissements list</target>
+      </trans-unit>
+      <trans-unit id="nF8Vzoh" resname="Type_etablissement Creation">
+        <source>Type_etablissement Creation</source>
+        <target>Type_etablissement Creation</target>
+      </trans-unit>
+      <trans-unit id="jw2W2SN" resname="Type_etablissement">
+        <source>Type_etablissement</source>
+        <target>Type_etablissement</target>
+      </trans-unit>
+      <trans-unit id="_ENPId7" resname="User edit">
+        <source>User edit</source>
+        <target>User edit</target>
+      </trans-unit>
+      <trans-unit id="OnqBk.y" resname="Users list">
+        <source>Users list</source>
+        <target>Users list</target>
+      </trans-unit>
+      <trans-unit id="FveKfWM" resname="username">
+        <source>username</source>
+        <target>username</target>
+      </trans-unit>
+      <trans-unit id="aBp92P_" resname="Phonenumber">
+        <source>Phonenumber</source>
+        <target>Phonenumber</target>
+      </trans-unit>
+      <trans-unit id="COatVdZ" resname="User Creation">
+        <source>User Creation</source>
+        <target>Add a user</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

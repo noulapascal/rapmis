@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- start page content -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+                        <div class="page-title">Programme la classe</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li><a class="parent-item" href="#">Subject  </a>&nbsp;<i class="fa fa-angle-right"></i>
+                        </li>
+                        <li class="active">Programme la classe</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabbable-line">
+
+                        <div class="tab-content">
+                            <div class="tab-pane active fontawesome-demo" id="tab1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card card-box">
+                                            <div class="card-head">
+                                                <header>Programme du niveau {{ epreuves.niveau    }}</header>
+                                                <div class="tools">
+                                                    <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-body ">
+<div class="row">
+                                                    <h2>
+                                                        {{ epreuves.intitule }}
+                                                    </h2>
+
+                                                    </div>
+                                                <div class="row ">
+                                                  
+                                                    
+                                                    <div class="col-sm-2">
+                                                        <h2 class="text text-center">Classe  </h2>
+                                                        <h3 class="title"> {{ epreuves.niveau    }}</h3>
+                                                       
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <h1 class="text text-center">Chapitres{% endtrans %}</h1>
+                                                         {% for chapitre in epreuves.chapitres %}
+                                                                  <strong>    {{ chapitre.nom }}</strong>
+                                                                    {% endfor %}
+                                                    </div>
+                                                </div>
+                                                    </div>
+                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end page content -->
+{% endblock %}

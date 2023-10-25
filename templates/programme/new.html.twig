@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+    {{ form_start(form) }}
+    <div class="box-footer clearfix">
+        <button type="submit" class="mdl-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-primary pull-right">Create <i class="fa fa-paper-plane-o"></i></button>
+    </div>
+    {{ form_end(form) }}
+</div></div></div></div></div>
+    {# <ul>
+         <li>
+             <a href="{{ path('epreuves_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+         </li>
+     </ul>#}
+
+{% endblock %}

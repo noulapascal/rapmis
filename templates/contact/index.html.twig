@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+ {% block meta %}
+    <meta name="description" content="Contactez nous. Nous sommes à votre écoute" />
+    <meta name="author" content="MOUAFO NOULA Pascal" />
+    {% endblock %}
+{% block body %}
+    
+  <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class="pull-left">
+    <h1>{% trans %}Contacts list{% endtrans %}</h1>
+
+    <table class="table-striped table " id="example1">
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %}Nom{% endtrans %}</th>
+                <th>{% trans %}Numerodetelephone{% endtrans %}</th>
+                <th>{% trans %}Adressemail{% endtrans %}</th>
+                <th>{% trans %}Message{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
+                <td>{{ contact.nom }}</td>
+                <td>{{ contact.numeroDeTelephone }}</td>
+                <td>{{ contact.adresseMail }}</td>
+                <td>{{ contact.message }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('contact_new') }}">Create a new contact</a>
+        </li>
+    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

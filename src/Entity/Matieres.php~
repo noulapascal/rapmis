@@ -1,0 +1,196 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Matieres
+ *
+ * @ORM\Table(name="matieres")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MatieresRepository")
+ */
+class Matieres
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=40)
+     */
+    private $name;
+
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="intitule", type="string", length=25, nullable=true)
+     */
+    private $intitule;
+
+
+        /**
+     * @ORM\OneToMany(targetEntity=Lacunes::class, mappedBy="matieres")
+     */
+    private $lacunes;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Devoir::class, mappedBy="matieres")
+     */
+    private $devoirs;
+    
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    } 
+
+    /**
+     * Set name.
+     *
+     * @param string $name
+     *
+     * @return Matieres
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+
+
+    /**
+     * Set intitule.
+     *
+     * @param string|null $intitule
+     *
+     * @return Matieres
+     */
+    public function setIntitule($intitule = null)
+    {
+        $this->intitule = $intitule;
+
+        return $this;
+    }
+
+    /**
+     * Get intitule.
+     *
+     * @return string|null
+     */
+    public function getIntitule()
+    {
+        return $this->intitule;
+    }
+
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->getName();
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->programmes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    
+    
+    
+    
+    
+    /**
+     * Add lacune
+     *
+     * @param \AppBundle\Entity\Lacunes $lacune
+     *
+     * @return Matieres
+     */
+    public function addLacune(\AppBundle\Entity\Lacunes $lacune)
+    {
+        $this->lacunes[] = $lacune;
+
+        return $this;
+    }
+
+    /**
+     * Remove lacune
+     *
+     * @param \AppBundle\Entity\Lacunes $lacune
+     */
+    public function removeLacune(\AppBundle\Entity\Lacunes $lacune)
+    {
+        $this->lacunes->removeElement($lacune);
+    }
+
+    /**
+     * Get lacunes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLacunes()
+    {
+        return $this->lacunes;
+    }
+
+    /**
+     * Add devoir
+     *
+     * @param \AppBundle\Entity\Devoir $devoir
+     *
+     * @return Matieres
+     */
+    public function addDevoir(\AppBundle\Entity\Devoir $devoir)
+    {
+        $this->devoirs[] = $devoir;
+
+        return $this;
+    }
+
+    /**
+     * Remove devoir
+     *
+     * @param \AppBundle\Entity\Devoir $devoir
+     */
+    public function removeDevoir(\AppBundle\Entity\Devoir $devoir)
+    {
+        $this->devoirs->removeElement($devoir);
+    }
+
+    /**
+     * Get devoirs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDevoirs()
+    {
+        return $this->devoirs;
+    }
+}

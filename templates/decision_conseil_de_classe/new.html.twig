@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<title>New DecisionConseilDeClasse</title>
+
+{% block body %}
+    <h1>{% trans %}Create new DecisionConseilDeClasse{% endtrans %}</h1>
+
+    {{ include('decision_conseil_de_classe/_form.html.twig') }}
+
+    <a href="{{ path('decision_conseil_de_classe_index') }}">back to list</a>
+{% endblock %}

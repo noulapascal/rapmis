@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- start page content -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+                        <div class="page-title"> {% trans %}Teachers list{% endtrans %} </div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li><a class="parent-item" href="#"> {% trans %}Teachers{% endtrans %} </a>&nbsp;<i class="fa fa-angle-right"></i>
+                        </li>
+                        <li class="active"> {% trans %}Teachers list{% endtrans %} </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabbable-line">
+                        <!-- <ul class="nav nav-tabs">
+    <li class="active">
+    <a href="#tab1" data-toggle="tab"> List View </a>
+    </li>
+    <li>
+    <a href="#tab2" data-toggle="tab"> Grid View </a>
+    </li>
+    </ul> -->
+                        <ul class="nav customtab nav-tabs" role="tablist">
+                            <li class="nav-item"><a href="#tab1" class="nav-link active"  data-toggle="tab" >List View</a></li>
+                            <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">Grid View</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active fontawesome-demo" id="tab1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card card-box">
+                                            <div class="card-head">
+                                                <header>{% trans %} All  Teachers{% endtrans %}</header>
+                                                <div class="tools">
+                                                    <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="row">
+                                                   {% if is_granted('ROLE_ADMIN_SEC') %} 
+                                                       <div class="col-md-6 col-sm-6 col-6">
+
+                                                        <a href="{{ path('teacher_new') }}"> 
+                                                            <div class="btn-group">
+                                                                <button id="addRow1"  class="btn btn-info">
+                                                                      {% trans %}Add{% endtrans %}  {% trans %}New{% endtrans %} Teacher<i class="fa fa-plus"></i>
+                                                                </button>
+                                                            </div></a>
+                                                                
+
+                                                    </div>
+                                                            {% endif %}
+                                                    <div class="col-md-6 col-sm-6 col-6">
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn deepPink-bgcolor  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
+                                                                <i class="fa fa-angle-down"></i>
+                                                            </a>
+                                                            <ul class="dropdown-menu pull-right">
+                                                                <li>
+                                                                    <a href="javascript:;">
+                                                                        <i class="fa fa-print"></i> {% trans %}Print {% endtrans %} </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;">
+                                                                        <i class="fa fa-file-pdf-o"></i> {% trans %}Save as PDF {% endtrans %}</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;">
+                                                                        <i class="fa fa-file-excel-o"></i> {% trans %}Export TO Excel {% endtrans %} </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-scrollable">
+                                                    <table class="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
+                                                        <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>{% trans %} Name {% endtrans %}
+                                                            <th>{% trans %}First name {% endtrans %}  </th>
+                                                            <th>{% trans %} Phone{% endtrans %}  </th>
+                                                            <th>{% trans %} Gender{% endtrans %}
+                                                            <th>{% trans %} Classes {% endtrans %}</th>
+                                                            <th>{% trans %}exempt subjects{% endtrans %}
+                                                            <th>{% trans %} Action {% endtrans %}</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {% for teacher in teachers %}
+
+                                                            <tr class="odd gradeX">
+                                                                <td class="patient-img">
+                                                                    <img src="{{ asset('uploads/media/teachers/' ~ teacher.filename) }}" alt="">
+                                                                </td>
+                                                                <td class="left">{{ teacher.name }}</td>
+                                                                <td class="left">{{ teacher.firstName }}</td>
+                                                                <td class="left">{{ teacher.tel }}</td>
+                                                                <td class="left">{{ teacher.sexe }}</td>
+                                                                <td class="left" width="20%">
+                                                                    {% for classe in teacher.classes %}
+                                                                        {{ classe }}
+                                                                    {% endfor %}
+                                                                    </td>
+                                                                <td class="left">{{ teacher.matieres|join('||') }}</td>
+                                                                <td>
+                                                                   {% if is_granted('ROLE_ADMIN_SEC') %}
+                                                                    <a href="{{ path('teacher_edit', { 'id': teacher.id }) }}" class="btn btn-primary btn-xs">
+                                                                        <i class="fa fa-pencil"></i>
+                                                                    </a>
+                                                                      
+                                                                    <a href="{{ path('teacher_show', { 'id': teacher.id }) }}" class="btn btn-info btn-xs">
+                                                                        <i class="fa fa-th-list"></i>
+                                                                    </a>
+                                                                      
+                                                                              <a href="{{ path('teacher_delete', { 'id': teacher.id }) }}" class="btn btn-danger btn-xs" onclick="return confirm('{{'Delete'|trans}}')">
+                                                                        <i class="fa fa-trash-o"></i>
+                                                                    </a>
+                                                                        
+                                                                    {% endif %}
+                                                                </td>
+                                                            </tr>
+                                                        {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- debut tab2 pour l'affichage en grid -->
+                            <div class="tab-pane" id="tab2">
+                                <div class="row">
+                                    {% for teacher in teachers %}
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="{{ asset('uploads/prof/' ~ teacher.filename) }}" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">{{ teacher.name }}</div>
+                                                            <div class="name-center"> {{ teacher.firstName }} </div>
+                                                        </div>
+                                                        <p>née le {% if teacher.dateDeNaissance %}{{ teacher.dateDeNaissance|date('Y-m-d') }}{% endif %}<br /></p>
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:{{ teacher.tel }}">{{ teacher.tel }}</a></p> </div>
+                                                        <div><p><i class="material-icons f-left">email</i> <a href="email:{{ teacher.email }}">{{ teacher.email }}</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="{{ path('teacher_show', { 'id': teacher.id }) }}" class="btn btn-circle deepPink-bgcolor btn-sm">Read More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end page content -->
+{% endblock %}

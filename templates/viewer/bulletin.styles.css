@@ -1,0 +1,90 @@
+
+@media {% trans %}Print {% endtrans %} and (min-width: 480px) {
+  body {
+    width: 29.7cm;
+    height: 21cm;
+  }
+
+  .col-{% trans %}Print {% endtrans %}-1 {width:8%;  float:left;}
+  .col-{% trans %}Print {% endtrans %}-2 {width:16%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-3 {width:25%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-4 {width:33%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-5 {width:42%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-6 {width:50%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-7 {width:58%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-8 {width:66%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-9 {width:75%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-10{width:83%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-11{width:92%; float:left;}
+  .col-{% trans %}Print {% endtrans %}-12{width:100%; float:left;}
+}
+
+.nb-tab{
+  border: 1px solid lightblue;
+  padding-left: 20%;
+}
+
+.nb{
+  padding : 3px 10px 3px 10px ;
+  background: lightblue;
+}
+
+.nb-text{
+  padding: 3px 3px 3px 3px ;
+  font-size: 1rem;
+}
+
+#tab-recap{
+  padding: 15px;
+}
+
+#tab-recap table, #notes table, #recap table{
+  width: 100%;
+  border: lightblue;
+  text-align: center
+}
+
+#tab-recap td, #notes td, #recap td{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.cel-no-style{
+  border: none;
+}
+
+.title-cel{
+  font-weight: bold;
+}
+
+.coloured-cel{
+  background: lightgray;
+}
+
+.title{
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  background: lightblue;
+}
+
+.title-decision{
+  padding: 10px 10px 10px 10px;
+  border: solid 1px lightblue;
+}
+
+.card-bas{
+  border: solid 1px lightblue;
+}
+
+.card-bas p{
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+#bottom input{
+  border : solid 1px lightblue;
+  width: 15px;
+  height: 15px;
+}

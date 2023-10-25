@@ -1,0 +1,21 @@
+        <div class="card  " style="background: url('{{ asset('assets/img/child.jpg') }}')">
+        <div class="row">
+<div class="col-md-12">
+      
+        <div id="owl-demo4" class="owl-carousel owl-demo" >
+            <div class="item card card-box"><p><a href="http://www.campusjeunes.net">CampusJeunes</a></p></div>
+           
+            <div class="item card card-box"><p><a href="http://www.cameroongceguide.com">GCE guide</a></p></div>
+           
+            <div class="item card card-box"><p><a href="http://www.campusjeunes.net">CamExamen</a></p></div>
+           
+            <div class="item card card-box"><p><a href="http://www.dastudy.net">Dastudy</a></p></div>
+            <div class="item card card-box"><p><a href="http://www.geniusmuna.net">Genius Muna</a></p></div>
+                <div class="item card card-box"><p><a href="http://www.prepdia.com">prepdia</a></p></div>
+       {% for lien in lienUtile %}
+            <div class="item card card-box"><p><a href="http://{{ lien.linkToWebsite }}">{{ lien.name }}</a></p></div>
+       {% endfor %}
+            </div>
+    </div>
+    </div>
+    </div>

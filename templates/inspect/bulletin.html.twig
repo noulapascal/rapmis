@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bulletin</title>
+{#
+  <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+#}
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/../../../wamp64/www/rapmis/web/css/bulletin.styles.css" />
+</head>
+<body size="A4" layout="portrait">
+{% set i = 0 %}
+  <section id="header">
+    <div class="container-fluid">
+      <div class=row>
+        <div class="col-md-9 col-{% trans %}Print {% endtrans %}-9"></div>
+        <div class="col-md-3 col-{% trans %}Print {% endtrans %}-3">
+          <p style="text-align:center;">
+            REPUBLIQUE DU CAMEROUN<br />
+            Paix-Travail-Patrie <br />
+            <strong>ANNEE SCOLAIRE</strong> 2017/2018 <br />
+            TROISIEME {% trans %}  Trimester{% endtrans %}
+          </p>
+         
+          <table class="float-right nb-tab">
+              <tr>
+                <td class="nb"><strong>NB</strong></td>
+                <td class="nb-text">Faites des photocopies ! Aucun <br /> Duplicata ne sera delivre par le college</td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-recap">
+    <div class="container-fluid">
+      <table border=1>
+        <tr>
+          <td>MATRICULE</td>
+          <td>44649</td>
+          <td>NOM:</td>
+          <td>{{ student.name }}&nbsp; {{ student.firstName }}</td>
+          <td><strong>Né(e) le</strong></td>
+          <td>{{ student.dateDeNaissance|date("m/d/Y") }}</td>
+        </tr>
+      </table>
+      <table border=1> 
+        <tr>
+          <td>REDOUBLANT(E)(Yes/No) : </td>
+          <td>{% if student.redoublant %}Yes{% else %}No{% endif %}</td>
+          <td><strong>CLASSE : </strong></td>
+          <td>{{ student.classes.niveau.name }}{{ student.classes.name }}</td>
+          <td><strong>EFFECTIF : </strong></td>
+          <td>{{ eff }}</td>
+          <td><strong>PROFESSEUR PRINCIPAL : </strong></td>
+          <td>
+              {#{% if enseignants_titulaire %}
+                  {{ enseignants_titulaire.teacher.name }}
+              {% else %}Pas d'eseignant titulaire
+              {% endif %}#}
+            kamguia devalère
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="container-fluid">
+      <table id="tab-head" border=1>
+        <tr>
+          <td class="title-cel coloured-cel">Disciplines</td>
+          <td class="title-cel">MOYENNE DE SEQUENCE</td>
+          <td class="title-cel coloured-cel">COEF</td>
+          <td class="title-cel">PRODUITS</td>
+          <td class="title-cel coloured-cel">NOMS DES PROFESSEURS</td>
+          <td class="title-cel">APPRECIATIONS ET SIGNATURES DES PROFESSEURS</td>
+        </tr>
+    
+
+      <!-- Groupe 1 -->
+
+             {% for mod in  notesmodule%}
+                 {% for note in notes if (note.module == mod.module ) %}
+
+                   <tr>
+                     <td class="coloured-cel">{{ note.matieres.name  }}</td>
+                     <td>{{ note.valeur  }}</td>
+                     <td class="coloured-cel">{{ note.coeff }}</td>
+                     <td>{{ note.coeff * note.valeur  }}</td>
+                     <td class="coloured-cel">{{ note.teacher.name  }}</td>
+                     <td>Signature</td>
+                   </tr>
+
+                 {% endfor %}
+               <tr>
+                 <td class="cel-no-style">{{ mod.module }}</td>
+                 <td class="cel-no-style">TOTAL : 92.0 </td>
+                 <td class="cel-no-style">T.COEF: </td>
+                 <td class="cel-no-style"> 9 </td>
+                 <td class="cel-no-style">MOYENNE : 10.22/20</td>
+                 <td class="cel-no-style">10.22/20</td>
+               </tr>
+             {% endfor %}
+
+      
+      <!-- Groupe 1 -->
+
+      <!-- Groupe2 -->
+          <tr>
+            <td class="coloured-cel">S.V.T</td>
+            <td>08.50</td>
+            <td class="coloured-cel">2</td>
+            <td>017.00</td>
+            <td class="coloured-cel">MBAPPE BELLE</td>
+            <td>Signature</td>
+          </tr>
+          <tr>
+            <td class="coloured-cel">S.V.T</td>
+            <td>08.50</td>
+            <td class="coloured-cel">2</td>
+            <td>017.00</td>
+            <td class="coloured-cel">MBAPPE BELLE</td>
+            <td>Signature</td>
+          </tr>
+          <tr>
+            <td class="coloured-cel">S.V.T</td>
+            <td>08.50</td>
+            <td class="coloured-cel">2</td>
+            <td>017.00</td>
+            <td class="coloured-cel">MBAPPE BELLE</td>
+            <td>Signature</td>
+          </tr>
+          <tr>
+            <td class="cel-no-style">ENS</td>
+            <td class="cel-no-style">TOTAL : 92.0 </td>
+            <td class="cel-no-style">T.COEF : </td>
+            <td class="cel-no-style"> 9 </td>
+            <td class="cel-no-style">MOYENNE : 10.22/20</td>
+            <td class="cel-no-style">10.22/20</td>
+          </tr>
+      <!-- Groupe2 -->
+
+      <!-- Groupe3 -->
+          <tr>
+            <td class="coloured-cel">S.V.T</td>
+            <td>08.50</td>
+            <td class="coloured-cel">2</td>
+            <td>017.00</td>
+            <td class="coloured-cel">MBAPPE BELLE</td>
+            <td>Signature</td>
+          </tr>
+          <tr>
+            <td class="coloured-cel">S.V.T</td>
+            <td>08.50</td>
+            <td class="coloured-cel">2</td>
+            <td>017.00</td>
+            <td class="coloured-cel">MBAPPE BELLE</td>
+            <td>Signature</td>
+          </tr>
+          <tr>
+            <td class="coloured-cel">S.V.T</td>
+            <td>08.50</td>
+            <td class="coloured-cel">2</td>
+            <td>017.00</td>
+            <td class="coloured-cel">MBAPPE BELLE</td>
+            <td>Signature</td>
+          </tr>
+          <tr>
+            <td class="cel-no-style">ens </td>
+            <td class="cel-no-style">TOTAL : 92.0 </td>
+            <td class="cel-no-style">T.COEF: </td>
+            <td class="cel-no-style"> 9 </td>
+            <td class="cel-no-style">MOYENNE : 10.22/20</td>
+            <td class="cel-no-style">10.22/20</td>
+          </tr>
+      <!-- Groupe3 -->
+      </table>
+
+      <table>
+        <tr>
+          <td>TOTAL</td>
+          <td></td>
+          <td>33</td>
+          <td>409.50/660</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <br />
+
+  <section id="recap" class="container-fluid">
+    <table border=1>
+      <tr>
+        <td class="title-cel coloured-cel">RECAPITULATIF</td>
+        <td class="title-cel coloured-cel">MOYENNE/20</td>
+        <td class="title-cel coloured-cel">{% trans %}Rank{% endtrans %}</td>
+        <td class="title-cel coloured-cel">MOYENNE GENEARALE DE LA CLASSE</td>
+        <td class="title-cel coloured-cel">ABSENCE(S) JUSTIFIEE(S)</td>
+        <td class="title-cel coloured-cel">ABSENCE(S) NON JUSTIFIEE(S)</td>
+        <td class="title-cel coloured-cel">CONSIGNE(S)</td>
+        <td class="title-cel coloured-cel">EXCLUSION (EN jours)</td>
+      </tr>
+
+      <tr>
+        <td>1er Trimestre</td>
+        <td>10.20</td>
+        <td>25e/30</td>
+        <td>11.50/20</td>
+        <td>0000H</td>
+        <td>0017H</td>
+        <td>000H</td>
+        <td>000J</td>
+      </tr>
+
+      <tr>
+        <td>2eme Trimestre</td>
+        <td>10.20</td>
+        <td>25e/30</td>
+        <td>11.50/20</td>
+        <td>0000H</td>
+        <td>0017H</td>
+        <td>000H</td>
+        <td>000J</td>
+      </tr>
+
+      <tr>
+        <td>3eme Trimestre</td>
+        <td>10.20</td>
+        <td>25e/30</td>
+        <td>11.50/20</td>
+        <td>0000H</td>
+        <td>0017H</td>
+        <td>000H</td>
+        <td>000J</td>
+      </tr>
+
+      <tr>
+        <td>Annuel</td>
+        <td>10.20</td>
+        <td>25e/30</td>
+        <td>11.50/20</td>
+        <td>0000H</td>
+        <td>0017H</td>
+        <td>000H</td>
+        <td>000J</td>
+      </tr>
+    </table>
+  </section>
+
+  <br />
+
+  <section id="bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-{% trans %}Print {% endtrans %}-6">
+          <div>
+            <h4 class="title">Decision du conseil de classe</h4>
+            <div class="col-md-5 col-{% trans %}Print {% endtrans %}-5">
+              <label>Tableau d'honneur </label>
+              <label>Encouragements </label>
+              <label>Felicitations </label>
+            </div>
+            <div class="col-md-1 col-{% trans %}Print {% endtrans %}-1">
+                <input type="checkbox" /><br />
+                <input type="checkbox" /><br />
+                <input type="checkbox" /><br />
+            </div>
+            <div class="col-md-5 col-{% trans %}Print {% endtrans %}-5">
+              <label>Avertissement Travail </label>
+              <label>Blame Travail </label>
+              <label>Avertissement Discipline </label>
+              <label>Blame Discipline </label>
+            </div>
+            <div class="col-md-1 col-{% trans %}Print {% endtrans %}-1">
+                <input type="checkbox" /><br />
+                <input type="checkbox" /><br />
+                <input type="checkbox" /><br />
+            </div>
+          </div>
+
+          <div class="container-fluid" style="padding-top: 15px">
+            <h4 style="text-align:center">Decision de fin d'annee</h4>
+            <div class="row" style="border: solid 1px lightblue">
+              <div class="col-md-6 col-{% trans %}Print {% endtrans %}-6">
+                <input type="checkbox" /> Redouble <br />
+                <input type="checkbox" /> Admin en _________ <br />
+              </div>
+              <div class="col-md-6 col-{% trans %}Print {% endtrans %}-6">
+                <input type="checkbox" /> Ne peut tripler <br />
+                <input type="checkbox" /> Exclu(e)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-{% trans %}Print {% endtrans %}-6">
+          <div class="card-bas">
+            <h4 class="title">Observations du chef D'etablissement</h4>
+            <p>
+              Douala le : 11/06/2018 <br />
+              LE PRINCIPAL
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

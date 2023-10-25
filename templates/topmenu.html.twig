@@ -1,0 +1,276 @@
+      <div class="top-menu w3-animate-left ">
+               
+                <ul class="nav navbar-nav pull-right  ">
+                    <li><a href="javascript:;" class="fullscreen-btn w3-center w3-padding"><i class="fa fa-arrows-alt"></i></a></li>
+
+                    
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle w3-btn w3-round-large w3-center w3-padding" data-toggle="dropdown"    aria-expanded="false"><i class="fa fa-phone-square "></i>{% trans %}Contact{% endtrans %}<i class="ico, icon-arrow-down"></i></a>
+                 
+                    <!-- start language menu -->
+                    
+                    <ul class="dropdown-menu w3-list  w3-round-large ">
+                    <li class="dropdown item w3-hover-blue"><a href="{{ path('contact_new') }}" class='  btn-sm'><span class="fa fa-envelope-o w3-blue"></span>{% trans %}Send  us a message{% endtrans %}</a>  
+                            </li>
+
+                            <li class="dropdown item w3-hover-teal"><a href='tel:+237697019629' class=' btn-sm'><span class="fa fa-phone w3-teal"></span> <strong>{% trans %}Call us{% endtrans %}</strong></a>
+                            </li>
+
+                            <li class="dropdown item w3-hover-green"><a href='https://wa.me/+237697019629' class=' btn-sm'><span class="fa fa-whatsapp w3-green"></span> <strong>{% trans %}Whatsapp{% endtrans %}</strong></a></li>
+                            <li class="dropdown item w3-hover-blue"><a href='https://facebook.com/Habitech-Solutions-Services-288897671931465/' class=' btn-sm'><span class="fa fa-facebook w3-blue"></span> <strong>{% trans %}Facebook{% endtrans %}</strong></a></li>
+                    </ul>
+                    </li>
+
+
+           <!-- end language menu -->
+                    <!-- start notification dropdown -->
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                  <!--  <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge headerBadgeColor1"> 6 </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="external">
+                                <h3><span class="bold">Notifications</span></h3>
+                                <span class="notification-label purple-bgcolor">{% trans %}New{% endtrans %} 6</span>
+                            </li>
+                            <li>
+                                <ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">just now</span>
+                                            <span class="details">
+                                                <span class="notification-icon circle deepPink-bgcolor"><i class="fa fa-check"></i></span> Congratulations!. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">3 mins</span>
+                                            <span class="details">
+                                                <span class="notification-icon circle purple-bgcolor"><i class="fa fa-user o"></i></span>
+                                                <b>John Micle </b>is now following you. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">7 mins</span>
+                                            <span class="details">
+                                                <span class="notification-icon circle blue-bgcolor"><i class="fa fa-comments-o"></i></span>
+                                                <b>Sneha Jogi </b>sent you a message. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">12 mins</span>
+                                            <span class="details">
+                                                <span class="notification-icon circle pink"><i class="fa fa-heart"></i></span>
+                                                <b>Ravi Patel </b>like your photo. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">15 mins</span>
+                                            <span class="details">
+                                                <span class="notification-icon circle yellow"><i class="fa fa-warning"></i></span> Warning! </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">10 hrs</span>
+                                            <span class="details">
+                                                <span class="notification-icon circle red"><i class="fa fa-times"></i></span> Application error. </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="dropdown-menu-footer">
+                                    <a href="javascript:void(0)"> {% trans %} All  Notifications{% endtrans %}  </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end notification dropdown -->
+                    <!-- start message dropdown -->
+
+                   <!-- <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge headerBadgeColor2"> 2 </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="external">
+                                <h3><span class="bold">Messages</span></h3>
+                                <span class="notification-label cyan-bgcolor">{% trans %}New{% endtrans %} 2</span>
+                            </li>
+                            <li>
+                                <ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
+                                    <li>
+                                        <a href="#">
+                                                <span class="photo">
+                                                	<img src="{{ asset('assets/img/prof/prof2.jpg') }}" class="img-circle" alt=""> </span>
+                                            <span class="subject">
+                                                	<span class="from"> Sarah Smith </span>
+                                                	<span class="time">Just Now </span>
+                                                </span>
+                                            <span class="message"> Jatin I found you on LinkedIn... </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <span class="photo">
+                                                	<img src="{{ asset('assets/img/prof/prof3.jpg') }}" class="img-circle" alt=""> </span>
+                                            <span class="subject">
+                                                	<span class="from"> John Deo </span>
+                                                	<span class="time">16 mins </span>
+                                                </span>
+                                            <span class="message"> Fwd: Important Notice Regarding Your Domain {% trans %} Name {% endtrans %}... </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <span class="photo">
+                                                	<img src="{{ asset('assets/img/prof/prof1.jpg') }}" class="img-circle" alt=""> </span>
+                                            <span class="subject">
+                                                	<span class="from"> Rajesh </span>
+                                                	<span class="time">2 hrs </span>
+                                                </span>
+                                            <span class="message"> pls take a {% trans %}Print {% endtrans %} of attachments. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <span class="photo">
+                                                	<img src="{{ asset('assets/img/prof/prof8.jpg') }}" class="img-circle" alt=""> </span>
+                                            <span class="subject">
+                                                	<span class="from"> Lina Smith </span>
+                                                	<span class="time">40 mins </span>
+                                                </span>
+                                            <span class="message"> Apply for Ortho Surgeon </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <span class="photo">
+                                                	<img src="{{ asset('assets/img/prof/prof5.jpg') }}" class="img-circle" alt=""> </span>
+                                            <span class="subject">
+                                                	<span class="from"> Jacob Ryan </span>
+                                                	<span class="time">46 mins </span>
+                                                </span>
+                                            <span class="message"> Request for leave application. </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="dropdown-menu-footer">
+                                    <a href="#"> {% trans %} All  Messages{% endtrans %}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <!-- end message dropdown -->
+                    <!-- start manage user dropdown -->
+
+
+
+
+
+
+
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle w3-padding w3-btn w3-round-large" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                           {% if app.user.photoDeProfil %}
+                            <img alt="" class="img-circle img-responsive img-rounded" src="{{ asset( 'uploads/user/'~ app.user.photoDeProfil.filename) }}" width='32px' />
+                            {% endif %}
+                            <span class="username username-hide-on-mobile"> {{ app.user.username }} </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default w3-bar w3-round-large">
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                <li><a href="{{ path('homepage') }}" class="w3-btn w3-hover-pink">
+                                        Logged in as {{ app.user.username }}
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li><a href="{{ path('app_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
+                            {% endif %}
+                            <li> 
+                                <a class="w3-btn w3-hover-pink" href="{{ path('app_update_register',{id:app.user.id}) }}">
+                                    <i class="icon-user"></i>{% trans %} Profile {% endtrans %}</a>
+                            </li>
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                            <li>
+                                <a href="{{ path('super_user_new') }}" class="w3-btn w3-hover-pink">
+                                    <i class="fa fa-user"></i>{% trans %} Create {% endtrans %}{% trans %} User {% endtrans %}
+                                </a>
+                            </li>
+                            {%  endif %}
+                            {% if  is_granted('ROLE_ADMIN') %}
+
+                            <li>
+
+                                <a href="{{ path('user_teacher') }}" class="w3-btn w3-hover-pink">
+                                    <i class="fa fa-user"></i>{% trans %} Create {% endtrans %} {% trans %} User {% endtrans %} {% trans %}  teacher {% endtrans %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_staff') }}" class="w3-btn w3-hover-pink">
+                                    <i class="fa fa-user"></i>{% trans %} Create {% endtrans %} {% trans %} User {% endtrans %} ({% trans %}  staff {% endtrans %})
+                                </a>
+                            </li>
+                            {% endif %}
+                            <!--li>
+                                <a href="#">
+                                    <i class="icon-directions"></i> Help
+                                </a>
+                            </li-->
+                            <li class="divider"> </li>
+                            <!--li>
+                                <a href="lock_screen.html">
+                                    <i class="icon-lock"></i> Lock
+                                </a>
+                            </li-->
+                            <li>
+                                <a href="{{ path('app_logout') }}" class="w3-btn w3-hover-red">
+                                    <i class="icon-logout"></i> {{ 'logout'|trans({}, 'FOSUserBundle') }} </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% else %}
+                        <li class="dropdown dropdown-user">
+                            <a href="{{ path('app_login') }}" class="hLink dropdown-toggle w3-btn w3-round-xlarge w3-green w3-center w3-padding"
+                               data-hover="dropdown" data-close-others="true"> {% trans %}  Login {% endtrans %} </a>
+                        </li>
+
+                    {% endif %}
+
+                    <!-- end manage user dropdown -->
+                    <li class="dropdown language-switch">
+                                            
+                        <a class="dropdown-toggle  w3-btn w3-round-large " data-toggle="dropdown" aria-expanded="false">
+                            <img src="{{ asset('assets/img/flags/Cameroun.png') }}" class="position-left" alt="{{ app.request.locale }}" width="32px" height="20px"><span> {{ app.request.locale }} </span><span class="icon icon-arrow-down"></span>
+                        </a>
+                    
+                            
+                            {% set param_route = app.request.attributes.get('_route_params')|length%} 
+                            {% if app.request.attributes.get('_locale')  and param_route == 1 %}
+                         <ul class="dropdown-menu text text-center  w3-panel w3-round-xxlarge">
+
+                            <li class="dropdown-item w3-hover-blue">
+                                <a class="french " href="{{ path( app.request.attributes.get('_route') ,{_locale:'fr'}) }}" title="Francais"><img src="{{ asset('assets/img/flags/fr.webp') }}" alt=""  width="32px" height="20px"> {% trans %} French{% endtrans %}</a>
+                            </li>
+                            <li class="dropdown-item w3-hover-purple">
+                                <a class="english" href="{{ path( app.request.attributes.get('_route') ,{_locale:'en'}) }}" title="English"><img src="{{ asset('assets/img/flags/en.webp') }}" alt="" width="32px" height="20px"> {% trans %} English{% endtrans %}</a>
+                            </li>
+
+                         </ul>
+                         {% endif %}
+
+                         
+                    </li>
+
+                    <!--li class="dropdown dropdown-quick-sidebar-toggler">
+                        <a id="headerSettingButton" class="mdl-button mdl-js-button mdl-button--icon pull-right" data-upgraded=",MaterialButton">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                    </li-->
+                </ul>
+            </div>{# empty Twig template #}

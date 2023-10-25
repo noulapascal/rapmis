@@ -1,0 +1,58 @@
+{#% extends "base.html.twig" %#}
+ <html>
+{% block title %}
+    <head><title></title></head>{% endblock %}
+
+{% block body %}
+    
+    <body class="page-content-wrapper" bgcolor=""  >
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+<h1>{% trans %} Update notifications from your child on rapmis{% endtrans %}</h1>
+        {% trans %} Hello dear parent of student {% endtrans %} {{ student.name }}
+         {% trans %}  from the class of{% endtrans %} 
+       {{ student.classes.niveau }} {{ student.classes.name }}
+
+
+<table width="100%" border="0" cellpadding="10" cellspacing="10" align="center">
+    <thead bgcolor="#abe">
+    <td>
+        <h1>{% trans %}Rapmis{% endtrans %}</h1>
+    </td>
+    <td>
+    </td>
+     
+    </thead>
+    
+    <tr>
+        <td>Libelle</td>
+        <td>{{ distinction.nom }}</td>
+    </tr>
+    <tr>
+        <td>{% trans %}Description{% endtrans %}</td>
+        <td>{{ distinction.description }}</td>
+    </tr>
+    <tr>
+        <td>
+            Nous voulons vous notifier qu'une information sur votre enfant a été mise à jour. <br>
+</td><td>Votre enfant a une nouvelle Distinction. 
+    {% trans %} Please{% endtrans %}{# example, assuming you h ave a route named "login" #}
+
+ <a href="https://rapmis.habitechsolution.com{{ path('students_show',
+ { 'id': student.id }) }}">{% trans %} Click here{% endtrans %}</a>. pour plus de détails.
+     </td>
+            </tr>
+</table>
+
+{# Makes an absolute URL to the /images/logo.png file #}
+<img src="{{ asset('favicon.png') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+{% endblock %}

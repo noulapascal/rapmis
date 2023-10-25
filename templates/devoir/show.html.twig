@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Devoir{% endtrans %}{% endblock %}
+
+{% block body %}
+    
+    <div class="page-content-wrapper">
+        <div class="page-content">
+    <h1>{% trans %}Devoir{% endtrans %}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <td>{{ devoir.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Homework{% endtrans %}</th>
+                <td>{{ devoir.homework }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}GivenOn{% endtrans %}</th>
+                <td>{{ devoir.givenOn ? devoir.givenOn|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}DoBefore{% endtrans %}</th>
+                <td>{{ devoir.doBefore ? devoir.doBefore|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}UpdateAt{% endtrans %}</th>
+                <td>{{ devoir.updateAt ? devoir.updateAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('devoir_index') }}">back to list</a>
+
+    <a href="{{ path('devoir_edit', {'id': devoir.id}) }}">edit</a>
+
+    {{ include('devoir/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class="pull-left">
+
+            </div></div></div>
+        <h1>{% trans %}Distinction Creation{% endtrans %}</h1>
+
+                        
+    {{ form_start(form) }}
+    
+    {{ form_widget(form) }}
+        <input type="submit" value="Save" />
+
+    {{ form_end(form) }}
+        </div></div>
+    {# <ul>
+         <li>
+             <a href="{{ path('epreuves_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+         </li>
+     </ul>#}
+
+{% endblock %}

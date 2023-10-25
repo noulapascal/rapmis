@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+    <h1>{% trans %}Schoolyear Creation{% endtrans %}</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="{% trans %} Create{% endtrans %}" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('schoolyear_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

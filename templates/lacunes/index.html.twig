@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- start page content -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+                        <div class="page-title">Programme la classe</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li><a class="parent-item" href="#">Subject  </a>&nbsp;<i class="fa fa-angle-right"></i>
+                        </li>
+                        <li class="active">Programme la classe</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabbable-line">
+
+                        <div class="tab-content">
+                            <div class="tab-pane active fontawesome-demo" id="tab1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card card-box">
+                                            <div class="card-head">
+                                                <header>Programme la classe</header>
+                                                <div class="tools">
+                                                    <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-6">
+
+
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-6">
+
+                                                    </div>
+                                                </div>
+                                                <div class="table-scrollable">
+                                                    <table class="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>{% trans %}Intitulé{% endtrans %}</th>
+                                                            <th>{% trans %}Level{% endtrans %}</th>
+                                                            <th>{% trans %}Matières{% endtrans %}</th>
+                                                            
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {% for epreuve in epreuves %}
+
+                                                            <tr class="odd gradeX">
+                                                                <td>{{ epreuve.intitule }}</td>
+                                                                <td>{{ epreuve.niveau   }}</td>
+                                                                <td>{{ epreuve.matiere     }}</td>
+                                                                
+                                                            </tr>
+                                                        {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end page content -->
+{% endblock %}

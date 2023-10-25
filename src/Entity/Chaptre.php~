@@ -1,0 +1,75 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use AppBundle\Repository\ChapitreRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=ChapitreRepository::class)
+ */
+class Chapitre
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $objectifs;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Programme::class, inversedBy="chapitres")
+     */
+    private $programme;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getObjectifs(): ?string
+    {
+        return $this->objectifs;
+    }
+
+    public function setObjectifs(?string $objectifs): self
+    {
+        $this->objectifs = $objectifs;
+
+        return $this;
+    }
+
+    public function getProgramme(): ?Programme
+    {
+        return $this->programme;
+    }
+
+    public function setProgramme(?Programme $programme): self
+    {
+        $this->programme = $programme;
+
+        return $this;
+    }
+}

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Niveaux list{% endtrans %}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <th>{% trans %}Subject{% endtrans %}</th>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for niveau in niveaux %}
+            <tr>
+                <td><a href="{{ path('niveau_show', { 'id': niveau.id }) }}">{{ niveau.id }}</a></td>
+                <td>{{ niveau.name }}</td>
+                <td>{{ niveau.matieres|join(',,') }}</td>
+                <td>{{ niveau.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('niveau_show', { 'id': niveau.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('niveau_edit', { 'id': niveau.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('niveau_new') }}">Create a new niveau</a>
+        </li>
+    </ul>
+    </div>
+</div>
+{% endblock %}

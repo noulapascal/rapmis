@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{% trans %}Country{% endtrans %}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <td>{{ country.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <td>{{ country.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Capital{% endtrans %}</th>
+                <td>{{ country.capital }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('country_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('country_edit', { 'id': country.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

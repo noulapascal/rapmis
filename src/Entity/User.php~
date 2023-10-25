@@ -1,0 +1,540 @@
+<?php
+// src/AppBundle\Entity/User.php
+
+namespace AppBundle\Entity;
+
+use AppBundle\Entity\Teacher;
+use Doctrine\Common\Collections\Collection;
+use FOS\UserBundle\Model\GroupInterface;
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
+use Grafikat\UploadBundle\Annotation\Uploadable;
+use Grafikat\UploadBundle\Annotation\UploadableField;
+use Symfony\Component\Validator\Constraints\DateTime;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ * @UniqueEntity(
+ * fields={"username"},
+ * message="username already used")
+ * @UniqueEntity(
+ * fields={"email"},
+ * message="email already used by another user"
+ * )
+ * @UniqueEntity(
+ * fields={"phoneNumber"},
+ * message="this phoneNumber is already used by another user"
+ * )
+ * @Uploadable()
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+       // $dev = new Media();
+        //$dev->setFilename('devalere.png');
+        $this->roles = array();
+
+
+        //$dev->setUpdatedAt(new DateTime('now'));
+       // $this->photoProfile = $dev;
+
+    }
+
+    
+    /**
+     * @ORM\Column(type="string", length=25)
+     *
+     * @Assert\Length(
+     *     min=9,
+     *     max=25,
+     *     minMessage="The number is too short.",
+     *     maxMessage="The number is too long.",
+         * )
+     */
+    
+    private $phoneNumber;
+
+    
+    /**
+     * Plain password. Used for model validation. Must not be persisted.
+     *
+     * @var string
+     */
+    protected $plainPassword;
+
+    /**
+     * 
+     * 
+     */
+    
+    private $typeDeCompte;
+    /**
+    * @ORM\Column(type="string", length=255,nullable=true)
+    */
+    
+   protected $zone;
+
+    /**
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Teacher", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    protected $teacher;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Type_etablissements", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    protected $typeEtablissement;
+
+    
+
+    public function getTeacher() {
+        return $this->teacher;   
+    }
+public function setTeacher($teacher)
+    {
+        $this->teacher=$teacher;
+    }
+    /**
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Staff", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    protected $staff;
+    
+
+    public function getStaff() {
+        return $this->staff;   
+    }
+public function setStaff($staff)
+    {
+        $this->staff=$staff;
+    }
+    
+    public function getTypeDeCompte() {
+        return $this->typeDeCompte;   
+    }
+public function setTypeDeCompte($typeDeCompte)
+    {
+        $this->typeDeCompte=$typeDeCompte;
+    }
+    
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="photo_de_profil", type="string", length=255, nullable = true)
+     */
+    private $filename;
+
+    
+    
+    /**
+     * @UploadableField(filename = "filename", path="uploads/user", nullable = true)
+     */
+    private $photoDeProfil;
+
+    public function getPhotoDeProfil() {
+        return $this->photoDeProfil;   
+    }
+public function setPhotoDeProfil($photoDeProfil)
+    {
+        $this->photoDeProfil=$photoDeProfil;
+    }
+
+    
+     public function getFilename()
+    {
+        return $this->filename;
+    }
+
+    /**
+     * @param null|string $filename
+     */
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+    }
+
+    ///// photoProfile
+    /**
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Media", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $photoProfile;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Etablissements", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $etablissements;
+
+    /**
+     * @return mixed
+     */
+    public function getEtablissements()
+    {
+        return $this->etablissements;
+    }
+
+    /**
+     * @param mixed $etablissements
+     */
+    public function setEtablissements($etablissements)
+    {
+        $this->etablissements = $etablissements;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoneNumber()
+    {
+        return $this->phoneNumber;
+    }
+
+    /**
+     * @param mixed $phoneNumber
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhotoProfile()
+    {
+        return $this->photoProfile;
+    }
+
+    /**
+     * @param mixed $photoProfile
+     */
+    public function setPhotoProfile($photoProfile)
+    {
+        $this->photoProfile = $photoProfile;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param string $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsernameCanonical()
+    {
+        return $this->usernameCanonical;
+    }
+
+    /**
+     * @param string $usernameCanonical
+     */
+    public function setUsernameCanonical($usernameCanonical)
+    {
+        $this->usernameCanonical = $usernameCanonical;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmailCanonical()
+    {
+        return $this->emailCanonical;
+    }
+
+    /**
+     * @param string $emailCanonical
+     */
+    public function setEmailCanonical($emailCanonical)
+    {
+        $this->emailCanonical = $emailCanonical;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param bool $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param string $plainPassword
+     */
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * @param string $salt
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getConfirmationToken()
+    {
+        return $this->confirmationToken;
+    }
+
+    /**
+     * @param null|string $confirmationToken
+     */
+    public function setConfirmationToken($confirmationToken)
+    {
+        $this->confirmationToken = $confirmationToken;
+    }
+
+    /**
+     * @return Collection|GroupInterface[]
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * @param Collection|GroupInterface[] $groups
+     */
+    public function setGroups($groups)
+    {
+        $this->groups = $groups;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getLastLogin()
+    {
+        return $this->lastLogin;
+    }
+
+    /**
+     * @param \DateTime|null $lastLogin
+     */
+    public function setLastLogin(\DateTime $lastLogin = null )
+    {
+        $this->lastLogin = $lastLogin;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getPasswordRequestedAt()
+    {
+        return $this->passwordRequestedAt;
+    }
+
+    /**
+     * @param \DateTime|null $passwordRequestedAt
+     */
+    public function setPasswordRequestedAt(\DateTime $passwordRequestedAt = null )
+    {
+        $this->passwordRequestedAt = $passwordRequestedAt;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * @param array $roles
+     */
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
+    }
+
+
+
+    /**
+     * Set ville
+     *
+     * @param \AppBundle\Entity\City $ville
+     *
+     * @return User
+     */
+    public function setVille(\AppBundle\Entity\City $ville = null)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return \AppBundle\Entity\City
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set city
+     *
+     * @param \AppBundle\Entity\City $city
+     *
+     * @return User
+     */
+    public function setCity(\AppBundle\Entity\City $city = null)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return \AppBundle\Entity\City
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set zone
+     *
+     * @param string $zone
+     *
+     * @return User
+     */
+    public function setZone($zone)
+    {
+        $this->zone = $zone;
+
+        return $this;
+    }
+
+    /**
+     * Get zone
+     *
+     * @return string
+     */
+    public function getZone()
+    {
+        return $this->zone;
+    }
+
+    /**
+     * Set typeEtablissement
+     *
+     * @param \AppBundle\Entity\Type_etablissements $typeEtablissement
+     *
+     * @return User
+     */
+    public function setTypeEtablissement(\AppBundle\Entity\Type_etablissements $typeEtablissement = null)
+    {
+        $this->typeEtablissement = $typeEtablissement;
+
+        return $this;
+    }
+
+    /**
+     * Get typeEtablissement
+     *
+     * @return \AppBundle\Entity\Type_etablissements
+     */
+    public function getTypeEtablissement()
+    {
+        return $this->typeEtablissement;
+    }
+}

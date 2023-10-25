@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StatOnLevelController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/ns/src/Controller/StatOnLevelController.php'|file_link(0) }}">src/Controller/StatOnLevelController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/wamp64/www/ns/templates/stat_on_level/index.html.twig'|file_link(0) }}">templates/stat_on_level/index.html.twig</a></code></li>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" >{% trans %}Send{% endtrans %}
+        {{ form_end(form) }}
+    </ul>
+
+        
+        {% for class in students %}
+             <table class="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
+                                                        <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>{% trans %} Name {% endtrans %}
+                                                            <th>{% trans %} FirstName {% endtrans %}
+                                                            <th>{% trans %} Class {% endtrans %}</th>
+                                                            <th>{% trans %}New{% endtrans %}  </th>
+                                                            <th>{% trans %} Gender{% endtrans %}
+                                                            <th>{% trans %}Admission Date{% endtrans %}</th>
+                                                            <th>{% trans %} Action {% endtrans %}</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+        {% for student in class %}
+            
+             <tr class="odd gradeX">
+                                                                <td class="patient-img">
+                                                                    <img src="{{ asset('uploads/students/' ~ student.filename) }}" alt="aucune Photo" width="32px" >
+                                                                </td>
+                                                                <td class="left">{{ student.name }}</td>
+                                                                <td class="left">{{ student.firstName }}</td>
+                                                                <td class="left">{{ student.classes.niveau.name }}  {{ student.classes.name }}</td>
+                                                                <td>{% if student.nouveau %}Yes{% else %}No{% endif %}</td>
+                                                                <td class="left">{{ student.sexe }}</td>
+                                                                <td class="left">{% if student.dateCreate %}{{ student.dateCreate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                                                <td>
+                                                                    {% if is_granted('ROLE_ADMIN_SEC') %}
+
+                                                                    <a href="{{ path('students_edit', { 'id': student.id }) }}" class="btn btn-primary btn-xs">
+                                                                        <i class="fa fa-pencil"></i>
+                                                                    </a>
+                                                                    {% endif %}
+                                                                    <a href="{{ path('students_show', { 'id': student.id }) }}" title="Voir les informations  sur l'élève" class="btn btn-info btn-xs">
+                                                                        <i class="fa fa-th-list"></i>
+                                                                               {% if is_granted('ROLE_ADMIN') %}
+                                                                             </a>
+                                                                    <a href="{{ path('students_delete', { 'id': student.id }) }}" class="btn btn-danger btn-xs" onclick="return confirm('{{'Delete'|trans}}')">
+                                                                        <i class="fa fa-remove"></i>
+                                                                    </a>
+                                                                               {% endif %}
+                                                                   <!-- <button class="btn btn-danger btn-xs">
+                                                                        <i class="fa fa-trash-o "></i>-->
+                                                                  
+                                                                </td>
+                                                            </tr>
+
+            
+            
+        {% endfor %}
+                                                        </tbody>
+             </table>
+        {% endfor %}
+        
+        </div>
+{% endblock %}

@@ -1,0 +1,954 @@
+{% extends 'base.html.twig' %}
+
+{% set moyClass = 0 %}
+{% set nombre_eleve = 0 %}
+{% set evaluation = '' %}
+{% set matiere = '' %}
+
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title"> <h5>Année scolaire {{ "now"|date('Y')-1 }}|{{ "now"|date('Y') }}</h5></div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{{ student.name }} {{ student.firstName }} <img src="{{ asset( 'uploads/students/'~ student.filename) }}" {#class="doctor-pic"#} alt="" width="150">
+    {% endtrans %}</h1>
+        <div class="col-md-10 col-sm-10">
+            <div class="panel tab-border card-box">
+                <header class="panel-heading panel-heading-gray custom-tab ">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a href="#home" data-toggle="tab" class="active">{% trans %} General Information{% endtrans %}</a>
+                        </li>
+                        <li class="nav-item"><a href="#about" data-toggle="tab">{% trans %}  Additional Information {% endtrans %}</a>
+                        </li>
+                        <li class="nav-item"><a href="#bulletin" data-toggle="tab">{% trans %}  Health book {% endtrans %}</a>
+                        </li>
+                        <li class="nav-item"><a href="#notes" data-toggle="tab">Notes </a>
+                        </li>
+                        <li class="nav-item"><a href="#profile" data-toggle="tab">{% trans %}  Emergency contact {% endtrans %}</a>
+                        </li>
+                        </li>
+                        <li class="nav-item"><a href="#disciplinaire" data-toggle="tab">Discipline</a>
+                        </li>
+                        <li class="nav-item"><a href="#edt" data-toggle="tab">{% trans %} TimeTable {% endtrans %}</a>
+                        <li class="nav-item"><a href="#distinction" data-toggle="tab">Distinction</a>
+                        </li>
+                        <li class="nav-item"><a href="#conseil" data-toggle="tab">{% trans %}  Class council {% endtrans %}</a>
+                        <li class="nav-item"><a href="#suivi" data-toggle="tab">{% trans %} Educational follow-up {% endtrans %}</a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>{% trans %} General Information{% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>{% trans %} Date of birth {% endtrans %}</td>
+                                                    <td>{% if student.dateDeNaissance %}{{ student.dateDeNaissance|date('Y-m-d')
+                                                        }}{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %} Place of birth {% endtrans %}</td>
+                                                    <td> {{ student.lieuDeNaissance }} </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %} Gender{% endtrans %}</td>
+                                                    <td> {{ student.sexe }} </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %} Admission date{% endtrans %}</td>
+                                                    <td>{% if student.dateCreate %}{{ student.dateCreate|date('Y-m-d H:i:s') }}{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %} Recrutement path{% endtrans %}</td>
+
+                                                        {% trans %} File study{% endtrans %} {% if student.etudeDossier %}Yes{% else %}No{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Cycle{% endtrans %} </td>
+                                                    <td> {% if student.cycle %} {{ student.cycle }} {% else %}Not define{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %} Series{% endtrans %} </td>
+                                                    <td> {% if student.serie %} {{ student.serie }} {% else %}Not define{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %} Last school attended {% endtrans %} </td>
+                                                    <td> {% if student.lastSchool %} {{ student.lastSchool }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Class passing average  {% endtrans %}</td>
+                                                    <td> {% if student.moyPassageClasse %} {{ student.moyPassageClasse }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Rank{% endtrans %} </td>
+                                                    <td> {% if student.rang  %} {{ student.rang  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Name of the last HeadMaster{% endtrans %}</td>
+                                                    <td> {% if student.nameChefLastSchool %} {{ student.nameChefLastSchool }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="about">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>{% trans %}Additional information{% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td> {% trans %}Father {% endtrans %} </td>
+                                                    <td> {% if student.pere %} {{ student.pere }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telPere  %} {{ student.telPere  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.emailPere %} {{ student.emailPere }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.profPere %} {{ student.profPere }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Mother {% endtrans %} </td>
+                                                    <td> {% if student.mere  %} {{ student.mere  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telMere %} {{ student.telMere }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.emailMere  %} {{ student.emailMere  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.profMere %} {{ student.profMere }} {% else %}Not define{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Tutor(s) {% endtrans %} / {% trans %}other(s) {% endtrans %} tuteur  </td>
+                                                    <td> {% if student.tuteur  %} {{ student.tuteur  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telTuteur %} {{ student.telTuteur }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.emailTuteur %} {{ student.emailTuteur }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.profTuteur  %} {{ student.profTuteur  }} {% else %}Not define{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}parents' Residence(s) {% endtrans %} </td>
+                                                    <td> {% if student.residenceParents %} {{ student.residenceParents }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Other(s) brother(s) or sister(s) {% endtrans %}</td>
+                                                    <td> {% if student.proche1  %} {{ student.proche1  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telProche1  %} {{ student.telProche1  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td> {% if student.proche2  %} {{ student.proche2  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telProche2  %} {{ student.telProche2  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td> {% if student.proche3  %} {{ student.proche3  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telProche3  %} {{ student.telProche3  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="bulletin">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>{% trans %}Student report card {% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td> {% trans %}Blood group {% endtrans %}</td>
+                                                    <td> {% if student.groupeSanguin  %} {{ student.groupeSanguin  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Specific pathology {% endtrans %} </td>
+                                                    <td> {% if student.pathogieParticuliere  %} {{ student.pathogieParticuliere  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Food allergy {% endtrans %}</td>
+                                                    <td> {% if student.allergieAlimentaire  %} {{ student.allergieAlimentaire  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Drug allergy {% endtrans %} </td>
+                                                    <td> {% if student.allergieMedicamenteuse  %} {{ student.allergieMedicamenteuse  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Exemption {% endtrans %}</td>
+                                                    <td> {% if student.dispense %} {{ student.dispense }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Family Doctor {% endtrans %} </td>
+                                                    <td> {% if student.medecinFamiliale %} {{ student.medecinFamiliale }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Family insurance {% endtrans %} </td>
+                                                    <td> {% if student.assuranceFamille %} {{ student.assuranceFamille }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Approved hospital {% endtrans %} </td>
+                                                    <td> {% if student.hopitalAgree %} {{ student.hopitalAgree }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}Rhesus{% endtrans %}</td>
+                                                    <td> {% if student.rhesus %} {{ student.rhesus }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Inaptitude</td>
+                                                    <td> {% if student.inaptitude  %} {{ student.inaptitude  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="notes">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header><a href="{{ path('bulletin_show', {'id': student.id}) }}">{% trans %}Report Card{% endtrans %}</a> </header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %}Subjects{% endtrans %}</th>
+                                                    <th>{% trans %}Libellé cours{% endtrans %}</th>
+                                                    <th>{% trans %}Note{% endtrans %}</th>
+                                                    <th>{% trans %}Coefficient{% endtrans %}</th>
+                                                    <th>{% trans %}CLass average{% endtrans %}</th>
+                                                    <th>{% trans %}Comments{% endtrans %}</th>
+
+                                                    {% if(is_granted('ROLE_ADMIN')) %}
+                                                        <th>{% trans %}Actions{% endtrans %}
+                                                    {% endif %}
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                        {% for note in notes %}
+
+                                            {% set matiere = note.matieres.name  %}
+                                            {% set evaluation = note.  %}
+                                            {% set flo = note.students.classes.name  %}
+                                            {% set dev = note.students.classes.niveau.name  %}
+
+                                                <tr>
+                                                  {#  {% if not loop.first %}
+                                                        <td> {{ note. }}</td>
+                                                    {% endif %}#}
+                                                    <td> {{ note. }}</td>
+
+                                                    <td>{{ note.matieres.name  }}</td>
+                                                    <td> {{ note.valeur  }} </td>
+                                                    <td> {{ note.coeff }} </td>
+                                                    <td>
+
+                                                        {% for i in 0 .. all_notes|length-1 if ((all_notes[i]. == evaluation and all_notes[i].matieres.name == matiere)
+                                                        and (all_notes[i].students.classes.niveau.name == dev and all_notes[i].students.classes.name == flo) )%}
+
+                                                            {% set moyClass = moyClass + all_notes[i].valeur  %}
+                                                            {% set nombre_eleve = nombre_eleve + 1 %}
+                                                        {% endfor %}
+                                                        {{ (moyClass/nombre_eleve)|round(2, 'floor')  }}
+                                                        {% set moyClass = 0 %}
+                                                        {% set nombre_eleve = 0 %}
+                                                    </td>
+                                                    <td> {{  note.commentaire  }} </td>
+
+                                                    {% if(is_granted('ROLE_ADMIN')) %}
+                                                        <td>
+                                                            <a href="{{ path('notes_edit', { 'id': note.id }) }}" class="btn btn-primary btn-xs">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </a>
+                                                            <a href="{{ path('notes_delete', { 'id': note.id }) }}" class="btn btn-danger btn-xs" onclick="return confirm('{{'Delete'|trans}}')">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </a>
+                                                        </td>
+                                                    {% endif %}
+
+
+
+                                                </tr>
+
+                                        {% endfor %}
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="profile">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>Informations de contact</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td> {% trans %}Father {% endtrans %} </td>
+                                                    <td> {% if student.pere %} {{ student.pere }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telPere  %} {{ student.telPere  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.emailPere %} {{ student.emailPere }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.profPere %} {{ student.profPere }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Mother {% endtrans %} </td>
+                                                    <td> {% if student.mere  %} {{ student.mere  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telMere %} {{ student.telMere }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.emailMere  %} {{ student.emailMere  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.profMere %} {{ student.profMere }} {% else %}Not define{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Tutor(s) {% endtrans %} / {% trans %}other(s) {% endtrans %} {% trans %}tutor(s) {% endtrans %}  </td>
+                                                    <td> {% if student.tuteur  %} {{ student.tuteur  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telTuteur %} {{ student.telTuteur }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.emailTuteur %} {{ student.emailTuteur }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.profTuteur  %} {{ student.profTuteur  }} {% else %}Not define{% endif %}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> {% trans %}parents' Residence(s) {% endtrans %} </td>
+                                                    <td> {% if student.residenceParents %} {{ student.residenceParents }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{% trans %}Other(s) brother(s) or sister(s) {% endtrans %}</td>
+                                                    <td> {% if student.proche1  %} {{ student.proche1  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telProche1  %} {{ student.telProche1  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td> {% if student.proche2  %} {{ student.proche2  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telProche2  %} {{ student.telProche2  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td> {% if student.proche3  %} {{ student.proche3  }} {% else %}Not define{% endif %}</td>
+                                                    <td> {% if student.telProche3  %} {{ student.telProche3  }} {% else %}Not define{% endif %}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane" id="disciplinaire">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>{% trans %}Discipline Information{% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %}Indiscipline type{% endtrans %}</th>
+                                                    <th>{% trans %}Date {% endtrans %}</th>
+                                                    <th>{% trans %}Description {% endtrans %}</th>
+                                                    <th>{% trans %}Compteur{% endtrans %}</th>
+                                                    <th>{% trans %}Actions{% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {% for disc in discipline %}
+                                                <tr>
+                                                    <td>{{ disc.motif }}</td>
+                                                    <td>{% if disc.dateMotif %}{{ disc.dateMotif|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                                    <td>{{ disc.description }}</td>
+                                                    <td>{{ disc.compteur }}</td>
+                                                    {% if(is_granted('ROLE_ADMIN')) %}
+                                                        <td>
+                                                            <a href="{{ path('facteurs_disciplinaires_edit', { 'id': disc.id }) }}" class="btn btn-primary btn-xs">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </a>
+                                                            <a href="{{ path('facteurs_disciplinaires_delete', { 'id': disc.id }) }}" class="btn btn-danger btn-xs" onclick="return confirm('{{'Delete'|trans}}')">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </a>
+                                                        </td>
+                                                    {% endif %}
+
+                                                </tr>
+
+                                                {% endfor %}
+
+
+
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="edt">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>{% trans %} TimeTable {% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %} TimeTable {% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                <tr>
+                                                    <td><img src="{{ asset("uploads/logo") }}/{{ student.classes.filename }}" alt="non disponible actuellement" width="100%"></td>
+                                                 
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="distinction">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <div class="card-head">
+                                        <header>DISTINCTION</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %} Distinction {% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                <tr>
+                                                                                                    
+                                                                                                    {% for item in distinctions %}
+                                                                                                        <td class="text text-primary"> {{ item.nom }}</td>
+                                                                                                        <td> {{ item.description }}</td>
+                                                                                                        {% endfor %}
+                                                                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="conseil">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                    <ul class="nav customtab nav-tabs" role="tablist">
+                            <li class="nav-item"><a href="#tb1" class="nav-link active"  data-toggle="tab" >{% trans %}  Trimester{% endtrans %} I</a></li>
+                            <li class="nav-item"><a href="#tb2" class="nav-link" data-toggle="tab">{% trans %}  Trimester{% endtrans %} II</a></li>
+                            <li class="nav-item"><a href="#tb3" class="nav-link" data-toggle="tab">{% trans %}  Trimester{% endtrans %} III</a></li>
+                            
+                                    </ul>
+                                    <div class="tab-content">
+                                                                            <div class="tab-pane active fontawesome-demo" id="tb1"> 
+                                    <div class="card-head">
+                                        <header>{% trans %}  Trimester{% endtrans %} I</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %}Appreciations{% endtrans %}</th>
+                                                    <th>{% trans %}Sequence I{% endtrans %}</th>
+                                                    <th>{% trans %}Sequence II{% endtrans %}</th>
+                                                    <th>{% trans %}Absence(s){% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                               
+                                                                                                    {% for item in conseil %}
+<tr>
+ {% if item.trimestre=='1' %}
+                                                                                                    
+     
+                                                                                                                 <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.appreciation }}</a></td>
+                                                                                                    <td class="text text-primary"> {{ item.premiereSequence }}</td>
+                                                                                                    <td> {{ item.deuxiemeSequence }}</td>
+                                                                                                    <td> {{ item.deuxiemeSequence }}</td>
+    
+{% endif %}
+ </tr>
+                                                                                                        {% endfor %}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                            <div class="tab-pane  fontawesome-demo" id="tb2"> 
+                                    <div class="card-head">
+                                        <header>{% trans %}  Trimester{% endtrans %} II</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+
+                                                    <th>{% trans %}Appreciations{% endtrans %}</th>
+                                                    <th>{% trans %}Sequence I{% endtrans %}</th>
+                                                    <th>{% trans %}Sequence II{% endtrans %}</th>
+                                                    <th>{% trans %}Absence(s){% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for item in conseil %}
+<tr>
+    {% if item.trimestre=='2'  %}
+                                                                                                   
+        
+                                                                                                                 <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.appreciation }}</a></td>
+                                                                                                    <td class="text text-primary"> {{ item.premiereSequence }}</td>
+                                                                                                    <td> {{ item.deuxiemeSequence }}</td>
+                                                                                                    <td> {{ item.deuxiemeSequence }}</td>
+    
+{% endif %}
+    </tr>
+                                                    {% endfor %}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                            <div class="tab-pane fontawesome-demo" id="tb3"> 
+                                    <div class="card-head">
+                                        <header>{% trans %}  Trimester{% endtrans %} III</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    
+                                                    <th>{% trans %}Appreciations{% endtrans %}</th>
+                                                    <th>{% trans %}Sequence I{% endtrans %}</th>
+                                                    <th>{% trans %}Sequence II{% endtrans %}</th>
+                                                    <th>{% trans %}Absence(s){% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                               
+                                                                                                    {% for item in conseil %}
+<tr>
+     {% if item.trimestre=='3' %}
+                                                                                                                 <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.appreciation }}</a></td>
+                                                                                                    <td class="text text-primary"> {{ item.premiereSequence }}</td>
+                                                                                                    <td> {{ item.deuxiemeSequence }}</td>
+     {% endif %}                                                                                              <td>{% if item.appreciation %}  <i class="fa fa-eye">voir</i></a>{% endif %}</td>
+ </tr>
+                                                                                                        {% endfor %}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                              
+                                    <div class="card-head">
+                                        <header>{% trans %}  Class council decision{% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %}Appreciation(s){% endtrans %}</th>
+                                                    <th>{% trans %}Exclusion(s){% endtrans %}</th>
+                                                    <th>{% trans %}Absence(s){% endtrans %}</th>
+                                                    <th>{% trans %}Periode{% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                
+                                                                                                    
+                                                                                                    {% for item in conseil %}
+                                                                                                        <tr>
+                                                                                                        <td class="text text-primary"> {{ item.appreciation }}</td>
+                                                                                                        <td> {{ item.exclusion }}</td>
+                                                                                                        <td> {{ item.absence }}</td>
+                                                                                                        <td> {{ item.trimestre }}</td>
+                                                                                                         </tr>
+                                                                                                        {% endfor %}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="suivi">
+                            <div class="col-sm-12">
+                                <div class="card card-topline-red">
+                                     <ul class="nav customtab nav-tabs" role="tablist">
+                            <li class="nav-item"><a href="#tab1" class="nav-link active"  data-toggle="tab" >{% trans %} Programme{% endtrans %}</a></li>
+                            <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">{% trans %} Gap(s){% endtrans %}</a></li>
+                            <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">{% trans %} Suggestion(s){% endtrans %}</a></li>
+                            <li class="nav-item"><a href="#tab4" class="nav-link" data-toggle="tab">{% trans %} Homework(s){% endtrans %}</a></li>
+                            <li class="nav-item"><a href="#tab5" class="nav-link" data-toggle="tab">Performance</a></li>
+                        </ul>
+                                    <div class="tab-content" > 
+                                    <div class="tab-pane active fontawesome-demo" id="tab1"> 
+                                    <div class="card-head">
+                                        <header>Programme</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans %} Subject(s){% endtrans %}</th>
+                                                     <th>{% trans %}Theme label{% endtrans %}</th>
+                                                    <th>{% trans %}Level{% endtrans %}</th>
+                                                    <th>{% trans %}Action{% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                               
+                                                                                                    {% for item in programme %}
+<tr>
+                                                                                                    <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.matiere }}</a></td>
+ 
+                                                                                                        <td class="text text-primary"> {{ item.intitule }}</td>
+                                                                                                        <td> {{ item.niveau }}</td>
+                                                                                                       <td>{% if item.filename %} <a href="{{ asset('uploads/programme') }}/{{ item.filename }}" ><i class="fa fa-eye">voir</i></a>{% endif %}</td>
+ </tr>
+                                                                                                        {% endfor %}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                
+                                                                                                
+                                    <div class="tab-pane  fontawesome-demo" id="tab2"> 
+                                    <div class="card-head">
+                                        <header>{% trans %} Gap(s){% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    
+                                                    <th></th>
+                                                    <th>{% trans %} Gap(s){% endtrans %}
+                                                    <th>{% trans %}Chapter or lesson{% endtrans %}</th>
+                                                    <th>{% trans %}Suggestion(s){% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                              
+                                                                                                    
+                                                                                                    {% for item in lacunes %}
+                                                                                                          <tr>
+                                                                                                        <td class="text text-primary"> {{ item.matieres }}</td>
+                                                                                                        <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.libelle }}</a></td>
+                                                                                                        <td> {{ item.observations }}</td>
+                                                                                                        <td>{{ item.suggestion }}</td>
+</tr>
+                                                                                                        {% endfor %}
+                                                                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                                                                                <div class="tab-pane  fontawesome-demo" id="tab3"> 
+                                    <div class="card-head">
+                                        <header>{% trans %} Suggestion(s){% endtrans %}</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    
+                                                    <th>{% trans %} Subject(s){% endtrans %}</th>
+                                                    <th>{% trans %}Leçon ou chapitre{% endtrans %}</th>
+                                                    <th>{% trans %}Observations{% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                
+                                                                                                    
+                                                                                                    {% for item in suggestions%}
+                                                                                                     <tr>   
+                                                                                                        <td>{{ item.Matieres}}</a></td>
+                                                                                                        <td> {{ item.chapitre  }}</td>
+                                                                                                        <td>{{ item.suggestion }}</td>
+                                                                                                </tr>
+                                                                                                        {% endfor %}
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                         <div class="tab-pane  fontawesome-demo" id="tab4"> 
+                                    <div class="card-head">
+                                        <header>Exercices à faire</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    
+                                                    <th>{% trans %}Devoir{% endtrans %}</th>
+                                                    <th>{% trans %} Subject(s){% endtrans %}</th>
+                                                    <th>{% trans %}Livrée le{% endtrans %}</th>
+                                                    <th>{% trans %} Délai de reception {% endtrans %}</th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                              
+                                                                                                    
+                                                                                                    {% for item in homework %}
+{% if item %}
+                                                                                                        <tr>
+                                                                                                            <td> {% if item.homework %}   {{ item.homework }} {% endif %}</td>
+                                                                                                        <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.matiere }}</a></td>
+                                                                                                        <td> {{ item.givenOn|date('d/m/y') }}</td>
+                                                                                                        <td>{{ item.faireAvant|date('d/m/y') }}</td>
+ {% endif %}
+                                                                                                        </tr>
+                                                                                                        {% endfor %}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                      
+                                                                                                        
+                                                                                                        <div class="tab-pane  fontawesome-demo" id="tab5"> 
+                                    <div class="card-head">
+                                        <header>Performance</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-scrollable">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    
+                                                    <th>{% trans %} Subject(s){% endtrans %}</th>
+                                                    <th>{% trans %}Leçon{% endtrans %}</th>
+                                                    <th>{% trans %}Performance{% endtrans %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                              
+                                                                                                    
+                                                                                                    {#% for item in homework %}
+{% if item %}
+                                                                                                        <tr>
+                                                                                                            <td> {% if item.homework %}   {{ item.homework }} {% endif %}</td>
+                                                                                                        <td><a href="{{ path('programme_show',{'id':item.id}) }}" >{{ item.matiere }}</a></td>
+                                                                                                        <td> {{ item.givenOn|date('d/m/y') }}</td>
+                                                                                                        <td>{{ item.faireAvant|date('d/m/y') }}</td>
+ {% endif %}
+                                                                                                        </tr>
+                                                                                                        {% endfor %#}
+                                                                                               
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                                                                                
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

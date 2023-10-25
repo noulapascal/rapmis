@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Modules list{% endtrans %}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <th>{% trans %}Coeff{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for module in modules %}
+            <tr>
+                <td><a href="{{ path('modules_show', { 'id': module.id }) }}">{{ module.id }}</a></td>
+                <td>{{ module.name }}</td>
+                <td>{{ module.description }}</td>
+                <td>{{ module.coeff }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('modules_show', { 'id': module.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('modules_edit', { 'id': module.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('modules_new') }}">Create a new module</a>
+        </li>
+    </ul>
+    </div>
+</div>
+{% endblock %}

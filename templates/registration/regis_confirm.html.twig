@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update profile{% endblock %}
+
+{% block body %}
+
+    <div class="page-content-wrapper">
+        <div class="page-content">
+                <h1>{% trans %}Thanks for your registration{% endtrans %}</h1>
+
+            <div class="row container-fluid">
+
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+    Your account has been created.
+            </div>
+        </div>
+    </div>
+{% endblock %}

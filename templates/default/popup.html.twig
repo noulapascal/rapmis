@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <!-- Button trigger modal -->
+            <button type="button" id="addRow1" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+                  {% trans %}Add{% endtrans %}  {% trans %}New{% endtrans %} School<i class="fa fa-plus"></i>
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">{% trans %}What kind of school do you want to create{% endtrans %}?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <div class="col-sm-12">
+                            <div class="card  card-box">
+                                <div class="card-head">
+                                    <header>Faites vôtre choix :</header>
+                                </div>
+                                <div class="card-body ">
+                                    <button type="button" class="btn btn-default btn-circle dropdown-toggle m-r-20">{% trans %} Nursery School {% endtrans %}</button>
+                                    <button type="button" class="btn btn-info btn-circle dropdown-toggle m-r-20 ">{% trans %} Primary School{% endtrans %}</button><br><br><br>
+                                    <button type="button" class="btn btn-success btn-circle dropdown-toggle m-r-20">{% trans %} High School{% endtrans %}</button>
+                                    <button type="button" class="btn btn-primary btn-circle dropdown-toggle m-r-20">{% trans %} University or Higher Institute{% endtrans %}</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+    {% if(is_granted('IS_AUTHENTICATED_FULLY')) %}
+        <p><a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a></p>
+    {% else %}
+        <p><a href="{{ path('fos_user_security_login') }}">Se connecter</a></p>
+    {% endif %}
+{% endblock %}

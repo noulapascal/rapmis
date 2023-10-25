@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Devoir index{%endtrans%}{% endblock %}
+
+{% block body %}
+    
+    <div class="page-content-wrapper">
+        <div class="page-content">
+    <h1>{% trans %}Devoir index{% endtrans %}</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <th>{% trans %}Homework{% endtrans %}</th>
+                <th>{% trans %}GivenOn{% endtrans %}</th>
+                <th>{% trans %}DoBefore{% endtrans %}</th>
+                <th>{% trans %}UpdateAt{% endtrans %}</th>
+                <th>{% trans %}actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for devoir in devoirs %}
+            <tr>
+                <td>{{ devoir.id }}</td>
+                <td>{{ devoir.homework }}</td>
+                <td>{{ devoir.givenOn ? devoir.givenOn|date('Y-m-d') : '' }}</td>
+                <td>{{ devoir.doBefore ? devoir.doBefore|date('Y-m-d') : '' }}</td>
+                <td>{{ devoir.updateAt ? devoir.updateAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('devoir_show', {'id': devoir.id}) }}">show</a>
+                    <a href="{{ path('devoir_edit', {'id': devoir.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('devoir_new') }}">Create new</a>
+        </div>
+    </div>
+{% endblock %}

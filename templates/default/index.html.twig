@@ -1,0 +1,424 @@
+{% extends 'base.html.twig' %}
+{% set compt = 0 %}
+{% set compt_class = 0 %}
+{% set percent = 0 %}
+{% set compt1 = 0 %}
+{% set percent1 = 0 %}
+ {% block title %}
+   Rapmis, Bienvenue sur  le réseau d'acteurs pour l'amélioration des performances en milieu scolaire
+    {% endblock %}
+ {% block meta %}
+    <meta name="description" content="Rapmis est une solution scolaire de gestion de la discipline, d’amélioration des performances 
+          en milieu scolaire et d’aide des parents
+          au suivi des enfants qui intègrent tous les maillons de la communauté éducative" />
+    <meta name="author" content="MOUAFO NOULA Pascal" />
+    {% endblock %}
+{% block body %}
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+
+                            <div class=" pull-left">
+                                <div class="page-title"></div>
+                            </div>
+                            <ol class="breadcrumb page-breadcrumb pull-right">
+                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                </li>
+                                <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="w3-row w3-container ">
+                                 <div class="col-md-12 center-block text-center center " >
+ 
+                      {% include 'compte_a_rebours/index.html.twig' %}   
+                                 </div>
+                                 </div>
+                                 <div class="container h-20">
+                                     {% include 'modulesUsed/fonctionnalites.html.twig' %}
+                                 </div>
+                                 <div class="row ">
+                                     <div class="col-md-4 col-xs-12">
+                                     {% include 'modulesUsed/habitech.html_1.twig' %}
+                                     </div>
+                                     <div class="col-md-4 col-xs-12">
+                                     {% include 'modulesUsed/habitech.html_2.twig' %}
+                                     </div>
+                                     <div class="col-md-4 col-xs-12">
+                                     {% include 'modulesUsed/habitech.html.twig' %}
+                                     </div>
+                                 </div>
+                                       
+                    <!-- start widget -->
+                    {#
+                    <div class="state-overview d-none d-sm-block">
+                        <div class="row ">
+    {% if is_granted('ROLE_ADMIN') %}
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="info-box bg-b-green">
+                                    <span class="info-box-icon push-bottom"><i class="material-icons">group</i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Total Students</span>
+                                            {% for student in students if ((app.user.etablissements.name) and (student.classes.etablissements.name == app.user.etablissements.name  )) %}
+                                                {% set compt = compt + 1 %}
+                                            {% endfor %}
+    {% if app.user.etablissements  %}
+
+                                        {% for class in classes if ((app.user.etablissements.name) and (class.etablissements.name == app.user.etablissements.name  )) %}
+                                            {% set compt_class = compt_class + 1 %}
+                                        {% endfor %}
+                                        {% if(compt_class == 0) %}
+                                        {% set percent = (compt/1)*0 %}
+                                            {% else %}
+                                                {% set percent = (compt/(compt_class*50))*100 %}
+                                        {% endif %}
+                                        {% endif %}
+                                        <span class="info-box-number">{{ compt }}</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: {{ percent }}%"></div>
+                                        </div>
+                                        <span class="progress-description">
+                                            {{ percent|round(2, 'floor')  }}% Increase in 28 Days
+						                  </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                    <!-- /.info-box -->
+                            </div>
+        {% else %}
+           <div class="col-xl-3 col-md-6 col-12">
+                <div class="info-box bg-b-green">
+                    <span class="info-box-icon push-bottom"><i class="material-icons">group</i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total Students</span>
+                        <span class="info-box-number">450</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 45%"></div>
+                        </div>
+                        <span class="progress-description">
+                                            45% Increase in 28 Days
+						                  </span>
+                    </div>
+                     <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+        {% endif %}
+                            <!-- /.col -->
+    {% if is_granted('ROLE_ADMIN') %}
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="info-box bg-b-yellow">
+                                    <span class="info-box-icon push-bottom"><i class="material-icons">person</i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">{% trans %}New{% endtrans %} Students</span>
+                                        {% for student in students if ((app.user.etablissements.name) and (student.classes.etablissements.name == app.user.etablissements.name  )) %}
+                                            {% if student.nouveau == true %}
+                                            {% set compt1 = compt1 + 1 %}
+                                            {% endif %}
+                                        {% endfor %}
+                            {% if (compt_class ==0) %}
+                                {% set percent1 = (compt1/1)*0 %}
+                            {% else %}
+                                        {% set percent1 = (compt1/(compt_class*50))*100 %}
+                                {% endif %}
+                                        <span class="info-box-number">{{ compt1 }}</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: {{ percent }}%"></div>
+                                        </div>
+                                        <span class="progress-description">
+						                   {{ percent1|round(2, 'floor')  }}% Increase in 28 Days
+						                  </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+        {% else %}
+            <div class="col-xl-3 col-md-6 col-12">
+                <div class="info-box bg-b-yellow">
+                    <span class="info-box-icon push-bottom"><i class="material-icons">person</i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">{% trans %}New{% endtrans %} Students</span>
+                        <span class="info-box-number">155</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-description">
+						                   40% Increase in 28 Days
+						                  </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+        {% endif %}
+                            <!-- /.col -->
+
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="info-box bg-b-blue">
+                                    <span class="info-box-icon push-bottom"><i class="material-icons">school</i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Total Course</span>
+                                        <span class="info-box-number">52</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 85%"></div>
+                                        </div>
+                                        <span class="progress-description">
+						                    85% Increase in 28 Days
+						                  </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="info-box bg-b-pink">
+                                    <span class="info-box-icon push-bottom"><i class="material-icons">monetization_on</i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Fees Collection</span>
+                                        <span class="info-box-number">13,921</span><span>$</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 50%"></div>
+                                        </div>
+                                        <span class="progress-description">
+						                    50% Increase in 28 Days
+						                  </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </div>
+                            #}
+                    <!-- end widget -->
+                    <!-- chart start --> 
+                    
+                    <div class="row">
+                        
+                        {#% include 'modulesUsed/habitech.html.twig' %#}
+                            <div class="">
+        <div class="w3-card">
+            
+            <div class="w3-panel w3-orange w3-center w3-opacity-min w3-round-large w3-hoverable w3-hover-red">
+                <h4>{% trans %}Covid-19 is a reality. Protect ourselves.{% endtrans %}</h4>
+                <p>{% trans %}To protect your health and the health of others,
+                     it is essential to follow the preventive health instructions:
+                     compulsory wearing of a mask,
+                     limitation of contact and movement to what is strictly necessary, frequent hand washing,
+                     no handshakes or hugs{% endtrans %}</p>
+                <p>{% trans %}If you have symptoms suggestive of COVID-19
+                     (cough, fever, sore throat),
+                     you must report to the administration without delay.{% endtrans %}</p>
+            </div>
+        </div>
+   
+            </div>
+
+                        
+                    </div>
+                    
+                    
+                    <div class="row">
+                        
+                        
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {#% include 'modulesUsed/school_survey.html.twig' %#}
+        {#% include 'modulesUsed/school_survey1.html.twig' %#}   
+        
+        {% include 'modulesUsed/course_list.html.twig' %}
+        {% include 'modulesUsed/carousel_slide.html.twig' %}
+
+
+    {% else %}
+        {% include 'modulesUsed/rapmis.html.twig' %}
+        {#% include 'modulesUsed/school_survey.html.twig' %#}
+        {#% include 'modulesUsed/carousel.html.twig' %#}
+        <div class='row container'>
+            {% include 'modulesUsed/carousel_slide.html.twig' %}  
+            </div>
+              {#% include 'compte_a_rebours/index.html.twig' %#}   
+ <div class="w3-row">
+        {% include 'modulesUsed/carousel_image.html.twig' %}
+        {% include 'modulesUsed/carousel_image.html_1.twig' %}
+        </div>  
+
+            {% endif %}
+                    <!-- Chart end -->
+                    <!-- start carousel images  or start course list -->
+                    <!-- End carousel images or end start course  -->
+
+                        <!-- Quick Mail and Activity feed start -->
+                        
+                    <!-- Quick Mail and Activity feed end -->
+                    <div class="row flex-row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 flex-row flex-column">
+                            <div class="card-box ">
+                                <div class="card-head text text-center text-success">
+                {% if is_granted('ROLE_PROF') %}
+                    <header>Upload Subject</header>
+                                   {% else %}
+                                   <strong class="btn btn-success">{% trans %}Download Subject{% endtrans %}</strong></a>
+                    <p class="text text-center "><a href="{{ path('epreuves_index') }}" class="text text-success">{% trans %}Download a test or a course at the level of your choice{% endtrans %}<br>
+                            {% trans %}A rich content regularly updated by teachers from partner schools{% endtrans %}<br>
+                            <strong class="btn btn-success">{% trans %}Download Subject{% endtrans %}</strong></a>
+                    </p>
+
+                {% endif %}
+                                   
+                                </div>
+                                <div class="card-body ">
+                                    <div class="table-responsive">
+                                        {% if is_granted('ROLE_PROF') %}
+                                            {{ form_start(form) }}
+                                            {{ form_widget(form) }}
+                                            <div class="box-footer clearfix">
+                                                <button type="submit" class="mdl-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-primary pull-right">Create <i class="fa fa-paper-plane-o"></i></button>
+                                            </div>
+                                            {{ form_end(form) }}
+                                            {#{{ render (controller('AppBundle:Epreuves:new')) }}#}
+                                        {% else %}
+                                            <div class="clear"></div>
+
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 card-box">
+                                <h4 class="text text-success">{% trans %}Useful Link{% endtrans %}</h4>
+                                <div>    
+                                    <div class="card-body">
+                               {% include 'modulesUsed/carousel_utile.html.twig' %}
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                                                   </div>
+
+                                                     <div class=" row">
+                                   {% include 'modulesUsed/carousel_astuce.html.twig' %}
+                                   
+                               </div>
+         
+                    <!-- start new {% trans %} Student List {% endtrans %} -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="card  card-box">
+                                <div class="card-head center text-center">
+                                    <header>
+                                        <a href="{{ path("etablissements_see") }}" class="btn ">{% trans %}School Partners{% endtrans %}</a>
+                                        <!--a href="{{ path("etablissements_see") }}" class="btn ">ils nous font confiance</a>
+                                        <a href="{{ path("etablissements_see") }}" class="btn ">FAQ Rapmis</a-->
+                                    </header>
+                                    <!--div class="tools">
+                                        <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                        <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                        <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                    </div-->
+                                </div>
+                                <div class="card-body ">
+                                    <!--div class="table-wrap">
+                                            <div class="table-scrollable table-responsive">
+                            <table class="table table-striped table-bordered table-hover table-checkable order-column text-dark " style="width: 100%" id="exampl">
+                                <thead class="text text-primary">
+                                <tr>
+                                    <th>{% trans %}
+                                        <label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+                                            <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                            <span></span>
+                                        </label>
+                                    {% endtrans %}</th>
+                                    <th></th>
+                                    <th>{% trans %} name {% endtrans %}</th>
+                                    <th>{% trans %}Sigle{% endtrans %}
+                                    <th>{% trans %} Adresses {% endtrans %}</th>
+                                    <th>{% trans %}School Type{% endtrans %}
+                                    <th>{% trans %}Description{% endtrans %}
+                                    <th>{% trans %}Actions{% endtrans %}
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+
+                                {% for etablissement in etablissements %}
+
+
+                                    <tr class="odd gradeX ">
+                                        <td>
+                                            <label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+                                                <input type="checkbox" class="checkboxes" value="1" />
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td class="patient-img "><img src="{{ asset('uploads/logo/' ~ etablissement.filename) }}" alt=" " width="32px" height="32px"></td>
+                                        <td>{{ etablissement.name }}</td>
+                                        <td>{{ etablissement.sigle }}</td>
+                                        <td>{% if etablissement.adresses %}{{ etablissement.adresses.tel }} {{ etablissement.adresses.bP     }} {{ etablissement.adresses.email }}{% endif %}</td>
+                                        <td>{{ etablissement.type_etablissements.name }}</td>
+                                        <td>{{ etablissement.description }}</td>
+                                        <td class="valigntop">
+                                            {% if is_granted('ROLE_ADMIN_SEC') %}    
+                                            {% if etablissement==app.user.etablissements %}
+                                                    
+
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs deepPink-bgcolor dropdown-toggle no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> {% trans %}Actions{% endtrans %}
+                                                    <i class="fa fa-angle-down"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li>
+                                                        <a href="{{ path('classes_index1', {'flo': etablissement.name }) }}">
+                                                            <i class="icon-docs"></i> {% trans %}Class List{% endtrans %} </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('etablissements_edit', { 'id': etablissement.id }) }}">
+                                                            <i class="icon-tag"></i> {% trans %} Edit  {% endtrans %}  {% trans %}School{% endtrans %}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('user_teacher') }}">
+                                                            <i class="icon-user"></i> {% trans %}New{% endtrans %} User (teacher) </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('user_staff') }}">
+                                                            <i class="fa fa-user"></i> {% trans %}New{% endtrans %} User (staff)</a>
+                                                    </li>
+                                                    <li class="divider"> </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon-flag"></i> Comments
+                                                            <span class="badge badge-success">4</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                                {% endif %}
+                                                {% endif %}
+
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                                    </div-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end new {% trans %} Student List {% endtrans %} -->
+                </div>
+
+            </div>
+{% endblock %}

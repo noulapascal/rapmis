@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<title>LienUtile</title>
+
+{% block body %}
+    <h1>{% trans %}LienUtile{% endtrans %}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <td>{{ lien_utile.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Name{% endtrans %}</th>
+                <td>{{ lien_utile.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}LinkToWebsite{% endtrans %}</th>
+                <td>{{ lien_utile.linkToWebsite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('lien_utile_index') }}">back to list</a>
+
+    <a href="{{ path('lien_utile_edit', {'id': lien_utile.id}) }}">edit</a>
+
+    {{ include('lien_utile/_delete_form.html.twig') }}
+{% endblock %}

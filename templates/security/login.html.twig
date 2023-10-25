@@ -1,0 +1,120 @@
+{#% extends 'base.html.twig' %#}
+<html>
+    <head><title>
+            {% block title %}Log in!{% endblock %}</title>
+            
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/floating-labels.css') }}">
+        <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+
+{% endblock %}
+    <style>
+         .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+    <script>
+        function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+} 
+        </script>
+    </head>
+{% block body %}
+    
+    <body class="">
+        
+<form method="post" class="form-signin">
+    {% if error %}
+        <div class="alert alert-danger center-block rounded round circle text text-center ">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3 centered center text text-center">
+            {% trans %}You are logged in as {% endtrans  %}<strong> {{ app.user.username }}</strong>    , <a href="{{ path('app_logout') }}">Logout</a>
+            or <a href="{{ path('homepage') }}">{% trans %}Go to Homepage{% endtrans %}</a>
+        </div>
+    {% endif %}
+
+    <h1 class="h3 mb-3 font-weight-normal text text-center">{% trans %}Please sign in{% endtrans %}</h1>
+  <div class="form-label-group">
+    <input type="text" value="{{ last_username }}" name="username" id="username" class="form-control" required autofocus placeholder="username">
+    <label for="username" class="">{% trans %}Username{% endtrans %}</label>
+
+  </div>
+    <div class="form-label-group">
+
+    <input type="password" name="password" id="password" class="form-control border" placeholder="Password" required>
+    <label for="password" class="">{% trans %}Password{% endtrans %}</label>
+    
+
+    </div>
+    <div class="form-label-group row ">
+        <div class = "col-xs-12 col-md-6 ">
+        <input type="checkbox" onclick="myFunction()" name="" id=""class="btn btn-danger">{% trans %}Show/hide Password {% endtrans %}
+    </div>
+        <div class = "col-xs-12 col-md-5 col-md-offset-1">
+
+            <input type="checkbox" name="_remember_me"> {% trans %}Remember me{% endtrans %}
+        <input type="hidden" name="_csrf_token"  value="{{ csrf_token('authenticate') }}">
+    </div>
+    </div>
+      
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+
+    <button class="btn btn-lg btn-primary" type="submit">
+       {% trans %} Sign in {% endtrans %}
+    </button>
+</form>
+
+    
+        <style>
+    body{
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url({{ asset('img/bg-1.jpg') }});
+  background-size:100%;
+  background-color: #fff;
+}    
+    form{
+  -ms-flex-align: center;
+  align-items: ltr;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #abf;
+  border-radius:10%;
+  border:solid blue;
+}    
+
+    </style>
+    <body>
+</html>
+{% endblock %}

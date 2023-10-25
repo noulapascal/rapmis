@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN HEAD -->
+<head>
+    {% include 'header.html.twig' %}
+    <style>
+        .rotation{
+  position: relative;
+            animation: rot 10s infinite;
+        }
+        a:selected,.btn, button,w3-btn{
+  position: relative;
+            animation: rot_link 2s 1;
+        }
+        @keyframes rot{
+            
+           0,100% {transform: rotate3d(0, 0, 0, 0deg);}
+           50% {transform: rotate3d(1,0, 0, 180deg);}
+           75% {transform: rotate3d(0,1, 0, 360deg);}
+
+        }
+       
+        @keyframes rot_link{
+            
+           100% {transform: rotate3d(0,1, 0, 360deg);}
+           
+        }
+       
+        </style>
+</head>
+<!-- END HEAD -->
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+<div class="page-wrapper">
+    <!-- start header -->
+    <div class="page-header navbar navbar-fixed-top ">
+        <div class="page-header-inner w3-hover-red ">
+            <!-- logo start -->
+            <div class="page-logo w3-animate-fading w3-hover-black w3-white rotation">
+                <a href="{{ path('homepage') }}" class=" ">
+                    <!--span class="logo-icon material-icons fa-rotate-45">school</span-->
+                    <span class="logo-icon fa-book fa-rotate-45"></span>
+                    <span class="logo-default " ><img src="{{ asset('./archeduc.jpg') }}" height='50px' class='' alt="ARCHEDUC"></span> </a>
+            </div>
+            <!-- logo end -->
+            <ul class="nav navbar-nav navbar-left navbar-item  ">
+                <li><a href="#" class="menu-toggler sidebar-toggler "><i class="icon-menu"></i></a></li>
+            </ul>
+           <!-- <form class="search-form-opened" action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." name="query">
+
+                    <span class="input-group-btn">
+                          <a href="javascript:;" class="btn submit">
+                             <i class="icon-magnifier"></i>
+                           </a>
+                        </span>
+                </div>
+            </form>
+--
+            <!-- start mobile menu -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span></span>
+            </a>
+            <!-- end mobile menu -->
+            <!-- start header menu -->
+
+
+      {% include 'topmenu.html.twig' %}
+
+        </div>
+    </div>
+                            
+                            
+
+
+
+    <!-- end header -->
+    <!-- start color quick setting -->
+    {% include 'settings.html.twig' %}
+
+    <!-- end color quick setting -->
+    <!-- start page container -->
+    <div class="page-container">
+        <!-- start sidebar menu -->
+{% if  is_granted('IS_AUTHENTICATED_FULLY') %}
+
+    <div>
+        {% include 'sidebar.html.twig' %}
+    </div>
+{% endif %}
+        <!-- end sidebar menu -->
+        <!-- start page content -->
+
+        <div class="w3-animate-zoom w3-container ">
+                {% block body %}
+                    <div class="container theme-showcase " role="main" style="overflow:scroll;">
+                    <div class="jumbotron ">
+                        {% block name %}
+                        {% endblock name %}
+
+                        {% if app.request.hasPreviousSession %}
+                            {% for type, messages in app.session.flashbag.all() %}
+                                {% for message in messages %}
+                                    <div class="flash-{{ type }} alert-{{ type }}">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+
+                        {% block content %}
+                        {% endblock content %}
+                    </div>
+                    </div>
+                {% endblock %}
+        </div>
+
+<!-- end page content -->
+<!-- start chat sidebar -->
+    </div>
+
+</div>
+<!-- end chat sidebar -->
+<!--/div-->
+<!-- end page container  -->
+<!-- start footer -->
+<!-- end footer -->
+<!--
+start js include path 
+-->
+
+{#
+<script src="{{ asset('jquery-3.2.1.min.js') }}" ></script>
+#}
+
+{% block javascripts %}{% endblock %}
+{% include 'footer.html.twig' %}
+{% include 'js.html.twig' %}
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<title>DecisionConseilDeClasse index</title>
+
+{% block body %}
+    <h1>{% trans %}DecisionConseilDeClasse index{% endtrans %}</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <th>{% trans %}Appreciation{% endtrans %}</th>
+                <th>{% trans %}Absence{% endtrans %}</th>
+                <th>{% trans %}Bulletin{% endtrans %}</th>
+                <th>{% trans %}Exclusion{% endtrans %}</th>
+                <th>{% trans %}DeuxiemeSequence{% endtrans %}</th>
+                <th>{% trans %}PremiereSequence{% endtrans %}</th>
+                <th>{% trans %}Trimestre{% endtrans %}</th>
+                <th>{% trans %}actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for decision_conseil_de_classe in decision_conseil_de_classes %}
+            <tr>
+                <td>{{ decision_conseil_de_classe.id }}</td>
+                <td>{{ decision_conseil_de_classe.appreciation }}</td>
+                <td>{{ decision_conseil_de_classe.absence }}</td>
+                <td>{{ decision_conseil_de_classe.bulletin }}</td>
+                <td>{{ decision_conseil_de_classe.exclusion }}</td>
+                <td>{{ decision_conseil_de_classe.deuxiemeSequence }}</td>
+                <td>{{ decision_conseil_de_classe.premiereSequence }}</td>
+                <td>{{ decision_conseil_de_classe.trimestre }}</td>
+                <td>
+                    <a href="{{ path('decision_conseil_de_classe_show', {'id': decision_conseil_de_classe.id}) }}">show</a>
+                    <a href="{{ path('decision_conseil_de_classe_edit', {'id': decision_conseil_de_classe.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('decision_conseil_de_classe_new') }}">Create new</a>
+{% endblock %}

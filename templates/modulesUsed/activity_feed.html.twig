@@ -1,0 +1,101 @@
+<!-- Activity feed start -->
+<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+    <div class="card-box">
+        <div class="card-head">
+            <header>Activity Feed</header>
+            <button id = "feedMenu"
+                    class = "mdl-button mdl-js-button mdl-button--icon pull-right"
+                    data-upgraded = ",MaterialButton">
+                <i class = "material-icons">more_vert</i>
+            </button>
+            <ul class = "mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                data-mdl-for = "feedMenu">
+                <li class = "mdl-menu__item"><i class="material-icons">assistant_photo</i>Action</li>
+                <li class = "mdl-menu__item"><i class="material-icons">{% trans %}Print {% endtrans %}</i>Another action</li>
+                <li class = "mdl-menu__item"><i class="material-icons">favorite</i>Something else here</li>
+            </ul>
+        </div>
+        <div class="card-body ">
+            <ul class="feedBody">
+                <li class="active-feed">
+                    <div class="feed-user-img">
+                        <img src="{{ asset('assets/img/std/std1.jpg') }}" class="img-radius "
+                             alt="User-Profile-Image">
+                    </div>
+                    <h6>
+                        <span class="feedLblStyle lblFileStyle">File</span> Sarah Smith <small class="text-muted">6 hours ago</small>
+                    </h6>
+                    <p class="m-b-15 m-t-15">
+                        hii John, I have upload doc related to task.
+                    </p>
+
+                </li>
+                <li class="diactive-feed">
+                    <div class="feed-user-img">
+                        <img src="{{ asset('assets/img/std/std2.jpg') }}" class="img-radius "
+                             alt="User-Profile-Image">
+                    </div>
+                    <h6>
+                        <span class="feedLblStyle lblTaskStyle">Task </span> Jalpa Joshi<small class="text-muted">5 hours
+                            ago</small>
+                    </h6>
+                    <p class="m-b-15 m-t-15">
+                        Please do as specify. Let me know if you have any query.
+                    </p>
+                </li>
+                <li class="diactive-feed">
+                    <div class="feed-user-img">
+                        <img src="{{ asset('assets/img/std/std3.jpg') }}" class="img-radius "
+                             alt="User-Profile-Image">
+                    </div>
+                    <h6>
+                        <span class="feedLblStyle lblCommentStyle">comment</span> Lina Smith<small class="text-muted">6 hours ago</small>
+                    </h6>
+                    <p class="m-b-15 m-t-15">
+                        Hey, How are you??
+                    </p>
+                </li>
+                <li class="active-feed">
+                    <div class="feed-user-img">
+                        <img src="{{ asset('assets/img/std/std4.jpg') }}" class="img-radius "
+                             alt="User-Profile-Image">
+                    </div>
+                    <h6>
+                        <span class="feedLblStyle lblReplyStyle">Reply</span> Jacob Ryan
+                        <small class="text-muted">7 hours ago</small>
+                    </h6>
+                    <p class="m-b-15 m-t-15">
+                        I am fine. You??
+                    </p>
+                </li>
+                <li class="active-feed">
+                    <div class="feed-user-img">
+                        <img src="{{ asset('assets/img/std/std5.jpg') }}" class="img-radius "
+                             alt="User-Profile-Image">
+                    </div>
+                    <h6>
+                        <span class="feedLblStyle lblFileStyle">File</span> Sarah Smith <small class="text-muted">6 hours ago</small>
+                    </h6>
+                    <p class="m-b-15 m-t-15">
+                        hii John, I have upload doc related to task.
+                    </p>
+
+                </li>
+                <li class="diactive-feed">
+                    <div class="feed-user-img">
+                        <img src="{{ asset('assets/img/std/std6.jpg') }}" class="img-radius "
+                             alt="User-Profile-Image">
+                    </div>
+                    <h6>
+                        <span class="feedLblStyle lblTaskStyle">Task </span> Jalpa Joshi<small class="text-muted">5 hours
+                            ago</small>
+                    </h6>
+                    <p class="m-b-15 m-t-15">
+                        Please do as specify. Let me know if you have any query.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Activity feed end -->

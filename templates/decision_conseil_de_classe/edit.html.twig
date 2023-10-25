@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Edit DecisionConseilDeClasse</title>
+
+{% block body %}
+    <h1>{% trans %}Edit DecisionConseilDeClasse{% endtrans %}</h1>
+
+    {{ include('decision_conseil_de_classe/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('decision_conseil_de_classe_index') }}">back to list</a>
+
+    {{ include('decision_conseil_de_classe/_delete_form.html.twig') }}
+{% endblock %}

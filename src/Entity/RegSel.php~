@@ -1,0 +1,96 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+/**
+ * RegSel
+ *
+ * @ORM\Table(name="reg_sel")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\RegSelRepository")
+ */
+class RegSel
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\city", inversedBy="city")
+     * @Assert\NotBlank
+     */
+    private $city;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Regions", inversedBy="city")
+     * @Assert\NotBlank
+     */
+    private $regions;
+  
+    
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set regions
+     *
+     * @param \AppBundle\Entity\Regions $regions
+     *
+     * @return RegSel
+     */
+    public function setRegions(\AppBundle\Entity\Regions $regions = null)
+    {
+        $this->regions = $regions;
+
+        return $this;
+    }
+
+    /**
+     * Get regions
+     *
+     * @return \AppBundle\Entity\Regions
+     */
+    public function getRegions()
+    {
+        return $this->regions;
+    }
+
+    /**
+     * Set city
+     *
+     * @param \AppBundle\Entity\city $city
+     *
+     * @return RegSel
+     */
+    public function setCity(\AppBundle\Entity\city $city = null)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return \AppBundle\Entity\city
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+}

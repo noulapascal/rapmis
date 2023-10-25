@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update profile{% endblock %}
+
+{% block body %}
+
+    <div class="page-content-wrapper">
+        <div class="page-content">
+                <h1>{% trans %}Update your registration{% endtrans %}</h1>
+
+            <div class="row container-fluid">
+
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        
+        {{ form_row(registrationForm.email, {
+            label: 'email'
+        }) }}
+        {{ form_row(registrationForm.phoneNumber, {
+            label: ' Phone'
+        }) }}
+        
+        
+
+        <button type="submit" class="btn btn-block btn-primary">Update</button>
+    {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

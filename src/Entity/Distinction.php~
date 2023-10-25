@@ -1,0 +1,150 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Students;
+
+/**
+ * Distinction
+ *
+ * @ORM\Table(name="distinction")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\DistinctionRepository")
+ */
+class Distinction
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Students",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $student ;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Distinction
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Distinction
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Add student
+     *
+     * @param \AppBundle\Entity\Students $student
+     *
+     * @return Distinction
+     */
+    public function addStudent(\AppBundle\Entity\Students $student)
+    {
+        $this->student[] = $student;
+
+        return $this;
+    }
+
+    /**
+     * Remove student
+     *
+     * @param \AppBundle\Entity\Students $student
+     */
+    public function removeStudent(\AppBundle\Entity\Students $student)
+    {
+        $this->student->removeElement($student);
+    }
+
+    /**
+     * Get student
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStudent()
+    {
+        return $this->student;
+    }
+
+    /**
+     * Set student
+     *
+     * @param \AppBundle\Entity\Students $student
+     *
+     * @return Distinction
+     */
+    public function setStudent(\AppBundle\Entity\Students $student = null)
+    {
+        $this->student = $student;
+
+        return $this;
+    }
+}

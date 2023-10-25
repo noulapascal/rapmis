@@ -1,0 +1,20 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+
+        {% block body %}
+            <div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+          Quel est le type d'utilisateur que vous voulez créer:
+          <a href='{{ path('super_user_new') }}' class='btn btn-primary btn-link'>Admin ou super Admin</a>
+          <a href='{{ path('user_teacher') }}' class='btn btn-primary btn-link'>Compte ministeriel</a>
+          <a href='{{ path('userinspect_create') }}' class='btn btn-primary btn-link'>Compte Regional</a>
+          <a href='{{ path('user_inspect') }}' class='btn btn-primary btn-link'>Compte Departemental</a>
+            <input type="submit" class="btn btn-primary btn-block">
+            
+            </div>
+            </div>
+            </div>
+            </div>
+        {% endblock %}

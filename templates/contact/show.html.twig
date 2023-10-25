@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{% trans %}Contact{% endtrans %}</h1>
+
+  <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class="pull-left">
+    <table>
+        <tbody>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <td>{{ contact.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Nom{% endtrans %}</th>
+                <td>{{ contact.nom }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Numerodetelephone{% endtrans %}</th>
+                <td>{{ contact.numeroDeTelephone }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Adressemail{% endtrans %}</th>
+                <td>{{ contact.adresseMail }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Message{% endtrans %}</th>
+                <td>{{ contact.message }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('contact_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<title>New Chapitre</title>
+
+{% block body %}
+    <h1>{% trans %}Create new Chapitre{% endtrans %}</h1>
+
+    {{ include('chapitre/_form.html.twig') }}
+
+    <a href="{{ path('chapitre_index') }}">back to list</a>
+{% endblock %}

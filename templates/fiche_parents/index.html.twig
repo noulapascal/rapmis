@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Fiche_parents list{% endtrans %}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %}NomfirstNamepere{% endtrans %}</th>
+                <th>{% trans %}Profession{% endtrans %}</th>
+                <th>{% trans %}Residence{% endtrans %}</th>
+                <th>{% trans %}Medecinfamille{% endtrans %}</th>
+                <th>{% trans %}Telpere{% endtrans %}</th>
+                <th>{% trans %}Emailpere{% endtrans %}</th>
+                <th>{% trans %}Signature{% endtrans %}</th>
+                <th>{% trans %}NomfirstNamemere{% endtrans %}</th>
+                <th>{% trans %}Professionmere{% endtrans %}</th>
+                <th>{% trans %}Assurancepere{% endtrans %}</th>
+                <th>{% trans %}Assurancemere{% endtrans %}</th>
+                <th>{% trans %}Residencemere{% endtrans %}</th>
+                <th>{% trans %}Medecinfamillemere{% endtrans %}</th>
+                <th>{% trans %}Telmere{% endtrans %}</th>
+                <th>{% trans %}Emailmere{% endtrans %}</th>
+                <th>{% trans %}Signaturemere{% endtrans %}</th>
+                <th>{% trans %}NomfirstNametuteur{% endtrans %}</th>
+                <th>{% trans %}Professiontuteur{% endtrans %}</th>
+                <th>{% trans %}Assurancetuteur{% endtrans %}</th>
+                <th>{% trans %}Residencetuteur{% endtrans %}</th>
+                <th>{% trans %}Medecinfamilletuteur{% endtrans %}</th>
+                <th>{% trans %}Teltuteur{% endtrans %}</th>
+                <th>{% trans %}Emailtuteur{% endtrans %}</th>
+                <th>{% trans %}Signaturetuteur{% endtrans %}</th>
+                <th>{% trans %}Frerenom1{% endtrans %}</th>
+                <th>{% trans %}Frerenom2{% endtrans %}</th>
+                <th>{% trans %}Frerenom3{% endtrans %}</th>
+                <th>{% trans %}Telfrere1{% endtrans %}</th>
+                <th>{% trans %}Telfrere2{% endtrans %}</th>
+                <th>{% trans %}Telfrere3{% endtrans %}</th>
+                <th>{% trans %}Mailfrere1{% endtrans %}</th>
+                <th>{% trans %}Mailfrere2{% endtrans %}</th>
+                <th>{% trans %}Mailfrere3{% endtrans %}</th>
+                <th>{% trans %}Niveauscolairefrere1{% endtrans %}</th>
+                <th>{% trans %}Niveauscolairefrere2{% endtrans %}</th>
+                <th>{% trans %}Niveauscolairefrere3{% endtrans %}</th>
+                <th>{% trans %}Professionfrere1{% endtrans %}</th>
+                <th>{% trans %}Professionfrere2{% endtrans %}</th>
+                <th>{% trans %}Professionfrere3{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fiche_parent in fiche_parents %}
+            <tr>
+                <td><a href="{{ path('fiche_parents_show', { 'id': fiche_parent.id }) }}">{{ fiche_parent.id }}</a></td>
+                <td>{{ fiche_parent.nomFirstNamePere }}</td>
+                <td>{{ fiche_parent.profession }}</td>
+                <td>{{ fiche_parent.residence }}</td>
+                <td>{{ fiche_parent.medecinFamille }}</td>
+                <td>{{ fiche_parent.telPere }}</td>
+                <td>{{ fiche_parent.emailPere }}</td>
+                <td>{{ fiche_parent.signature }}</td>
+                <td>{{ fiche_parent.nomFirstNameMere }}</td>
+                <td>{{ fiche_parent.professionMere }}</td>
+                <td>{{ fiche_parent.assurancePere }}</td>
+                <td>{{ fiche_parent.assuranceMere }}</td>
+                <td>{{ fiche_parent.residenceMere }}</td>
+                <td>{{ fiche_parent.medecinFamilleMere }}</td>
+                <td>{{ fiche_parent.telMere }}</td>
+                <td>{{ fiche_parent.emailMere }}</td>
+                <td>{{ fiche_parent.signatureMere }}</td>
+                <td>{{ fiche_parent.nomFirstNameTuteur }}</td>
+                <td>{{ fiche_parent.professionTuteur }}</td>
+                <td>{{ fiche_parent.assuranceTuteur }}</td>
+                <td>{{ fiche_parent.residenceTuteur }}</td>
+                <td>{{ fiche_parent.medecinFamilleTuteur }}</td>
+                <td>{{ fiche_parent.telTuteur }}</td>
+                <td>{{ fiche_parent.emailTuteur }}</td>
+                <td>{{ fiche_parent.signatureTuteur }}</td>
+                <td>{{ fiche_parent.frereNom1 }}</td>
+                <td>{{ fiche_parent.frereNom2 }}</td>
+                <td>{{ fiche_parent.frereNom3 }}</td>
+                <td>{{ fiche_parent.telFrere1 }}</td>
+                <td>{{ fiche_parent.telFrere2 }}</td>
+                <td>{{ fiche_parent.telFrere3 }}</td>
+                <td>{{ fiche_parent.mailFrere1 }}</td>
+                <td>{{ fiche_parent.mailFrere2 }}</td>
+                <td>{{ fiche_parent.mailFrere3 }}</td>
+                <td>{{ fiche_parent.niveauScolaireFrere1 }}</td>
+                <td>{{ fiche_parent.niveauScolaireFrere2 }}</td>
+                <td>{{ fiche_parent.niveauScolaireFrere3 }}</td>
+                <td>{{ fiche_parent.professionFrere1 }}</td>
+                <td>{{ fiche_parent.professionFrere2 }}</td>
+                <td>{{ fiche_parent.professionFrere3 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fiche_parents_show', { 'id': fiche_parent.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fiche_parents_edit', { 'id': fiche_parent.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fiche_parents_new') }}">Create a new fiche_parent</a>
+        </li>
+    </ul>
+    </div>
+    </div>
+{% endblock %}

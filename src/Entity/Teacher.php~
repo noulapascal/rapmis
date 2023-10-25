@@ -1,0 +1,508 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Grafikat\UploadBundle\Annotation\Uploadable;
+use AppBundle\Entity\User;
+use Symfony\Component\Validator\Constraints as Assert;
+use Grafikat\UploadBundle\Annotation\UploadableField;
+use Symfony\Component\Validator\Constraints\DateTime;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+/**
+ * Teacher
+ *
+ * @ORM\Table(name="teacher")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TeacherRepository")
+ * @Uploadable()
+ */
+class Teacher
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=150, nullable=false)
+     */
+    private $name;
+    
+    /**
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\User", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     * @Assert\NotBlank(message="Please enter your profile name.", groups={"Profile"})
+     */
+    private $user;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="prenom", type="string", length=150, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tel", type="string", length=255)
+     */
+    private $tel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sexe", type="string", length=25, nullable=false)
+     */
+    private $sexe;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="date_de_naissance", type="date", nullable=true)
+     */
+    private $dateDeNaissance;
+
+    /** date de creation de l'enseignant
+     * @var \DateTime|null
+     * @ORM\Column(name="date_de_creation", type="datetime", nullable=true)
+     */
+    private $dateDeCreation;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Classes", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $classes;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Etablissements", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $etablissements;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Matieres", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $matieres;
+
+
+    //upload file (image)
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filename", type="string", length=255, nullable=true)
+     */
+    private $filename;
+
+    /**
+     * @UploadableField(filename = "filename", path="uploads/prof")
+     */
+    public $file;
+
+    /*
+     * @var \DateTime
+     * @ORM\Column(name"updated_at", type="datetime", nullable=true)
+     */
+    private $UpdatedAt;
+
+    /**
+     * @return mixed
+     */
+    public function getUpdatedAt()
+    {
+        return $this->UpdatedAt;
+    }
+
+    /**
+     * @param mixed $UpdatedAt
+     */
+    public function setUpdatedAt($UpdatedAt)
+    {
+        $this->UpdatedAt = $UpdatedAt;
+    }
+
+
+    /**
+     * @return File/null
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param File $file/null
+     *
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
+    /**
+     * Set filename.
+     *
+     * @param string $filename
+     *
+     * @return teacher
+     */
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
+    /**
+     * Get filename.
+     *
+     * @return string
+     */
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param null|string $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getAnneeNais()
+    {
+        return $this->anneeNais;
+    }
+
+    /**
+     * @param \DateTime|null $anneeNais
+     * @return teacher
+     */
+    public function setAnneeNais($anneeNais = null)
+    {
+        $this->anneeNais = $anneeNais;
+    }
+
+
+
+    /**
+     * Set teacher.
+     *
+     * @param \DateTime|null $teacher
+     *
+     * @return teacher
+     */
+    public function setDateCreate($dateCreate = null)
+    {
+        $this->dateCreate = $dateCreate;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCreate.
+     *
+     * @return \DateTime|null
+     */
+    public function getDateCreate()
+    {
+        return $this->dateCreate;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * @param string $tel
+     */
+    public function setTel(string $tel)
+    {
+        $this->tel = $tel;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEtablissements()
+    {
+        return $this->etablissements;
+    }
+
+    /**
+     * @param mixed $etablissements
+     */
+    public function setEtablissements($etablissements)
+    {
+        $this->etablissements = $etablissements;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMatieres()
+    {
+        return $this->matieres;
+    }
+
+    /**
+     * @param mixed $matieres
+     */
+    public function setMatieres($matieres)
+    {
+        $this->matieres = $matieres;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getSexe()
+    {
+        return $this->sexe;
+    }
+
+    /**
+     * @param string $sexe
+     */
+    public function setSexe(string $sexe)
+    {
+        $this->sexe = $sexe;
+    }
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->matieres = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add matiere.
+     *
+     * @param \AppBundle\Entity\Matieres $matiere
+     *
+     * @return Teacher
+     */
+    public function addMatiere(\AppBundle\Entity\Matieres $matiere)
+    {
+        $this->matieres[] = $matiere;
+
+        return $this;
+    }
+
+    /**
+     * Remove matiere.
+     *
+     * @param \AppBundle\Entity\Matieres $matiere
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeMatiere(\AppBundle\Entity\Matieres $matiere)
+    {
+        return $this->matieres->removeElement($matiere);
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Teacher
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set anneeDeNaissance
+     *
+     * @param \DateTime $anneeDeNaissance
+     *
+     * @return Teacher
+     */
+    
+    /**
+     * Set dateDeCreation
+     *
+     * @param \DateTime $dateDeCreation
+     *
+     * @return Teacher
+     */
+    public function setDateDeCreation($dateDeCreation)
+    {
+        $this->dateDeCreation = $dateDeCreation;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDeCreation
+     *
+     * @return \DateTime
+     */
+    public function getDateDeCreation()
+    {
+        return $this->dateDeCreation;
+    }
+
+    /**
+     * Set dateDeNaissance
+     *
+     * @param \DateTime $dateDeNaissance
+     *
+     * @return Teacher
+     */
+    public function setDateDeNaissance($dateDeNaissance)
+    {
+        $this->dateDeNaissance = $dateDeNaissance;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDeNaissance
+     *
+     * @return \DateTime
+     */
+    public function getDateDeNaissance()
+    {
+        return $this->dateDeNaissance;
+    }
+
+   
+
+    /**
+     * Add class
+     *
+     * @param \AppBundle\Entity\Classes $class
+     *
+     * @return Teacher
+     */
+    public function addClass(\AppBundle\Entity\Classes $class)
+    {
+        $this->classes[] = $class;
+
+        return $this;
+    }
+
+    /**
+     * Remove class
+     *
+     * @param \AppBundle\Entity\Classes $class
+     */
+    public function removeClass(\AppBundle\Entity\Classes $class)
+    {
+        $this->classes->removeElement($class);
+    }
+
+    /**
+     * Get classes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getClasses()
+    {
+        return $this->classes;
+    }
+}

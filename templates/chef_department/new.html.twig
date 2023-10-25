@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+
+                    </div>
+              
+    <h1>{% trans %} Chef_Department{% endtrans %}{% trans %} Creation{% endtrans %}</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="{% trans %} Create{% endtrans %}" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('chef_department_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+    </ul>  </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

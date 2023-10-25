@@ -1,0 +1,145 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use AppBundle\Repository\DevoirRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=DevoirRepository::class)
+ */
+class Devoir
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $devoir;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Matieres::class, inversedBy="devoirs")
+     */
+    private $matiere;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Classes::class, inversedBy="devoirs")
+     */
+    private $classe;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $donneLe;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $faireAvant;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getDevoir(): ?string
+    {
+        return $this->devoir;
+    }
+
+    public function setDevoir(string $devoir): self
+    {
+        $this->devoir = $devoir;
+
+        return $this;
+    }
+
+    public function getMatieres(): ?Matieres
+    {
+        return $this->matieres;
+    }
+
+    public function setMatieres(?Matieres $matieres): self
+    {
+        $this->matieres = $matieres;
+
+        return $this;
+    }
+
+    public function getDonneLe(): ?\DateTimeInterface
+    {
+        return $this->donneLe;
+    }
+
+    public function setDonneLe(\DateTimeInterface $donneLe): self
+    {
+        $this->donneLe = $donneLe;
+
+        return $this;
+    }
+
+    public function getFaireAvant(): ?\DateTimeInterface
+    {
+        return $this->faireAvant;
+    }
+
+    public function setFaireAvant(\DateTimeInterface $faireAvant): self
+    {
+        $this->faireAvant = $faireAvant;
+
+        return $this;
+    }
+
+    /**
+     * Set matiere
+     *
+     * @param \AppBundle\Entity\Matieres $matiere
+     *
+     * @return Devoir
+     */
+    public function setMatiere(\AppBundle\Entity\Matieres $matiere = null)
+    {
+        $this->matiere = $matiere;
+
+        return $this;
+    }
+
+    /**
+     * Get matiere
+     *
+     * @return \AppBundle\Entity\Matieres
+     */
+    public function getMatiere()
+    {
+        return $this->matiere;
+    }
+
+    /**
+     * Set classe
+     *
+     * @param \AppBundle\Entity\Classes $classe
+     *
+     * @return Devoir
+     */
+    public function setClasse(\AppBundle\Entity\Classes $classe = null)
+    {
+        $this->classe = $classe;
+
+        return $this;
+    }
+
+    /**
+     * Get classe
+     *
+     * @return \AppBundle\Entity\Classes
+     */
+    public function getClasse()
+    {
+        return $this->classe;
+    }
+}

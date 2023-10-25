@@ -1,0 +1,654 @@
+<div class="sidebar-container w3-hover-black w3-animate-right menu-close ">
+	<div class=" sidemenu-container  navbar-collapse collapse fixed-menu  w3-text w3-hover-text-white w3-hover-red">
+		<div id="remove-scroll" class="left-sidemenu">
+			<ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px;">
+				<li class="sidebar-toggler-wrapper hide">
+					<div class="sidebar-toggler">
+						<span></span>
+					</div>
+				</li>
+
+
+				{% if is_granted('IS_AUTHENTICATED_FULLY') or  is_granted('IS_REMEMBERED') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+					<li class="sidebar-user-panel">
+						<div class="user-panel">
+							{% if app.user.photoDeProfil %}
+
+								<div class="pull-left image">
+									<img src="{{ asset( 'uploads/user/'~ app.user.photoDeProfil) }}" class="img-circle user-img-circle" alt="User Image" width="100px" height="100px"/>
+								</div>
+							{% else %}
+
+								<div
+									class="pull-left image"><!--  <img src="{{ asset( 'uploads/user/devalere.png' ) }}" class="img-circle user-img-circle" alt="User Image" /> -->
+								</div>
+								
+							{% endif %}
+							<div class="pull-left info">
+								<p>
+									{{ app.user.username }}</p>
+								<a href="#">
+									<i class="fa fa-circle user-online"></i>
+									<span class="txtOnline">
+										Online</span>
+								</a>
+							</div>
+						</div>
+					</li>
+				{% endif %}
+
+				{% if is_granted('ROLE_SUPER_ADMIN') %}
+
+
+					<li class="nav-item start ">
+						<a href="#" class="nav-link nav-toggle">
+							<i class="material-icons">dashboard
+							</i>
+							<span class="title">
+								{% trans %}
+								Dashboard
+								{% endtrans %}</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="sub-menu">
+
+							<li class="nav-item">
+								<a href="{{ path('country_index') }}" class=" nav-link nav-toggle arrow">
+									<span class="fa fa-group"></span>
+									<span class="title">{% trans %}Manage User{% endtrans %}</span>
+									<span class="arrow"></span>
+
+
+								</a>
+								<ul class="sub-menu">
+									<li class="nav-item ">
+										<a href="{{ path('super_user_new') }}">Créer un administrateur</a>
+									</li>
+									<li class="nav-item ">
+										<a href="{{ path('country_index') }}" class=" nav-link nav-toggle arrow">
+											<span class="title">Etat</span>
+											<span class="arrow"></span>
+										</a>
+
+										<ul class="sub-menu ">
+											<li class="nav-item ">
+												<a href="{{ path('inspect_create') }}">{% trans %}Create User for subdivision{% endtrans %}</a>
+											</li>
+											<li class="nav-item ">
+												<a href="{{ path('user_dep') }}">{% trans %}Create User for deparment{% endtrans %}</a>
+											</li>
+											<li class="nav-item ">
+												<a href="{{ path('user_reg') }}">{% trans %}Create User for region{% endtrans %}</a>
+											</li>
+											<li class="nav-item ">
+												<a href="{{ path('min_create') }}">{% trans %}Create User for all state{% endtrans %}</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item ">
+								<a href="{{ path('country_index') }}" class="nav-link ">
+									<span class="fa fa-flag"></span>
+									<span class="title">Country</span>
+								</a>
+							</li>
+
+							<li class="nav-item ">
+								<a href="{{ path('students_admin_index') }}" class="nav-link ">
+									<span class="fa fa-book"></span>
+									<span class="title">{% trans %}School Management{% endtrans %}</span>
+
+								</a>
+							</li>
+
+						</ul>
+
+
+					{% endif %}
+
+
+					{% if (is_granted('ROLE_ADMIN_SEC')) or (is_granted('ROLE_ARR'))  %}
+
+						<li class="nav-item start ">
+							<a href="#" class="nav-link nav-toggle">
+								<i class="material-icons">dashboard
+								</i>
+								<span class="title">{% trans %}
+									Dashboard
+									{% endtrans %}</span>
+								<span class="selected"></span>
+								<span class="arrow open"></span>
+							</a>
+							<ul class="sub-menu">
+
+
+								{% if is_granted('ROLE_ADMIN') %}
+									<li class="nav-item "></li>
+									<li class="nav-item "></li>
+									<li class="nav-item ">
+										<a href="{{ path('etablissements_index') }}" class="nav-link ">
+											<span class="title">{% trans %}School Management{% endtrans %}</span>
+											<span class="selected"></span>
+										</a>
+									</li>
+									<li class="nav-item ">
+										<a href="{{ path('classes_index',{'flo':app.user.etablissements.id}) }}" class="nav-link ">
+											<span class="title">{% trans %}Class management{% endtrans %}
+											</span>
+											<span class="selected"></span>
+										</a>
+									</li>
+								{% endif %}
+
+
+								{% if is_granted('ROLE_ARR') %}
+									<li class="nav-item active"></li>
+									<li class="nav-item ">
+										<a href="{{ path('regions_index_min') }}" class="nav-link ">
+											<span class="title">{% trans %}School Management{% endtrans %}</span>
+											<span class="selected"></span>
+										</a>
+									</li>
+								{% endif %}
+
+							</ul>
+						</li>
+						<li class="nav-item "></li>
+						<li class="nav-item active"></li>
+						{% if is_granted('ROLE_PROF')  %}
+
+							<li class="nav-item ">
+								<a href="{{ path('epreuves_new') }}" class="nav-link ">
+									<span class="fa fa-cloud-upload"></span>
+									<span class="title">Envoyer un cours ou une epreuve</span>
+
+								</a>
+							</li>
+
+						{% endif %}
+						<!--<li class="nav-item">
+																																																												                            <a href="{{ path('event') }}" class="nav-link nav-toggle"> <i class="material-icons">event</i>
+																																																												                                <span class="title">Event Management</span>
+																																																												                            </a>
+																																																												                        </li>-->
+					{%  endif %}
+
+
+					<li class="nav-item">
+						<a href="#" class="nav-link nav-toggle">
+							<i class="material-icons">person</i>
+							<span class="title">{% trans %}Teacher{% endtrans %}</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="{{ path('teacher_index') }}" class="nav-link ">
+									<span class="title">{% trans %}
+										All  Teachers{% endtrans %}
+									</span>
+								</a>
+							</li>
+
+							{% if is_granted('ROLE_ADMIN_SEC') %}
+								<li class="nav-item">
+									<a href="{{ path('teacher_new') }}" class="nav-link ">
+										<span class="title">{% trans %}Add{% endtrans %}
+											{% trans %}Teacher{% endtrans %}
+										</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="{{ path('enseignants_titulaire_index') }}" class="nav-link ">
+										<span class="title">{% trans %}Titular Teacher{% endtrans %}
+										</span>
+									</a>
+								</li>
+
+
+								<li class="nav-item">
+									<a href="{{ path('teacher_index') }}" class="nav-link ">
+										<span class="title">{% trans %}About Teacher{% endtrans %}
+										</span>
+									</a>
+								</li>
+							{% endif %}
+
+						</ul>
+					</li>
+
+
+					{% if is_granted('ROLE_PARENT') %}
+
+						<li class='nav-item'>
+							<a href="{{ path('students_list') }}">
+								<span class='fa fa-user'></span>My child(ren)</a>
+						</li>
+					{% endif %}
+
+
+					{% if not is_granted('ROLE_PARENT') %}
+
+						<li class="nav-item">
+							<a href="#" class="nav-link nav-toggle">
+								<i class="material-icons">face</i>
+								<span class="title">Staff</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item">
+									<a href="{{ path('staff_index') }}" class="nav-link ">
+										<span class="title">{% trans %}
+											All  staff
+											{% endtrans %}</span>
+									</a>
+								</li>
+
+								{% if is_granted('ROLE_ADMIN_SEC') %}
+
+									<li class="nav-item">
+										<a href="{{ path('staff_new') }}" class="nav-link ">
+											<span class="title">{% trans %}Add{% endtrans %}
+												{% trans %}
+												staff
+												{% endtrans %}</span>
+										</a>
+									</li>
+								{% endif %}
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link nav-toggle">
+								<i class="material-icons">group</i>
+								<span class="title">{% trans %}Student Management
+									{% endtrans %}
+								</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+
+
+								<li class="nav-item">
+									<a href="#" class="nav-link nav-toggle">
+										<i class="material-icons">local_library</i>
+										<span class="title">{% trans %}
+											Search for a student
+											{% endtrans %}</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu">
+
+
+										<li class="nav-item">
+											{% if is_granted('ROLE_SUPER_ADMIN') %}
+												<li>
+													<a href="{{ path('search') }}" class="nav-link ">
+														<span class="title">{% trans %}
+															Search in  all country{% endtrans %}</span>
+													</a>
+												</li>
+											{% endif %}
+
+											{% if is_granted('ROLE_PARENT') %}
+
+												<li class='nav-item'>
+													<a href="{{ path('students_list') }}">
+														<span class='fa fa-user'></span>My child(ren)</a>
+												</li>
+											{% endif %}
+
+											{% if is_granted('ROLE_PAYS') %}
+												<li>
+													<a href="{{ path('search') }}" class="nav-link ">
+														<span class="title">{% trans %}
+															Search in  all country{% endtrans %}</span>
+													</a>
+												</li>
+											{% endif %}
+
+
+											{% if is_granted('ROLE_REGION') %}
+												<li>
+													<a href="{{ path('search_select') }}" class="nav-link ">
+														<span class="title">{% trans %}
+															Search in my region{% endtrans %}</span>
+													</a>
+												</li>
+											{% endif %}
+
+
+											{% if is_granted('ROLE_DEPT') %}
+												<li>
+													<a href="{{ path('search_select_for_dept') }}" class="nav-link ">
+														<span class="title">{% trans %}
+															Search in my division{% endtrans %}</span>
+													</a>
+												</li>
+											{% endif %}
+
+											{% if is_granted('ROLE_PARENT') %}
+
+												<li class='nav-item'>
+													<a href="{{ path('students_list') }}">
+														<span class='fa fa-user'></span>My child(ren)</a>
+												</li>
+											{% endif %}
+
+
+											{% if is_granted('ROLE_ARR') %}
+												<a href="{{ path('student_sub_search') }}" class="nav-link ">
+													<span class="title">{% trans %}
+														Search in my Subdivision{% endtrans %}</span>
+												</a>
+											{% endif %}
+
+
+											{% if is_granted('ROLE_ADMIN_SEC') %}
+											</li>
+											<a href="{{ path('student_admin_search') }}" class="nav-link ">
+												<span class="title">{% trans %}
+													Search in my school{% endtrans %}</span>
+											</a>
+										</li>
+									{% endif %}
+
+								</li>
+
+
+							</ul>
+
+						</li>
+
+
+						{% if is_granted('ROLE_ADMIN_SEC') %}
+
+							<li class="nav-item">
+								<a href="{{ path('distinction_new') }}" class="nav-link ">
+									<span class="fa fa-plus"></span>
+									<span class="title">{% trans %}Add{% endtrans %}
+										Distinction</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link nav-toggle">
+									<i class="material-icons">local_library</i>
+									<span class="title">{% trans %}
+										Discipline{% endtrans %}</span>
+									<span class="arrow"></span>
+								</a>
+								<ul class="sub-menu">
+
+									<li class="nav-item">
+										<a href="{{ path('facteurs_disciplinaires_new') }}" class="nav-link ">
+											<span class="title">{% trans %}Add{% endtrans %}
+												{% trans %}
+												Disciplinary Note{% endtrans %}</span>
+										</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="#" class="nav-link ">
+											<span class="title">{% trans %}
+												Disciplinary Note{% endtrans %}</span>
+										</a>
+									</li>
+
+								</ul>
+
+							</li>
+						{% endif %}
+
+
+						{% if is_granted('ROLE_SUPER_ADMIN') %}
+							<li class="nav-item">
+								<a href="{{ path('students_admin_index') }}" class="nav-link ">
+									<span class="title">{% trans %}
+										All  Students{% endtrans %}
+										of country
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="{{ path('student_upload') }}" class="nav-link ">
+									<span class="title">Upload students (excel file)
+									</span>
+								</a>
+							</li>
+
+						{% endif %}
+
+						{% if is_granted('ROLE_ADMIN_SEC') %}
+
+							<li class="nav-item">
+								<a href="{{ path('classes_index1',{'flo':app.user.etablissements.id}) }}" class="nav-link ">
+									<span class="title">{% trans %}
+										All  Classes{% endtrans %}
+									</span>
+								</a>
+							</li>
+						{% endif %}
+						{% if is_granted('ROLE_ADMIN_SEC') %}
+
+							<li class="nav-item">
+								<a href="{{ path('students_new') }}" class="nav-link ">
+									<span class="title">{% trans %}Add{% endtrans %}
+										{% trans %}
+										Student
+										{% endtrans %}</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ path('notes_new') }}" class="nav-link ">
+									<span class="title">{% trans %}Add{% endtrans %}
+										Student Note</span>
+								</a>
+							</li>
+
+						{% endif %}
+					</ul>
+				</li>
+
+
+			{% endif %}
+
+
+			{% if is_granted('ROLE_SUPER_ADMIN') %}
+
+				<li class="nav-item">
+					<a href="#" class="nav-link nav-toggle">
+						<i class="material-icons">school</i>
+						<span class="title">{% trans %}Courses{% endtrans %}</span>
+						<span class="arrow"></span>
+						<!--    <span class="label label-rouded label-menu label-success">new</span> -->
+					</a>
+					<ul class="sub-menu">
+						<li class="nav-item">
+							<a href="{{ path('matieres_index') }}" class="nav-link ">
+								<span class="title">{% trans %}
+									All  Courses{% endtrans %}
+								</span>
+							</a>
+						</li>
+						{% if is_granted('ROLE_ADMIN_SEC') %}
+
+							<li class="nav-item">
+								<a href="{{ path('matieres_new') }}" class="nav-link ">
+									<span class="title">{% trans %}Add{% endtrans %}
+										Course</span>
+								</a>
+							</li>
+						{% endif %}
+						<li class="nav-item">
+							<a href="{{ path('niveau_index') }}" class="nav-link ">
+								<span class="title">{% trans %}
+									All Level{% endtrans %}</span>
+							</a>
+						</li>
+						{% if is_granted('ROLE_ADMIN_SEC') %}
+							<li class="nav-item">
+								<a href="{{ path('niveau_new') }}" class="nav-link ">
+									<span class="title">{% trans %}Add{% endtrans %}
+										{% trans %}Level{% endtrans %}</span>
+								</a>
+							</li>
+						{% endif %}
+					</ul>
+				</li>
+
+
+				<li class="nav-item">
+					<a href="{{ path('lienutile_index') }}" class="nav-link ">
+						<i class="material-icons">business</i>
+						<span class="title">{% trans %}importants links{% endtrans %}</span>
+						<span class="arrow"></span>
+					</a>
+				</li>
+				{% if is_granted('ROLE_ADMIN') %}
+
+					<li class="nav-item">
+						<a href="#" class="nav-link nav-toggle">
+							<i class="material-icons">business</i>
+							<span class="title">{% trans %}Departments{% endtrans %}</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="{{ path('chef_department_index') }}" class="nav-link ">
+									<span class="title">{% trans %}
+										All  Departments{% endtrans %}
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{ path('chef_department_new') }}" class="nav-link ">
+									<span class="title">{% trans %}Add{% endtrans %}
+										Department</span>
+								</a>
+							</li>
+						{% endif %}
+					</li>
+				</ul>
+			</li>
+
+
+			{% if is_granted('ROLE_ADMIN_SEC') %}
+				<li class="nav-item">
+					<a href="#" class="nav-link nav-toggle">
+						<i class="material-icons">face</i>
+						<span class="title">Staff</span>
+						<span class="arrow"></span>
+					</a>
+					<ul class="sub-menu">
+						<li class="nav-item">
+							<a href="{{ path('staff_index') }}" class="nav-link ">
+								<span class="title">{% trans %}
+									All
+									{% endtrans %}{% trans %}
+									staff
+									{% endtrans %}</span>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="{{ path('staff_new') }}" class="nav-link ">
+								<span class="title">{% trans %}Add{% endtrans %}
+									{% trans %}
+									staff
+									{% endtrans %}</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+			{% endif %}
+
+		{% endif %}
+
+
+		{% if  is_granted('ROLE_PROF') %}
+
+			<li class="nav-item">
+				<a href="#" class="nav-link nav-toggle">
+					<i class="material-icons">face</i>
+					<span class="title">{% trans %}Class management{% endtrans %}
+					</span>
+					<span class="arrow"></span>
+				</a>
+				<ul class="sub-menu">
+					<li class="nav-item">
+						<a href="{{ path('teacher_classes') }}" class="nav-link ">
+							<span class="title">{% trans %}My class{% endtrans %}</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="{{ path('programme_new') }}" class="nav-link ">
+							<span class="title">{% trans %}Add program
+								{% endtrans %}</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{ path('devoir_new') }}" class="nav-link ">
+							<span class="title">{% trans %}add a homework{% endtrans %}</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{ path('suggestions_new') }}" class="nav-link ">
+							<span class="title">Faire une suggestion</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="{{ path('lacunes_new') }}" class="nav-link ">
+							<span class="title">Ajouter une lacune</span>
+						</a>
+					</li>
+
+
+				</ul>
+			</li>
+
+
+		{% endif %}
+
+
+		{% if  is_granted('ROLE_SG') %}
+
+
+			<li class="nav-item">
+				<a href="#" class="nav-link nav-toggle">
+					<i class="material-icons">local_library</i>
+					<span class="title">{% trans %}
+						Discipline{% endtrans %}</span>
+					<span class="arrow"></span>
+				</a>
+				<ul class="sub-menu">
+
+
+					<li class="nav-item">
+						<a href="{{ path('facteurs_disciplinaires_new') }}" class="nav-link ">
+							<span class="title">{% trans %}Add{% endtrans %}
+								{% trans %}
+								Disciplinary Note{% endtrans %}</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link ">
+							<span class="title">{% trans %}
+								Disciplinary Note{% endtrans %}</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+
+		{% endif %}
+	</ul>
+	<div>
+    </div>
+</div>
+</div>
+</div>{# empty Twig template #}

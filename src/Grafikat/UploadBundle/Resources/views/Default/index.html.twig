@@ -1,0 +1,987 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="colors-switcher">
+        <a id="show-panel" class="hide-panel"><i class="fa fa-tint"></i></a>
+        <ul class="colors-list">
+            <li><a title="Light Red" onClick="setActiveStyleSheet('light-red'); return false;" class="light-red"></a></li>
+            <li><a title="Blue" class="blue" onClick="setActiveStyleSheet('blue'); return false;"></a></li>
+            <li class="no-margin"><a title="Light Blue" onClick="setActiveStyleSheet('light-blue'); return false;" class="light-blue"></a></li>
+            <li><a title="Green" class="green" onClick="setActiveStyleSheet('green'); return false;"></a></li>
+
+            <li class="no-margin"><a title="light-green" class="light-green" onClick="setActiveStyleSheet('light-green'); return false;"></a></li>
+            <li><a title="Yellow" class="yellow" onClick="setActiveStyleSheet('yellow'); return false;"></a></li>
+
+        </ul>
+
+    </div>
+
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Westecheng</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#feature">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about-us">A Propos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#service">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Equipe</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#partner">Partenaires</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:rgba(60, 118, 61, 0.4);">
+                    <button type="button" class="close" style="color:white;opacity:2;" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" style="color:white;font-family:'myriad';text-align:center;font-size:28px;">Connexion</h4>
+                </div>
+
+                <div class="modal-body" style="padding-left:40px;padding-right:40px;">
+
+
+
+                    <form action="" method="POST">
+
+                        <div class="form-group mb-none">
+                            <div class="row" style="margin:35px 15px">
+                                <div class="col-sm-6 mb-lg">
+                                    <label style="font-size:15px;color:white;font-family:'myriad';text-align:center">Identifiant</label>
+                                    <input type="text" name="identifiant" required class="form-control" style="background-color:white; height:20px" placeholder="identifiant">
+                                </div>
+                                <div class="col-sm-6 mb-lg">
+                                    <label style="font-size:15px;color:white;font-family:'myriad';text-align:center">Mot de passe</label>
+                                    <input type="password"  name="password" required class="form-control" style="background-color:white; height:20px" placeholder="mot de passe">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+
+                    <button type="submit"  class="btn btn-primary">envoyer</button>
+
+                </div>
+
+
+                </form>
+                </div>
+
+
+
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="page-top">
+        <!-- Carousel -->
+        <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slide" data-slide-to="1"></li>
+                <li data-target="#main-slide" data-slide-to="2"></li>
+            </ol>
+            <!--/ Indicators end-->
+
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="img-responsive" src="images/header-bg-1.jpg" alt="slider">
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h1 class="animated3">
+                                <span><strong>Fame</strong> for the highest</span>
+                            </h1>
+                            <p class="animated2">At vero eos et accusamus et iusto odio dignissimos<br> ducimus qui blanditiis praesentium voluptatum</p>
+                            <a href="#feature" class="page-scroll btn btn-primary animated1">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Carousel item end -->
+
+                <div class="item">
+                    <img class="img-responsive" src="images/header-back.png" alt="slider">
+
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h1 class="animated1">
+                                <span>Welcome to <strong>Westecheng Sarl!</strong></span>
+                            </h1>
+                            <p class="animated2">Faites nous confiance pour vos besoins d'ETUDE, REALISATION, MAINTENANCE<br>
+                                (production-transport-distribution de l'eau et l'énergie)</p>
+                            <a href="#feature" class="page-scroll btn btn-primary animated3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Carousel item end -->
+
+                <div class="item">
+                    <img class="img-responsive" src="images//galaxy.jpg" alt="slider">
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h1 class="animated2">
+                                <span>The way of <strong>Success</strong></span>
+                            </h1>
+                            <p class="animated1">toujour avoir un visuel en temps réel sur nos biens<br> ou encore visualiser le fonctionnement de certains appareil à distance</p>
+                            <a class="animated3 slider btn btn-primary btn-min-block" href="#">Get Now</a><a class="animated3 slider btn btn-default btn-min-block" href="#">Live Demo</a>
+
+                        </div>
+                    </div>
+                </div>
+                <!--/ Carousel item end -->
+            </div>
+            <!-- Carousel inner end-->
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#main-slide" data-slide="prev">
+                <span><i class="fa fa-angle-left"></i></span>
+            </a>
+            <a class="right carousel-control" href="#main-slide" data-slide="next">
+                <span><i class="fa fa-angle-right"></i></span>
+            </a>
+        </div>
+        <!-- /carousel -->
+    </section>
+
+
+
+
+
+    <section id="feature" class="feature-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <i class="fa fa-magic"></i>
+                        <div class="feature-content">
+                            <h4>Web Design</h4>
+                            <p>Développement des sites web
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <i class="fa fa-gift"></i>
+                        <div class="feature-content">
+                            <h4>Vidéosurveillance</h4>
+                            <p> Télé Vidéosurveillance sur Ecran, Ordinateur, Smartphone
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <i class="fa fa-wordpress"></i>
+                        <div class="feature-content">
+                            <h4>Energie </h4>
+                            <p>Installation des panneaux solaire, forage et plomberie ainsi que leurs maintenances</p>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <i class="fa fa-plug"></i>
+                        <div class="feature-content">
+                            <h4>Developpement des logiciels</h4>
+                            <p>Développement Application Androïde, application pour ordinateur de bureau</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section>
+
+
+    <section id="portfolio" class="portfolio-section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Notre protefeuille</h3>
+                        <p>Notre homework est d'aider les consommateurs à trouver satisfaction</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Start Portfolio items -->
+                    <ul id="portfolio-list">
+                        <li>
+                            <div class="portfolio-item">
+                                <img src="images/img1.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-caption">
+                                    <h4>Portfolio Title</h4>
+                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="portfolio-item">
+                                <img src="images/img2.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-caption">
+                                    <h4>Portfolio Title</h4>
+                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="portfolio-item">
+                                <img src="images/img3.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-caption">
+                                    <h4>Portfolio Title</h4>
+                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="portfolio-item">
+                                <img src="images/img4.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-caption">
+                                    <h4>Portfolio Title</h4>
+                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="portfolio-item">
+                                <img src="images/img5.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-caption">
+                                    <h4>Portfolio Title</h4>
+                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="portfolio-item">
+                                <img src="images/img6.jpg" class="img-responsive" alt="" />
+                                <div class="portfolio-caption">
+                                    <h4>Portfolio Title</h4>
+                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <!-- End Portfolio items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="section-title text-center">
+                        <h3>Portfolio Details</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <img src="images/img1.jpg" class="img-responsive" alt="..">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/img1.jpg" class="img-responsive" alt="..">
+                    </div>
+
+                </div><!-- /.row -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section id="about-us" class="about-us-section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                        <h3>A Propos de Nous</h3>
+                        <h4>WEST TECHNOLOGY AND ENGENEERRING</h4>
+                        <p>Tout Ce Que Nous Faisons Et Proposons à WESTECHENG SARL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="welcome-section text-center">
+                        <img src="images/about-01.jpg" class="img-responsive" alt="..">
+                        <h4>Office Philosophy</h4>
+                        <div class="border"></div>
+                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="welcome-section text-center">
+                        <img src="images/about-02.jpg" class="img-responsive" alt="..">
+                        <h4>Office Mission & Vission</h4>
+                        <div class="border"></div>
+                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="welcome-section text-center">
+                        <img src="images/about-03.jpg" class="img-responsive" alt="..">
+                        <h4>Office Value & Rules</h4>
+                        <div class="border"></div>
+                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section>
+
+
+
+
+
+    <div class="about-us-section-2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="skill-shortcode">
+
+                        <!-- Progress Bar -->
+                        <div class="skill">
+                            <p>Web Design</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"  data-percentage="60">
+                                    <span class="progress-bar-span" >60%</span>
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="skill">
+                            <p>HTML & CSS</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"  data-percentage="95">
+                                    <span class="progress-bar-span" >95%</span>
+                                    <span class="sr-only">95% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="skill">
+                            <p>Wordpress</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"  data-percentage="80">
+                                    <span class="progress-bar-span" >80%</span>
+                                    <span class="sr-only">80% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="skill">
+                            <p>Joomla</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"  data-percentage="100">
+                                    <span class="progress-bar-span" >100%</span>
+                                    <span class="sr-only">100% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="skill">
+                            <p>Extension</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"  data-percentage="70">
+                                    <span class="progress-bar-span" >70%</span>
+                                    <span class="sr-only">70% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div id="carousel-example-generic" class="carousel slide about-slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/about-01.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/about-02.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/about-03.jpg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section id="service" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Our Services</h3>
+                        <p>pour ne citer que ceux si, car nous intervenons dans plusieurs domaines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="feature-2">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-magic"></i>
+                                <div class="border"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Vidéosurveillance</h4>
+                                <p>Télé Vidéosurveillance sur Ecran, Ordinateur, Smartphone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="feature-2">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-css3"></i>
+                                <div class="border"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Automatisme</h4>
+                                <p>Automatisme, Commande Informatisée, assistance à distance d'équipement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="feature-2">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-wordpress"></i>
+                                <div class="border"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">securisation d'accès</h4>
+                                <p>Gestion d’accès Biométrie Carte magnétique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="feature-2">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-plug"></i>
+                                <div class="border"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Energie</h4>
+                                <p>Installation et maintenance des panneaux solaires, ainsi que l'electricité domestique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="feature-2">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-joomla"></i>
+                                <div class="border"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Maintenance informatique</h4>
+                                <p>Réparation des dispositifs informatiques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="feature-2">
+                        <div class="media">
+                            <div class="pull-left">
+                                <i class="fa fa-cube"></i>
+                                <div class="border"></div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Publicité</h4>
+                                <p>Ecran publicitaire, enseignes lumineuses animées, plaque publicitaire</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section>
+
+
+
+
+    <section class="fun-facts">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="counter-item">
+                        <i class="fa fa-cloud-upload"></i>
+                        <div class="timer" id="item1" data-to="50000" data-speed="5000"></div>
+                        <h5>Fichiers uplodés</h5>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="counter-item">
+                        <i class="fa fa-check"></i>
+                        <div class="timer" id="item2" data-to="5000" data-speed="5000"></div>
+                        <h5>Projets Terminés</h5>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="counter-item">
+                        <i class="fa fa-code"></i>
+                        <div class="timer" id="item3" data-to="20000" data-speed="5000"></div>
+                        <h5>Lignes de code écrites</h5>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="counter-item">
+                        <i class="fa fa-male"></i>
+                        <div class="timer" id="item4" data-to="8423" data-speed="5000"></div>
+                        <h5>Happy clients</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="team" class="team-member-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                        <h3>Notre Equipe</h3>
+                        <p>Ceux là, qui se tue au quotidien pour vous satisfaire</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="team-section">
+
+
+
+
+
+                        <div class="our-team">
+
+                            <div class="team-member">
+                                <img src="images/manage-1.png" class="img-responsive" alt="">
+                                <div class="team-details">
+                                    <h4>TEUFACK Dagobert</h4>
+                                    <p>Fondateur & Directeur</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="images/manage-2.png" class="img-responsive" alt="">
+                                <div class="team-details">
+                                    <h4>John Doe</h4>
+                                    <p>CTO & Developpeur UI / UE & Admin System Résaux</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="images/manage-3.png" class="img-responsive" alt="">
+                                <div class="team-details">
+                                    <h4>John Doe</h4>
+                                    <p>Founder & Director</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="images/manage-4.png" class="img-responsive" alt="">
+                                <div class="team-details">
+                                    <h4>John Doe</h4>
+                                    <p>Founder & Director</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="images/manage-1.png" class="img-responsive" alt="">
+                                <div class="team-details">
+                                    <h4>John Doe</h4>
+                                    <p>Founder & Director</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="images/manage-2.png" class="img-responsive" alt="">
+                                <div class="team-details">
+                                    <h4>John Doe</h4>
+                                    <p>Founder & Director</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="partner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Nos Partenaires</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="clients">
+
+                    <div class="col-md-12">
+                        <img src="images/themeforest.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/creative-market.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/designmodo.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/creative-market.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/microlancer.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/themeforest.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/microlancer.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/designmodo.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/creative-market.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/designmodo.jpg" class="img-responsive" alt="...">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h3>Nous Contactez</h3>
+                        <p class="white-text">Laisser-Nous  Votre Message</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--<form name="sentMessage" id="contactForm" novalidate> -->
+                    <form class="contact-form" action="" method="post" enctype="multipart/form-data">
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="name">Nom</label>
+                                    <input type="text" id="name" name="name" class="form-control"  required data-validation-required-message="Entrez votre Nom.">
+                                    <!--	<p class="help-block text-danger"></p> -->
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control"  required data-validation-required-message="Entrez votre Email." >
+                                    <!--	<p class="help-block text-danger"></p> -->
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="phone">Téléphone</label>
+                                    <input type="phone" id="phone" name="phone" class="form-control"  required data-validation-required-message="Entrez votre Téléphone." >
+                                    <!-- class="help-block text-danger"></p> -->
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="message">message</label>
+                                    <textarea id="message" name="message" class="form-control" rows="6"  required data-validation-required-message="Veuillez entrer votre message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" name="submit" class="btn btn-lg btn-outline">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-contact-info">
+                        <h4>Nos Contacts</h4>
+                        <ul>
+                            <li><strong>E-mail :</strong> teufdagobert@yahoo.fr</li>
+                            <li><strong>Portable :</strong> (+237) 653 76 85 05 / 699 43 15 56</li>
+                            <li><strong>Fixe:</strong> (+237) 243 63 80 79</li>
+                            <li><strong>BP:</strong> 12405 Douala Cameroun</li>
+                            <li><strong>Web :</strong> <a href="http://www.westechengsarl.com" style="color:#fff">www.westechengsarl.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="footer-contact-info">
+                        <h4>Heure de Travail</h4>
+                        <ul>
+                            <li><strong>Lundi-Mercredi :</strong> 9 h à 15 h</li>
+                            <li><strong>Jeudi-Vendredi :</strong> 12 pm to 10 pm</li>
+                            <li><strong>Samedi:</strong> 9 h à 15 h</li>
+                            <li><strong>Dimanche :</strong> Fermer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <span class="copyright">Copyright &copy; WESTECHENG 2018</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-social text-center">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-link">
+                            <ul class="pull-right">
+                                <li><a href="#">A propos </a>
+                                </li>
+                                <li><a href="htpp://ww.lefaxcm.org">Partenaires</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+    <div id="loader">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+
+{% endblock %}
+

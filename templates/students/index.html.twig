@@ -1,0 +1,175 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- start page content -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+                        <div class="page-title">Students List</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li><a class="parent-item" href="#">Students</a>&nbsp;<i class="fa fa-angle-right"></i>
+                        </li>
+                        <li class="active">Students List</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabbable-line">
+                        <!-- <ul class="nav nav-tabs">
+    <li class="active">
+    <a href="#tab1" data-toggle="tab"> List View </a>
+    </li>
+    <li>
+    <a href="#tab2" data-toggle="tab"> Grid View </a>
+    </li>
+    </ul> -->
+                        <ul class="nav customtab nav-tabs" role="tablist">
+                            <li class="nav-item"><a href="#tab1" class="nav-link active"  data-toggle="tab" >List View</a></li>
+                            <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">Grid View</a></li>
+                        </ul>   
+                        <div class="tab-content">
+                            <div class="tab-pane active fontawesome-demo" id="tab1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card card-box">
+                                            <div class="card-head">
+                                                <header>{% trans %} All  Students{% endtrans %}</header>
+                                                <div class="tools">
+                                                    <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-6">
+                                                        <div class="btn-group">
+                                                                                {% if is_granted('ROLE_ADMIN_SEC') %}
+                                                            <a href="{{ path('students_new') }}" id="addRow" class="btn btn-info">
+                                                                  {% trans %}Add{% endtrans %}  {% trans %}New{% endtrans %} <i class="fa fa-plus"></i>
+                                                            </a>
+                                                                {% endif %}
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-6">
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn deepPink-bgcolor  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
+                                                                <i class="fa fa-angle-down"></i>
+                                                            </a>
+                                                            <ul class="dropdown-menu pull-right">
+                                                                <li>
+                                                                    <a href="javascript:;">
+                                                                        <i class="fa fa-print"></i> {% trans %}Print {% endtrans %} </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;">
+                                                                        <i class="fa fa-file-pdf-o"></i> {% trans %}Save as PDF {% endtrans %}</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;">
+                                                                        <i class="fa fa-file-excel-o"></i> {% trans %}Export TO Excel {% endtrans %} </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-scrollable">
+                                                    <table class="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
+                                                        <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>{% trans %} Name {% endtrans %}
+                                                            <th>{% trans %} FirstName {% endtrans %}
+                                                            <th>{% trans %} Class {% endtrans %}</th>
+                                                            <th>{% trans %}New{% endtrans %}  </th>
+                                                            <th>{% trans %} Gender{% endtrans %}
+                                                            <th>{% trans %}Admission Date{% endtrans %}</th>
+                                                            <th>{% trans %} Action {% endtrans %}</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {% for student in students %}
+
+                                                            <tr class="odd gradeX">
+                                                                <td class="patient-img">
+                                                                    <img src="{{ asset('uploads/students/' ~ student.filename) }}" alt="aucune Photo" width="32px" >
+                                                                </td>
+                                                                <td class="left">{{ student.name }}</td>
+                                                                <td class="left">{{ student.firstName }}</td>
+                                                                <td class="left">{{ student.classes.niveau.name }}  {{ student.classes.name }}</td>
+                                                                <td>{% if student.nouveau %}Yes{% else %}No{% endif %}</td>
+                                                                <td class="left">{{ student.sexe }}</td>
+                                                                <td class="left">{% if student.dateCreate %}{{ student.dateCreate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                                                <td>
+                                                                    {% if is_granted('ROLE_ADMIN_SEC') %}
+
+                                                                    <a href="{{ path('students_edit', { 'id': student.id }) }}" class="btn btn-primary btn-xs">
+                                                                        <i class="fa fa-pencil"></i>
+                                                                    </a>
+                                                                    {% endif %}
+                                                                    <a href="{{ path('students_show', { 'id': student.id }) }}" title="Voir les informations  sur l'élève" class="btn btn-info btn-xs">
+                                                                        <i class="fa fa-th-list"></i>
+                                                                               {% if is_granted('ROLE_ADMIN') %}
+                                                                             </a>
+                                                                    <a href="{{ path('students_delete', { 'id': student.id }) }}" class="btn btn-danger btn-xs" onclick="return confirm('{{'Delete'|trans}}')">
+                                                                        <i class="fa fa-remove"></i>
+                                                                    </a>
+                                                                               {% endif %}
+                                                                   <!-- <button class="btn btn-danger btn-xs">
+                                                                        <i class="fa fa-trash-o "></i>-->
+                                                                  
+                                                                </td>
+                                                            </tr>
+                                                        {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- debut tab2 pour l'affichage en grid -->
+                            <div class="tab-pane" id="tab2">
+                                <div class="row">
+                                    {% for student in students %}
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="{{ asset( 'uploads/students/'~ student.filename) }}" class="doctor-pic" alt="???" width="64px" height="64px">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">{{ student.name }}</div>
+                                                            <div class="name-center"> {{ student.firstName }} </div>
+                                                        </div>
+                                                        <p>née à {{ student.lieuDeNaissance  }}, <br />Cameroun</p>
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:{{ student.telResponsable }}">{{ student.telResponsable }}</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="{{ path('students_show', { 'id': student.id }) }}" class="btn btn-circle deepPink-bgcolor btn-sm">Read More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end page content -->
+{% endblock %}

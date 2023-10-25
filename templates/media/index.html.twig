@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+    <h1>{% trans %}Media list{% endtrans %}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <th>{% trans %}Filename{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for medium in media %}
+            <tr>
+                <td><a href="{{ path('media_show', { 'id': medium.id }) }}">{{ medium.id }}</a></td>
+                <td>{{ medium.name }}</td>
+                <td>{{ medium.filename }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('media_show', { 'id': medium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('media_edit', { 'id': medium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('media_new') }}">Create a new medium</a>
+        </li>
+    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

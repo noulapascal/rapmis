@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Facteurs_disciplinaire{% endtrans %}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <td>{{ facteurs_disciplinaire.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Motif{% endtrans %}</th>
+                <td>{{ facteurs_disciplinaire.motif }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Compteur{% endtrans %}</th>
+                <td>{{ facteurs_disciplinaire.compteur }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <td>{{ facteurs_disciplinaire.description }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Datemotif{% endtrans %}</th>
+                <td>{% if facteurs_disciplinaire.dateMotif %}{{ facteurs_disciplinaire.dateMotif|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('facteurs_disciplinaires_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('facteurs_disciplinaires_edit', { 'id': facteurs_disciplinaire.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    </div>
+</div>
+{% endblock %}

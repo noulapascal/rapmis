@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <script type="text/javascript">
+         function init() {        
+      var s = document.getElementsByTagName('select');
+      for (var i = 0; i < s.length; i++) {
+        if (s[i].multiple) {
+          s[i].onclick = updateSelect;
+        }
+      }
+    }
+    function updateSelect(e) {
+      var opts = this.getElementsByTagName('option'), t, o;
+      if (e) {
+        e.preventDefault();
+        t = e.target;
+      }
+      else if (window.event) {
+        window.event.returnValue = false;
+        t = window.event.srcElement;
+      }
+      else return;
+      t = e.target || window.event.srcElement;
+      if (t.className == 'selected') t.className = '';
+      else t.className = 'selected';
+      for (var i = 0, j = opts.length; i < j; i++) {
+        if (opts[i].className == 'selected') opts[i].selected = true;
+        else opts[i].selected = false;
+      }
+    }
+    window.onload = init;
+    </script>
+
+    
+    
+    
+  <div class="page-content-wrapper">
+        <div class="page-content">
+            <div class="page-bar">
+                <div class="page-title-breadcrumb">
+                    <div class=" pull-left">
+    {{ form_start(form) }}
+    {#{ form_row(form.student) }#}
+    <div class="box-footer clearfix">
+     {{ form_end(form) }}   
+        <button type="submit" class="mdl-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-primary pull-right">Create <i class="fa fa-paper-plane-o"></i></button>
+
+    </div>
+   
+</div></div></div></div></div>
+    {# <ul>
+         <li>
+             <a href="{{ path('epreuves_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+         </li>
+     </ul>#}
+    
+{% endblock %}

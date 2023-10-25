@@ -1,0 +1,243 @@
+<!doctype html>
+<!--html lang="fr">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Rapmis, reseau des acteurs pour 
+l'amelioration des performances en milieu scolaire"/-->
+    <link type="text/css" href="{{ asset('css/jy2hyfifc-_main.css') }}" rel="stylesheet"/>
+   <!--
+    <style type="text/css">
+        .content{clear:both;padding:20px 0;
+                font-size:x-large;
+        }
+        .feature{clear:both;padding:20px 0}
+        .feature h4{margin:50px 0 20px;color:#48261D;font-size:14px}
+        .feature img{width:500px;height:265px}.feature .picLeft{float:left;margin:15px 40px 15px 0}
+        .feature .picRight{float:right;margin:15px 0 15px 40px}ul.featuresNav{margin:40px 0}.featuresNav li
+       a{display:block;position:relative;float:left;margin:0 14px;padding:10px 0 10px 55px;width:135px;text-decoration:none;
+                font-size:13px;color:#888;font-weight:bold;border:1px solid #ccc;background:#fff url({{ asset('images/soft.png') }})
+            no-repeat 10px center}
+       .column{
+           
+           margin-right:2%;padding:0 2% 20px;background:#78e;color:#fff}
+       
+       .page-content{
+         
+           margin-right:2%;padding:0 2% 20px;
+           background: ;
+           color:#fff}
+       
+        .column h3{font-size:17px}
+        .column h4{margin:20px
+        0;font-size:13px;color:#555;text-transform:uppercase}
+        .pres{float:right;margin:0 0 20px 20px;width:145px}
+        .pic{width:385px;margin:20px auto}
+        .column ul{margin:20px}
+        .column li{list-style-type:square;margin:5px 0 5px 10px}</style>
+    -->
+    <style>
+        .item{
+             font-size:1.5em;
+            font-family: "Alex Brush","arial","sans-serif";
+            line-height:1em;
+        }
+        .classicContent p{
+            text-indent:50px;
+            font-size:1em;
+        }
+        .classicContent h4{
+            text-indent:50px;
+            font-size:1em;
+            font: bold;
+        }
+        @font-face{
+            font-family:"Alex Brush";
+            src: url({{ asset('css/AlexBrush-Regular.ttf') }});
+        }
+        </style>
+    <script type="text/javascript" src="{{ asset('ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js') }}"></script>
+    <link rel="alternate" type="application/rss+xml" href="../rss-news/index.html"/>
+ 
+<!--/head>
+<body-->
+                <div id="header">
+                    <div style="background-color: #00d6b2" >
+                    </div>
+                </div>
+
+
+        <div id="menuTopContainer">
+            <div id="content" class='text text-justify w3-container   w3-orange w3-round-xxlarge'>
+                        <div>
+                            <div class="classicContent w3-container  ">
+                                <div class="" class="w3-text w3-xlarge">
+                    <h3 class="w3-center w3-text w3-xlarge">{% trans %}What is rapmis ?{% endtrans %}</h3>
+                    <img class="w3-image w3-padding w3-round-xxlarge w3-third " src="{{ asset('image/school1.jpg') }}">
+                                
+                    <p class='text text-justify'><b>RAPMIS</b>
+   </p
+   <h4 class="w3-text w3-large">{% trans %}Greetings dear members of the educational community{% endtrans %}</h4>
+   <p>{% trans %}RAPMIS solution supports both the administration
+       of the establishment than the parent in better monitoring and supervision of the student so that all
+       efforts to make it a good product for society are achieved.   {% endtrans %}</p>
+                        
+<details>
+    <summary class="w3-btn w3-small w3-teal "><span class="icon icon-plus"></span>{% trans %}Read More...{% endtrans %}</summary>
+    <p {% trans %}
+Dear parents, with RAPMIS installed in the child's establishment, you will be informed in time and in detail
+       to allow you to carry out specific actions in the supervision of your child.        {% endtrans %}
+  <dl class="list text text-justify text-lg">
+<dt>{% trans %} Absences from classes
+{% endtrans %}</dt><dt>{% trans %} Absences at specific times
+{% endtrans %}</dt><dt>{% trans %} homework
+{% endtrans %}</dt><dt> {% trans %} Gap(s) on the lessons
+{% endtrans %}</dt><dt>{% trans %} Requested permissions
+{% endtrans %}</dt><dt>{% trans %} Participation in courses
+
+{% endtrans %}</dt><dt>{% trans %} General school life
+{% endtrans %}</dt><dt>{% trans %} Discipline 
+{% endtrans %}</dt><dt>{% trans %} Attitudes
+{% endtrans %}</dt><dt>{% trans %} Community life
+{% endtrans %}</dt><dt>{% trans %} School life Archiving
+{% endtrans %}</dt><dt> {% trans %} Updated timetable
+{% endtrans %}</dt><dt>{% trans %} Punctual stop of courses
+{% endtrans %}</dt><dt>{% trans %} Etc...{% endtrans %}</dt>
+</dl>
+
+    
+  <!--/p-->
+</details>
+</div>
+<div class=" clear">
+    <br>
+</div>
+<div class="w3-row ">
+<!--/p-->
+                    <!--
+                                    <ul class="w3-ul w3-card w3-hoverable">
+                                        <li>{{ "Punctuality (delay in class)"|trans }}</li>
+                                        <li>{{ "Deviations or any  other  behavior related to indiscipline"|trans }}</li>
+                                        <li>{{ "Absences and their impact on results"|trans }}</li>
+                                        <li>{{ "The fanciful and unknown permissions of you, parents or guardians"|trans }}</li>
+                                        <li>{{ "Disciplinary sanctions "|trans }}</li>
+                                        <li>{{ "The summons"|trans }}</li>
+                                        <li>{{ "Notes and Suggestion(s) for improvement"|trans }}</li>
+                                        <li>{{ "Weaknesses and gap (s) to be filled"|trans }}</li>
+                                        <li>{{ "Timetable and his variation"|trans }}</li>
+                                        <li>{{ "All fees charged by the establishment"|trans }}</li>
+                                        <li>{{ "Homework not done"|trans }}</li>
+                                        <li>{{ "Teachers, supervisors and censors and their contacts"|trans }}</li>
+                                        <li>{{ "Temporary court stopping"|trans }}</li>
+                                        <li>{{ "The merit and prowess"|trans }}</li>
+                                        <li>{{ "Skills and abilities"|trans }}</li>
+                                        <li>{{ "Etc…;"|trans }}</li>
+                                    </ul> -->
+                                    <img class="w3-image w3-padding w3-round-xxlarge w3-third float-right" src="{{ asset('image/school3.jpg') }}">
+
+                    <p>{% trans %} Dear Parents,
+If this solution is not yet used in the school where your child's school,
+enter us and we will get closer to the administration of the establishment
+so that he appropriates it for the benefit of everyone and particularly you the parent.
+{% endtrans %}</p>
+
+                                    <details>
+                                        <summary class="text text-center btn btn-info btn-xs  "><span class="fa fa-angle-right"></span>{% trans %} Read More {% endtrans %}</summary>
+                                        <p>
+                                            {% trans %}Dear heads of nursery, primary, secondary, university and other establishments
+                                             training centers, this monitoring solution will allow you to have all the
+                                             information about each of your students without the need to go through a third party. Thanks to RAPMIS,
+                                             the student's file will be at your fingertips and you will be able, thanks to the amount of information gathered,
+                                             make direct statistics, carry out an action on the basis of convincing and concrete elements, guide
+                                             a new policy thanks to the amount of information available, to provide reliable information to
+                                             parents and other guardian (s) when needed.{% endtrans %}
+                                        </p>
+                                        {% trans %}Cette solution vous facilitera la tâche en bien des points :{% endtrans %}
+
+<dl><dt>{% trans %} Dossier disciplinaire à portée de mains
+{% endtrans %}</dt><dt>{% trans %} Educational file at your fingertips
+{% endtrans %}</dt><dt>{% trans %} Contact person
+{% endtrans %}</dt><dt>{% trans %} Student health book
+{% endtrans %}</dt><dt>{% trans %} Detailed identification of the pupil's shortcomings
+{% endtrans %}</dt><dt>{% trans %} Program advanced level by class
+{% endtrans %}</dt><dt>{% trans %} Observation of the student's performance curve
+{% endtrans %}</dt><dt>{% trans %} Contacts of parents or guardians at your fingertip{% endtrans %}</dt></dl>
+                                    </details>
+
+                    </div>
+
+                                <div class="w3-row">
+                                    <h3 class='text w3-center'>{% trans %}RAPMIS: "a safe and profitable investment for your children"{% endtrans %}</h3><p>
+                                    <h4 class='text w3-center '>{% trans %}Why?{% endtrans %}</h4>
+                                                                            <br>                                  
+
+                                                                            </div>                
+                           
+
+<div class=" w3-panel w3-animate-fading  w3-round-xxlarge w3-center w3-teal w3-opacity ">
+                <div class="w3-half">
+                
+                 <button class="w3-bar-item w3-button w3-half " onclick="openCity('findings')"> 
+                    <span class="w3-tag w3-round-large w3-red  w3-border  w3-border-white">
+                        {% trans %}Findings{% endtrans %}</span></button>
+                <button class="w3-bar-item w3-button w3-half " onclick="openCity('motivations')">
+                    <span class="w3-tag w3-round-large w3-teal w3-border w3-border-white">
+                        {% trans %}Motivations{% endtrans %}</span></button>
+                </div>
+                <div class="w3-half">
+               
+                <button class="w3-bar-item w3-button w3-half  " onclick="openCity('functions')">
+                    <span class="w3-tag w3-round-large w3-light-blue w3-border w3-border-white">
+                        {% trans %}Features{% endtrans %}</span></button>
+                <button class="w3-bar-item w3-button w3-half " onclick="openCity('goals')">
+                    <span class="w3-tag w3-round-large w3-green w3-border w3-border-white">
+                        {% trans %} Goals{% endtrans %}</span></button>
+            
+                </div>
+            </div>
+
+                        {% include 'modulesUsed/findings.html.twig' %}
+                        {% include 'modulesUsed/functionnalities.html.twig' %}
+                        {% include 'modulesUsed/goals.html.twig' %}
+                        {% include 'modulesUsed/motivations.html.twig' %}
+                        {#% include 'modulesUsed/chartGoogle.html.twig' %#}
+                        
+                        
+                        
+                        
+                        <script>
+                            openCity("findings");
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>         
+                                   
+                           
+
+                                </div>
+
+</div>
+                            <div class="clear">
+
+                            </div>
+
+                            <script type="text/javascript">var iniJSON='{"lang":"fr","path_dir":"#\/","login_path":"identification",' +
+                                    '"error_path":"erreur","disconnected":"Votre session a expir\u00c3\u00a9, {% trans %} Please{% endtrans %}vous reconnecter.",' +
+                                    '"msg_load":"Chargement en cours !","null_value":"Valeur requise !","siteSearch":"Rechercher..."}';
+                            </script><script type="text/javascript" src="{{ asset('js/53rczyg4i-_main.js') }}"></script>
+                            <script type="text/javascript" src="{{ asset('pis.google.com/js/plusone.js') }}">
+                            </script>
+                            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+                        </div>
+
+</div>
+</div>
+</body>
+
+</html>

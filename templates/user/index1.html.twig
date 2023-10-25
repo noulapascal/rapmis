@@ -1,0 +1,20 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+
+        {% block body %}
+            <div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                
+            {{ form_start(form) }}
+            {% for item in form %}
+            {{ form_row(item) }}
+            {% endfor %}    
+            <input type="submit" class="btn btn-primary btn-block">
+            {{ form_end(form) }}
+            </div>
+            </div>
+            </div>
+            </div>
+        {% endblock %}

@@ -1,0 +1,220 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Chapitre;
+
+
+use Grafikat\UploadBundle\Annotation\Uploadable;
+use Grafikat\UploadBundle\Annotation\UploadableField;
+/**
+ * Programme
+ *
+ * @ORM\Table(name="programme")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ProgrammeRepository")
+ */
+class Programme
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+   /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $intitule;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Chapitre::class, mappedBy="programme")
+     */
+    private $chapitres;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Matieres::class, inversedBy="programmes" )
+     */
+    private $matiere;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Niveau::class, inversedBy="programmes")
+     */
+    private $niveau;
+
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filename", type="string", length=255)
+     */
+    private $filename;
+
+    /**
+     * @UploadableField(filename = "filename", path="uploads/logo")
+     */
+    public $fichier;
+    
+     /*   /**
+     * @ORM\OneToMany(targetEntity=Suggestions::class, mappedBy="chapitre")
+     *
+    private $suggestions;
+    */
+    
+    
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->chapitres = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add chapitre
+     *
+     * @param \AppBundle\Entity\Chapitre $chapitre
+     *
+     * @return Programme
+     */
+    public function addChapitre(\AppBundle\Entity\Chapitre $chapitre)
+    {
+        $this->chapitres[] = $chapitre;
+
+        return $this;
+    }
+
+    /**
+     * Remove chapitre
+     *
+     * @param \AppBundle\Entity\Chapitre $chapitre
+     */
+    public function removeChapitre(\AppBundle\Entity\Chapitre $chapitre)
+    {
+        $this->chapitres->removeElement($chapitre);
+    }
+
+    /**
+     * Get chapitres
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getChapitres()
+    {
+        return $this->chapitres;
+    }
+
+    /**
+     * Set matiere
+     *
+     * @param \AppBundle\Entity\Matieres $matiere
+     *
+     * @return Programme
+     */
+    public function setMatiere(\AppBundle\Entity\Matieres $matiere = null)
+    {
+        $this->matiere = $matiere;
+
+        return $this;
+    }
+
+    /**
+     * Get matiere
+     *
+     * @return \AppBundle\Entity\Matieres
+     */
+    public function getMatiere()
+    {
+        return $this->matiere;
+    }
+
+    /**
+     * Set niveau
+     *
+     * @param \AppBundle\Entity\Niveau $niveau
+     *
+     * @return Programme
+     */
+    public function setNiveau(\AppBundle\Entity\Niveau $niveau = null)
+    {
+        $this->niveau = $niveau;
+
+        return $this;
+    }
+
+    /**
+     * Get niveau
+     *
+     * @return \AppBundle\Entity\Niveau
+     */
+    public function getNiveau()
+    {
+        return $this->niveau;
+    }
+
+    /**
+     * Set intitule
+     *
+     * @param string $intitule
+     *
+     * @return Programme
+     */
+    public function setIntitule($intitule)
+    {
+        $this->intitule = $intitule;
+
+        return $this;
+    }
+
+    /**
+     * Get intitule
+     *
+     * @return string
+     */
+    public function getIntitule()
+    {
+        return $this->intitule;
+    }
+
+    /**
+     * Set filename
+     *
+     * @param string $filename
+     *
+     * @return Programme
+     */
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
+    /**
+     * Get filename
+     *
+     * @return string
+     */
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+    
+    public function __toString() {
+        return strval( $this->niveau);
+    }
+
+   
+}

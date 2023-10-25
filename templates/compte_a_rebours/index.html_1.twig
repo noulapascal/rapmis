@@ -1,0 +1,267 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- start page content -->
+ 
+           <div id="compte_a_rebours" class="card-box col-sm-6"><noscript>Fin de l'évènement le 1er janvier 2020.</noscript></div>
+
+<script type="text/javascript">
+
+function compte_a_rebours()
+
+{
+
+    var compte_a_rebours = document.getElementById("compte_a_rebours");
+
+
+    var date_actuelle = new Date();
+
+    var date_evenement = new Date("Jan 1 00:00:00 2025");
+
+    var total_secondes = (date_evenement - date_actuelle) / 1000;
+
+
+    var prefixe = "Compte à rebours terminé dans ";
+
+    if (total_secondes < 0)
+
+    {
+
+        prefixe = "Compte à rebours terminé il y a "; // On modifie le préfixe si la différence est négatif
+
+        total_secondes = Math.abs(total_secondes); // On ne garde que la valeur absolue
+
+    }
+
+
+    if (total_secondes > 0)
+
+    {
+
+        var jours = Math.floor(total_secondes / (60 * 60 * 24));
+
+        var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
+
+        minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
+
+        secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
+
+
+        var et = "et";
+
+        var mot_jour = "jours,";
+
+        var mot_heure = "heures,";
+
+        var mot_minute = "minutes,";
+
+        var mot_seconde = "secondes";
+
+
+        if (jours == 0)
+
+        {
+
+            jours = '';
+
+            mot_jour = '';
+
+        }
+
+        else if (jours == 1)
+
+        {
+
+            mot_jour = "jour,";
+
+        }
+
+
+        if (heures == 0)
+
+        {
+
+            heures = '';
+
+            mot_heure = '';
+
+        }
+
+        else if (heures == 1)
+
+        {
+
+            mot_heure = "heure,";
+
+        }
+
+
+        if (minutes == 0)
+
+        {
+
+            minutes = '';
+
+            mot_minute = '';
+
+        }
+
+        else if (minutes == 1)
+
+        {
+
+            mot_minute = "minute,";
+
+        }
+
+
+        if (secondes == 0)
+
+        {
+
+            secondes = '';
+
+            mot_seconde = '';
+
+            et = '';
+
+        }
+
+        else if (secondes == 1)
+
+        {
+
+            mot_seconde = "seconde";
+
+        }
+
+
+        if (minutes == 0 && heures == 0 && jours == 0)
+
+        {
+
+            et = "";
+
+        }
+
+
+        compte_a_rebours.innerHTML = prefixe + jours + ' ' + mot_jour + ' ' + heures + ' ' + mot_heure + ' ' + minutes + ' ' + mot_minute + ' ' + et + ' ' + secondes + ' ' + mot_seconde;
+
+    }
+
+    else
+
+    {
+
+        compte_a_rebours.innerHTML = 'Compte à rebours terminé.';
+
+    }
+
+
+    var actualisation = setTimeout("compte_a_rebours();", 1000);
+
+}
+
+compte_a_rebours();
+
+</script>
+       
+   
+    
+    
+<div id="countdown" class="text-center" class="colsm-6">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+	   <span id="countdown_day" class="compterebour">--</span><br> jours
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+       <span id="countdown_hour" class="compterebour">--</span><br> heures
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">	
+       <span id="countdown_min" class="compterebour">--</span><br> minutes
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">	
+       <span id="countdown_sec" class="compterebour">--</span><br> secondes
+	</div>
+</div>
+
+
+<script typte="text/javascript">
+countdownManager = {
+    // Configuration
+    targetTime: new Date('2018-01-20 12:00:00'), // Date cible du compte à rebours (00:00:00)
+    displayElement: { // Elements HTML où sont affichés les informations
+        day:  null,
+        hour: null,
+        min:  null,
+        sec:  null
+    },
+     
+    // Initialisation du compte à rebours (à appeler 1 fois au chargement de la page)
+    init: function(){
+        // Récupération des références vers les éléments pour l'affichage
+        // La référence n'est récupérée qu'une seule fois à l'initialisation pour optimiser les performances
+        this.displayElement.day  = jQuery('#countdown_day');
+        this.displayElement.hour = jQuery('#countdown_hour');
+        this.displayElement.min  = jQuery('#countdown_min');
+        this.displayElement.sec  = jQuery('#countdown_sec');
+         
+        // Lancement du compte à rebours
+        this.tick(); // Premier tick tout de suite
+        window.setInterval("countdownManager.tick();", 1000); // Ticks suivant, répété toutes les secondes (1000 ms)
+    },
+     
+    // Met à jour le compte à rebours (tic d'horloge)
+    tick: function(){
+        // Instant présent
+        var timeNow  = new Date();
+         
+        // On s'assure que le temps restant ne soit jamais négatif (ce qui est le cas dans le futur de targetTime)
+        if( timeNow > this.targetTime ){
+            timeNow = this.targetTime;
+        }
+         
+        // Calcul du temps restant
+        var diff = this.dateDiff(timeNow, this.targetTime);
+         
+        this.displayElement.day.text(  diff.day  );
+        this.displayElement.hour.text( diff.hour );
+        this.displayElement.min.text(  diff.min  );
+        this.displayElement.sec.text(  diff.sec  );
+    },
+     
+    // Calcul la différence entre 2 dates, en jour/heure/minute/seconde
+    dateDiff: function(date1, date2){
+        var diff = {}                           // Initialisation du retour
+        var tmp = date2 - date1;
+ 
+        tmp = Math.floor(tmp/1000);             // Nombre de secondes entre les 2 dates
+        diff.sec = tmp % 60;                    // Extraction du nombre de secondes
+        tmp = Math.floor((tmp-diff.sec)/60);    // Nombre de minutes (partie entière)
+        diff.min = tmp % 60;                    // Extraction du nombre de minutes
+        tmp = Math.floor((tmp-diff.min)/60);    // Nombre d'heures (entières)
+        diff.hour = tmp % 24;                   // Extraction du nombre d'heures
+        tmp = Math.floor((tmp-diff.hour)/24);   // Nombre de jours restants
+        diff.day = tmp;
+ 
+        return diff;
+    }
+};
+jQuery(function($){
+    // Lancement du compte à rebours au chargement de la page
+    countdownManager.init();
+});
+</script>
+    <!-- end page content -->
+    <style>.compterebour {
+	width: 80%;
+    background: #000;
+    color: #FFF;
+    font-size: 4em;
+    padding: 23%;
+    margin-top: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: inline-block;
+	}
+    </style>
+{% endblock %}
+ 

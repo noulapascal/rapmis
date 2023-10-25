@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Teacher{% endtrans %}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th></th>
+                <td><img src="{{ asset('uploads/prof/' ~ teacher.filename) }}" alt="" width="250"></td>
+            </tr>
+            <tr>
+                <th>{% trans %} Name {% endtrans %}</th>
+                <td>{{ teacher.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}FirstName{% endtrans %}</th>
+                <td>{{ teacher.firstName }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %} Tel {% endtrans %}</th>
+                <td>{{ teacher.tel }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Email{% endtrans %}</th>
+                <td>{{ teacher.email }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Sexe{% endtrans %}</th>
+                <td>{{ teacher.sexe }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Annee de naissance{% endtrans %}</th>
+                <td>{% if teacher.dateDeNaissance %}{{ teacher.dateDeNaissance|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Date de Création{% endtrans %}</th>
+                <td>{% if teacher.dateDeCreation %}{{ teacher.dateDeCreation|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Filename{% endtrans %}</th>
+                <td>{{ teacher.filename }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('teacher_index') }}">{% trans %}Back To The List{% endtrans %}</a>
+        </li>
+        <li>
+            <a href="{{ path('teacher_edit', { 'id': teacher.id }) }}">{% trans %} Edit  {% endtrans %}</a>
+        </li>
+        {%  if is_granted('ROLE_ADMIN_SEC') %}
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="{% trans %}Delete{% endtrans %}">
+            {{ form_end(delete_form) }}
+        </li>
+        {% endif %}
+    </ul>
+    </div>
+</div>
+{% endblock %}

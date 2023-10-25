@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<title>DecisionConseilDeClasse</title>
+
+{% block body %}
+    <h1>{% trans %}DecisionConseilDeClasse{% endtrans %}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Appreciation{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.appreciation }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Absence{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.absence }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Bulletin{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.bulletin }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Exclusion{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.exclusion }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}DeuxiemeSequence{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.deuxiemeSequence }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}PremiereSequence{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.premiereSequence }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Trimestre{% endtrans %}</th>
+                <td>{{ decision_conseil_de_classe.trimestre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('decision_conseil_de_classe_index') }}">back to list</a>
+
+    <a href="{{ path('decision_conseil_de_classe_edit', {'id': decision_conseil_de_classe.id}) }}">edit</a>
+
+    {{ include('decision_conseil_de_classe/_delete_form.html.twig') }}
+{% endblock %}

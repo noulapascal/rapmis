@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">{% trans %} Dashboard {% endtrans %}</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ path('homepage') }}">{% trans %} Home {% endtrans %}</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">{% trans %} Dashboard {% endtrans %}</li>
+                </ol>
+            </div>
+        </div>
+    <h1>{% trans %}Facteurs_disciplinaires list{% endtrans %}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans %} Id{% endtrans %}</th>
+                <th>{% trans %}Motif{% endtrans %}</th>
+                <th>{% trans %}Compteur{% endtrans %}</th>
+                <th>{% trans %}Description{% endtrans %}</th>
+                <th>{% trans %}Datemotif{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facteurs_disciplinaire in facteurs_disciplinaires %}
+            <tr>
+                <td><a href="{{ path('facteurs_disciplinaires_show', { 'id': facteurs_disciplinaire.id }) }}">{{ facteurs_disciplinaire.id }}</a></td>
+                <td>{{ facteurs_disciplinaire.motif }}</td>
+                <td>{{ facteurs_disciplinaire.compteur }}</td>
+                <td>{{ facteurs_disciplinaire.description }}</td>
+                <td>{% if facteurs_disciplinaire.dateMotif %}{{ facteurs_disciplinaire.dateMotif|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('facteurs_disciplinaires_show', { 'id': facteurs_disciplinaire.id }) }}">show</a>
+                        </li>
+                        {% if is_granted('ROLE_ADMIN_SEC') %}
+                        <li>
+                            <a href="{{ path('facteurs_disciplinaires_edit', { 'id': facteurs_disciplinaire.id }) }}">edit</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% if is_granted('ROLE_ADMIN_SEC') %}
+    <ul>
+        <li>
+            <a href="{{ path('facteurs_disciplinaires_new') }}">Create a new facteurs_disciplinaire</a>
+        </li>
+    </ul>
+            {% endif %}
+    </div>
+</div>
+{% endblock %}

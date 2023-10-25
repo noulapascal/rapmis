@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<title>Chapitre</title>
+
+{% block body %}
+    <h1>{% trans %}Chapitre{% endtrans %}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <td>{{ chapitre.id }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Name{% endtrans %}</th>
+                <td>{{ chapitre.name }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Objectifs{% endtrans %}</th>
+                <td>{{ chapitre.objectifs }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('chapitre_index') }}">back to list</a>
+
+    <a href="{{ path('chapitre_edit', {'id': chapitre.id}) }}">edit</a>
+
+    {{ include('chapitre/_delete_form.html.twig') }}
+{% endblock %}
